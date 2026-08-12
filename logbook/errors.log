@@ -4,3 +4,11 @@
     Category: error only
     See logbook/protocol.md for the full spec.
 -->
+
+## [ENT-001] | 2026-08-12 17:33 UTC | Link | error | ref: logbook/protocol.md
+Batch-created bootstrap files reused one timestamp as their frontmatter id.
+validate-ids.sh flagged DUPLICATE ID: logbook/protocol.md vs ANCHOR.md
+(id: 20260812T171239Z); ascii-guard CI failed on both bootstrap pushes.
+Fix: unique id per file, generated with date -u. The gate already existed
+(validate-ids.sh runs in CI); the scar is process discipline: never reuse
+one timestamp batch across files that carry id: frontmatter.

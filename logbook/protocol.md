@@ -1,6 +1,6 @@
 ---
 name: forge-logbook-protocol
-id: 20260812T171239Z
+id: 20260812T173300Z
 tier: protocol
 author: Link
 approved_by: Suggi
