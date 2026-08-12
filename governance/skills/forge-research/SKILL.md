@@ -41,13 +41,13 @@ Confirm ALL verification sections passed before committing.
 
 ### 1. Run the Feynman Loop
 
-Before any research or writing, invoke the `loop-feynman` skill.
+Before any research or writing, invoke the `forge-loop-feynman` skill.
 Complete all 6 steps. The blank page (Step 1) MUST precede any
 source consultation (Step 3). Focus the blank page on: "What evidence
 would prove or disprove each claim in the idea brief? What sources
 are most likely to have this evidence?"
 
-See `skills/loop-feynman/SKILL.md` for the full procedure and
+See `skills/forge-loop-feynman/SKILL.md` for the full procedure and
 self-check.
 
 ### 2. Read the parent idea brief
@@ -207,6 +207,6 @@ the reasoning.
 
 - `skills/forge-research/assets/template.md` -- evidence report format, example
 - `skills/forge-ideate/SKILL.md` -- prior stage (idea generation)
-- `skills/loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
+- `skills/forge-loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
 - `skills/query-brain/SKILL.md` -- brain search (for prior work)
 - `forge/protocol.md` -- full pipeline specification

@@ -45,7 +45,7 @@ ANCHOR.md            # the forge direction -- set by Suggi
 STATUS.md            # current pipeline cursor (where a fresh loop resumes)
 JOURNAL.md           # chronological lab notebook (append-only)
 LEARNINGS.md         # curated method memory
-forge/               # the research pipeline (protocol, stage folders, logs/)
+forge/               # the research pipeline (protocol, stage folders, logbook/)
 scripts/             # sanitize-ascii.py, setup-hooks.sh, validate-ids.sh, logbook-archive.py
 .githooks/           # local pre-commit ASCII guard
 .github/workflows/   # CI: ascii-guard.yml, forge-logbook-archive.yml

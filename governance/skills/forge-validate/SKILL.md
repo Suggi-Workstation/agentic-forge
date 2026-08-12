@@ -43,13 +43,13 @@ Confirm ALL verification sections passed before committing.
 
 ### 1. Run the Feynman Loop
 
-Before any validation, invoke the `loop-feynman` skill. Complete all
+Before any validation, invoke the `forge-loop-feynman` skill. Complete all
 6 steps. The blank page (Step 1) MUST precede any source consultation
 (Step 3). Focus the blank page on: "What is the single worst thing
 that could go wrong with this plan? What assumptions, if wrong, would
 break it? Where would an adversary attack?"
 
-See `skills/loop-feynman/SKILL.md` for the full procedure and
+See `skills/forge-loop-feynman/SKILL.md` for the full procedure and
 self-check.
 
 ### 2. Read the parent proposal and full provenance chain
@@ -219,5 +219,5 @@ dimension results, and reasoning.
 - `skills/forge-validate/assets/template.md` -- validation result format, example
 - `skills/forge-propose/SKILL.md` -- prior stage (planning)
 - `skills/forge-insight/SKILL.md` -- next stage (insight extraction)
-- `skills/loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
+- `skills/forge-loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
 - `forge/protocol.md` -- full pipeline specification

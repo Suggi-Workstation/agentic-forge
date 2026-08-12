@@ -43,12 +43,12 @@ Confirm ALL verification sections passed before committing.
 
 ### 1. Run the Feynman Loop
 
-Before any evaluation, invoke the `loop-feynman` skill. Complete all
+Before any evaluation, invoke the `forge-loop-feynman` skill. Complete all
 6 steps. The blank page (Step 1) MUST precede any source consultation
 (Step 3). Focus the blank page on: "What criteria would a fair evaluator
 use to judge this evidence? What would make this idea succeed or fail?"
 
-See `skills/loop-feynman/SKILL.md` for the full procedure and
+See `skills/forge-loop-feynman/SKILL.md` for the full procedure and
 self-check.
 
 ### 2. Read the parent evidence report
@@ -215,5 +215,5 @@ and reasoning.
 - `skills/forge-evaluate/assets/template.md` -- evaluation verdict format, example
 - `skills/forge-research/SKILL.md` -- prior stage (evidence gathering)
 - `skills/forge-propose/SKILL.md` -- next stage (implementation planning)
-- `skills/loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
+- `skills/forge-loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
 - `forge/protocol.md` -- full pipeline specification

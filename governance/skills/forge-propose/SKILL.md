@@ -43,13 +43,13 @@ Confirm ALL verification sections passed before committing.
 
 ### 1. Run the Feynman Loop
 
-Before any planning, invoke the `loop-feynman` skill. Complete all
+Before any planning, invoke the `forge-loop-feynman` skill. Complete all
 6 steps. The blank page (Step 1) MUST precede any source consultation
 (Step 3). Focus the blank page on: "What is the simplest working
 version of this idea? What are the irreducible components? What
 assumptions am I making that need validation?"
 
-See `skills/loop-feynman/SKILL.md` for the full procedure and
+See `skills/forge-loop-feynman/SKILL.md` for the full procedure and
 self-check.
 
 ### 2. Read the parent evaluation verdict and evidence report
@@ -214,5 +214,5 @@ the reasoning.
 - `skills/forge-propose/assets/template.md` -- implementation plan format, example
 - `skills/forge-evaluate/SKILL.md` -- prior stage (evaluation)
 - `skills/forge-validate/SKILL.md` -- next stage (validation)
-- `skills/loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
+- `skills/forge-loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
 - `forge/protocol.md` -- full pipeline specification

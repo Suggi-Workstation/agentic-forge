@@ -42,13 +42,13 @@ Confirm ALL verification sections passed before committing.
 
 ### 1. Run the Feynman Loop
 
-Before any research or writing, invoke the `loop-feynman` skill.
+Before any research or writing, invoke the `forge-loop-feynman` skill.
 Complete all 6 steps. The blank page (Step 1) MUST precede any
 source consultation (Step 3). Focus the blank page on: "What novel
 research questions could advance the current anchor goal? What gaps
 exist in our current understanding?"
 
-See `skills/loop-feynman/SKILL.md` for the full procedure and
+See `skills/forge-loop-feynman/SKILL.md` for the full procedure and
 self-check.
 
 ### 2. Read the anchor goal
@@ -192,7 +192,7 @@ reasoning.
 ## Related
 
 - `skills/forge-ideate/assets/template.md` -- idea brief format, example
-- `skills/loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
+- `skills/forge-loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
 - `skills/query-brain/SKILL.md` -- brain search (for prior art check)
 - `forge/protocol.md` -- full pipeline specification
 - `ANCHOR.md` -- the forge north star goal

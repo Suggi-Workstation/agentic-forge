@@ -45,12 +45,12 @@ Confirm ALL verification sections passed before committing.
 
 ### 1. Run the Feynman Loop
 
-Before extracting the insight, invoke the `loop-feynman` skill.
+Before extracting the insight, invoke the `forge-loop-feynman` skill.
 Complete all 6 steps. Focus the blank page on: "What is the ONE
 thing someone should take away from this entire pipeline? If Suggi
 reads only one sentence from this work, what should it be?"
 
-See `skills/loop-feynman/SKILL.md` for the full procedure and
+See `skills/forge-loop-feynman/SKILL.md` for the full procedure and
 self-check.
 
 ### 2. Read the Full Provenance Chain
@@ -230,7 +230,7 @@ reasoning.
 
 - `skills/forge-insight/assets/template.md` -- insight artifact format, example
 - `skills/forge-validate/SKILL.md` -- prior stage (validation)
-- `skills/loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
+- `skills/forge-loop-feynman/SKILL.md` -- Feynman Loop (prerequisite)
 - `forge/protocol.md` -- full pipeline specification
 - `LEARNINGS.md` -- cross-pipeline compound knowledge
 - `ANCHOR.md` -- iteration rule 4 (every 10th session synthesis)
