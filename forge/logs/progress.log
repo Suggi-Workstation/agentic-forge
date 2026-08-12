@@ -1,0 +1,5 @@
+<!-- progress.log -- compact machine-oriented gate record for the Forge loop.
+    Written by the Forge loop only. One line per event:
+    <UTC> | <stage> | <artifact-id> | PASS|HALT | <note>
+    See forge/logs/protocol.md for the full spec. Append-only.
+-->
