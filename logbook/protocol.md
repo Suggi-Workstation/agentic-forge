@@ -100,7 +100,7 @@ on every push to main. It:
 
 1. Checks `errors.log` for line count > 500.
 2. Cuts the oldest complete entries (never mid-entry) from the active file.
-3. Appends them to `forge/logbook/archive/errors-<YYYY-MM-DD>.log`.
+3. Appends them to `logbook/archive/errors-<YYYY-MM-DD>.log`.
 4. Commits with an `[archive]` tag so the workflow does not re-trigger itself.
 5. The ENT-ID counter continues uninterrupted -- archived entries keep
    their original ENT-IDs for cross-reference integrity.

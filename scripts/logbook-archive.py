@@ -5,7 +5,7 @@ Triggered by .github/workflows/forge-logbook-archive.yml on push to main.
 Skips commits tagged with [archive] to prevent infinite loops.
 Cuts at complete entry boundaries (## [ENT-NNN]) -- never splits an entry.
 Keeps the header comment intact. Appends archived entries to
-forge/logbook/archive/errors-<YYYY-MM-DD>.log.
+logbook/archive/errors-<YYYY-MM-DD>.log.
 """
 import os
 import sys
@@ -13,8 +13,8 @@ from datetime import datetime, timezone
 
 MAX_LINES = 500
 TARGET_LINES = 400  # Cut enough to leave headroom for normal operation
-LOGBOOK_DIR = "forge/logbook"
-ARCHIVE_DIR = "forge/logbook/archive"
+LOGBOOK_DIR = "logbook"
+ARCHIVE_DIR = "logbook/archive"
 LOG_FILES = ["errors.log"]
 
 
@@ -108,7 +108,7 @@ def process_log(log_path):
             f.write(f"<!-- {base}.log archive -- entries {archive_boundaries[0][0]}-{archive_boundaries[-1][1]} (line range)\n")
             f.write(f"     Moved from active log on {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}\n")
             f.write(f"     Active log continues from ENT-{ent_match} onward.\n")
-            f.write("     See forge/logbook/protocol.md for full spec.\n")
+            f.write("     See logbook/protocol.md for full spec.\n")
             f.write("-->\n\n")
         else:
             f.write(f"\n<!-- Appended {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')} -->\n\n")
@@ -129,7 +129,7 @@ def main():
                  if os.path.isfile(os.path.join(LOGBOOK_DIR, f))]
 
     if not log_files:
-        print("No Forge log files found in forge/logbook/")
+        print("No Forge log files found in logbook/")
         return 0
 
     for log_path in log_files:

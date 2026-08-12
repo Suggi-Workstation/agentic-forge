@@ -1,13 +1,12 @@
 name: forge-logbook-archive
 
 # WHAT THIS DOES:
-# After every push to main, checks forge/logbook/errors.log. If it
-# exceeds 500 lines, cuts the oldest complete entries (never
-# mid-entry) and moves them to
-# forge/logbook/archive/errors-<YYYY-MM-DD>.log. The active log is
-# trimmed so loop-start reads stay fast and context lean. Archive
-# commits are tagged [archive] and do not re-trigger this workflow
-# (infinite loop guard).
+# After every push to main, checks logbook/errors.log. If it exceeds
+# 500 lines, cuts the oldest complete entries (never mid-entry) and
+# moves them to logbook/archive/errors-<YYYY-MM-DD>.log. The active
+# log is trimmed so loop-start reads stay fast and context lean.
+# Archive commits are tagged [archive] and do not re-trigger this
+# workflow (infinite loop guard).
 #
 # HOW TO INSTALL: put this file at
 # .github/workflows/forge-logbook-archive.yml in the agentic-forge repo.
@@ -51,6 +50,6 @@ jobs:
 
           git config user.name "Logbook Archive Bot"
           git config user.email "archive@suggi-workstation.dev"
-          git add forge/logbook/
+          git add logbook/
           git commit -m "[archive] forge-logbook: auto-archived entries exceeding 500 lines"
           git push origin main

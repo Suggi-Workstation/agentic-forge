@@ -2,5 +2,5 @@
     Append entries at the bottom. Never edit old entries.
     Format: ## [ENT-NNN] | YYYY-MM-DD HH:MM UTC | Agent | error | ref: path/to/file.md
     Category: error only
-    See forge/logbook/protocol.md for the full spec.
+    See logbook/protocol.md for the full spec.
 -->

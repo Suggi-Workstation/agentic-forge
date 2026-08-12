@@ -50,8 +50,8 @@ the active pipeline: HALT.
 ### 3. Read the checkpoint
 
 Read `STATUS.md`, the tail of `JOURNAL.md`, the tail of
-`forge/logbook/progress.log`, and `LEARNINGS.md`. One canonical
-cursor: `STATUS.md`. Do not duplicate its fields anywhere else.
+`logbook/progress.log`, and `LEARNINGS.md`. One canonical cursor:
+`STATUS.md`. Do not duplicate its fields anywhere else.
 
 ### 4. Verify repository state
 
@@ -169,4 +169,4 @@ or resets confidence without explanation.
 - `forge-loop-feynman` -- the thinking loop run inside every stage.
 - `forge-verify` -- maker-checker orchestration.
 - `forge/protocol.md` -- pipeline specification.
-- `forge/logbook/protocol.md` -- log spec.
+- `logbook/protocol.md` -- log spec.
