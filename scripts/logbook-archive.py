@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Archive log entries from the active Forge error log when it exceeds MAX_LINES.
+"""Archive log entries from active .log files when they exceed MAX_LINES.
 
-Triggered by .github/workflows/forge-logbook-archive.yml on push to main.
+Triggered by .github/workflows/logbook-archive.yml on push to main.
 Skips commits tagged with [archive] to prevent infinite loops.
 Cuts at complete entry boundaries (## [ENT-NNN]) -- never splits an entry.
 Keeps the header comment intact. Appends archived entries to
-logbook/archive/errors-<YYYY-MM-DD>.log.
+logbook/archive/<name>-<quarter>.log.
 """
 import os
 import sys
@@ -15,13 +15,10 @@ MAX_LINES = 500
 TARGET_LINES = 400  # Cut enough to leave headroom for normal operation
 LOGBOOK_DIR = "logbook"
 ARCHIVE_DIR = "logbook/archive"
-LOG_FILES = ["errors.log"]
-
 
 def date_label():
-    """Return current date label like '2026-08-12'."""
+    """Return current date label like '2026-07-22'."""
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
 
 def find_entry_boundaries(lines):
     """Return list of (start_idx, end_idx) tuples for each entry block.
@@ -34,7 +31,7 @@ def find_entry_boundaries(lines):
             entry_starts.append(i)
 
     if not entry_starts:
-        return 0, [], 0  # No entries at all -- header only
+        return 0, [], 0  # No entries at all -- header_only
 
     header_end = entry_starts[0]
     boundaries = []
@@ -43,7 +40,6 @@ def find_entry_boundaries(lines):
         boundaries.append((start, end))
 
     return header_end, boundaries, entry_starts[0]
-
 
 def process_log(log_path):
     """Archive oldest entries from log_path if it exceeds MAX_LINES."""
@@ -103,6 +99,7 @@ def process_log(log_path):
     mode = "a" if os.path.exists(archive_path) else "w"
     with open(archive_path, mode, encoding="ascii") as f:
         if mode == "w":
+            # Extract ENT IDs from first archived and first kept entries
             first_archived_line = lines[archive_boundaries[0][0]]
             last_archived_line = lines[archive_boundaries[-1][0]]
             first_ent = first_archived_line.strip().split("[ENT-")[1].split("]")[0] if "[ENT-" in first_archived_line else "???"
@@ -112,7 +109,7 @@ def process_log(log_path):
             f.write(f"<!-- {base}.log archive -- ENT-{first_ent} to ENT-{last_ent}\n")
             f.write(f"     Moved from active log on {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}\n")
             f.write(f"     Active log continues from ENT-{ent_match} onward.\n")
-            f.write("     See logbook/protocol.md for full spec.\n")
+            f.write(f"     See logbook/protocol.md for full spec.\n")
             f.write("-->\n\n")
         else:
             first_archived_line = lines[archive_boundaries[0][0]]
@@ -130,24 +127,25 @@ def process_log(log_path):
           f"(archived {len(archive_lines)} lines to {archive_name})")
     return True
 
-
 def main():
     changed = False
-    log_files = [os.path.join(LOGBOOK_DIR, f) for f in LOG_FILES
-                 if os.path.isfile(os.path.join(LOGBOOK_DIR, f))]
+    log_files = sorted([
+        f for f in os.listdir(LOGBOOK_DIR)
+        if f.endswith(".log") and os.path.isfile(os.path.join(LOGBOOK_DIR, f))
+    ])
 
     if not log_files:
-        print("No Forge log files found in logbook/")
+        print("No .log files found in logbook/")
         return 0
 
-    for log_path in log_files:
+    for log_file in log_files:
+        log_path = os.path.join(LOGBOOK_DIR, log_file)
         if process_log(log_path):
             changed = True
 
     if not changed:
-        print("All Forge log files within limits.")
+        print("All log files within limits.")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())

@@ -1,15 +1,15 @@
-name: forge-logbook-archive
+name: logbook-archive
 
 # WHAT THIS DOES:
-# After every push to main, checks logbook/errors.log. If it exceeds
-# 500 lines, cuts the oldest complete entries (never mid-entry) and
-# moves them to logbook/archive/errors-<YYYY-MM-DD>.log. The active
-# log is trimmed so loop-start reads stay fast and context lean.
-# Archive commits are tagged [archive] and do not re-trigger this
-# workflow (infinite loop guard).
+# After every push to main, checks all logbook/*.log files. If any
+# exceed 500 lines, cuts the oldest complete entries (never mid-entry)
+# and moves them to logbook/archive/<name>-<quarter>.log. The active
+# log is trimmed so it stays readable at preflight without bloating
+# agent context. Archive commits are tagged [archive] and do not
+# re-trigger this workflow (infinite loop guard).
 #
 # HOW TO INSTALL: put this file at
-# .github/workflows/forge-logbook-archive.yml in the agentic-forge repo.
+# .github/workflows/logbook-archive.yml in the repo.
 
 on:
   push:
@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: forge-logbook-archive-${{ github.ref }}
+  group: logbook-archive-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -33,11 +33,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run forge logbook archive script
+      - name: Run logbook archive script
         shell: bash
         run: |
           set -uo pipefail
-          echo "forge-logbook-archive: checking log files..."
+          echo "logbook-archive: checking log files..."
           python scripts/logbook-archive.py
 
       - name: Commit and push archived changes
@@ -51,5 +51,5 @@ jobs:
           git config user.name "Logbook Archive Bot"
           git config user.email "archive@suggi-workstation.dev"
           git add logbook/
-          git commit -m "[archive] forge-logbook: auto-archived entries exceeding 500 lines"
+          git commit -m "[archive] logbook: auto-archived entries exceeding 500 lines"
           git push origin main
