@@ -95,8 +95,8 @@ itself, follow the `ref:` or `see:` link.
 When `errors.log` exceeds 500 lines, CI automatically archives the
 oldest entries to keep loop reads fast and context lean.
 
-The `forge-logbook-archive.yml` workflow (`.github/workflows/`) fires
-on every push to main. It:
+The `logbook-archive.yml` workflow (`.github/workflows/`) fires on
+every push to main. It:
 
 1. Checks `errors.log` for line count > 500.
 2. Cuts the oldest complete entries (never mid-entry) from the active file.
