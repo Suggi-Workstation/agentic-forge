@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Query the brain-index. Returns ranked file paths with snippets.
+Query the forge-index. Returns ranked file paths with snippets.
 
 Usage:
     python query.py "your question" --top-k 20
@@ -218,8 +218,8 @@ def rrf_fusion(dense_results: list, sparse_results: list,
 
 
 # Module-level cache: the cross-encoder loads ONCE per process, not per
-# query. Loading a 278M/1.1GB model per call made eval (100 queries) take
-# 13+ minutes; with the cache the model loads once and every query reuses it.
+# query. The cache keeps evaluation runs from reloading the model for every
+# gold query.
 _RERANKER_CACHE = {}
 
 

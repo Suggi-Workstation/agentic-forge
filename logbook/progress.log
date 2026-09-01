@@ -1,5 +1,3 @@
-<!-- progress.log -- compact machine-oriented gate record for the Forge loop.
-    Written by the Forge loop only. One line per event:
-    <UTC> | <stage> | <artifact-id> | PASS|HALT | <note>
-    See logbook/protocol.md for the full spec. Append-only.
--->
+<!-- progress.log -- append-only Forge stage events.
+     Every event is a multiline ENT block. Counters are sequential per file.
+     See logbook/protocol.md. -->

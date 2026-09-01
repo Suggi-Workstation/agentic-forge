@@ -2,258 +2,102 @@
 name: forge-protocol
 id: 20260801T000008Z
 tier: protocol
-author: Link
+author: Morpheus
 approved_by: Suggi
-version: 1.0
+version: 2.0
 ---
+# Forge Protocol -- Researcher and Analyst
 
-# Forge Protocol -- Research-to-Insight Pipeline
+## Purpose
 
-## What the Forge Is
-
-The forge is a 6-stage pipeline that converts raw ideas into durable
-insights through structured research, evaluation, and validation.
-Each stage produces an immutable artifact. Each gate is a binary
-decision: PASS (advance to next stage) or HALT (pivot or abandon).
-
-The final output is an INSIGHT -- a transferable principle about
-agentic harness optimization that Suggi can review and implement.
+The Forge turns one narrow question into one reviewed build. Researcher
+creates the work. Analyst challenges it. Each session completes one small
+stage in 10-15 minutes and exits.
 
 ## Pipeline
 
-```
-IDEA --> RESEARCH --> EVALUATE --> PROPOSE --> VALIDATE --> INSIGHT
-  |         |           |            |            |           |
- Gate      Gate        Gate         Gate         Gate        Gate
-```
+| Current stage | Owner | PASS moves to | REVISE moves to |
+|:--|:--|:--|:--|
+| `ideate` | Researcher | `propose` / Researcher | no artifact; try later |
+| `propose` | Researcher | `research` / Researcher | narrow the proposal |
+| `research` | Researcher | `evaluate` / Analyst | narrow the proposal |
+| `evaluate` | Analyst | `build` / Researcher | `research` / Researcher |
+| `build` | Researcher | `verify` / Analyst | return to `research` |
+| `verify` | Analyst | `review` / Human | `build` / Researcher |
 
-| Stage | Folder | Input | Output | Gate |
-|:--|:--|:--|:--|:--|
-| 1. Ideate | `ideas/` | Raw insight from research | Scoped idea brief | Novel AND testable? |
-| 2. Research | `research/` | Scoped idea brief | Evidence report with sources | Evidence supports? |
-| 3. Evaluate | `evaluations/` | Evidence report | PASS/HALT verdict with reasoning | Credible AND viable? |
-| 4. Propose | `proposals/` | PASS verdict | Research plan | Concrete AND feasible? |
-| 5. Validate | `validations/` | Research plan | Stress-test result | Survives scrutiny? |
-| 6. Insight | `insights/` | Validated plan + full chain | Durable principle | Actionable AND transferable? |
+Analyst may also REJECT at evaluate or verify. Record the verdict, reset
+STATUS to `ready`, and leave the immutable chain for future reference.
 
-## Folder Map
+## Artifact Rule
 
-```
-forge/
-  protocol.md         # this file
-  ideas/              # stage 1: scoped idea briefs
-  research/           # stage 2: evidence reports
-  evaluations/        # stage 3: PASS/HALT verdicts
-  proposals/          # stage 4: research plans
-  validations/        # stage 5: stress-test results
-  insights/           # stage 6: durable, transferable principles
-  graveyard/          # definitively dead ideas + post-mortems
-  archive/            # completed pipelines (idea through insight)
-```
+Files use `<slug>-rNN.md`. The first stage artifact is `r01`; a correction
+creates the next revision and names the prior same-stage ID in `supersedes`.
+Never edit a completed artifact.
 
-## Entry Format
-
-Every artifact in the forge follows this frontmatter schema:
+Every artifact uses:
 
 ```yaml
 ---
-id: <ISO-8601-timestamp>
-stage: ideas|research|evaluations|proposals|validations|insights|graveyard
-parent: <id of the artifact this derives from, or "root">
-status: active|halted|complete
-confidence: 0.0-1.0
-created: <ISO-8601>
+name: <slug>
+id: <YYYYMMDDTHHMMSSZ>
+pipeline: <idea r01 id>
+research_path: <agent-systems|value-investing-systems>
+stage: <idea|proposal|research|evaluation|build|verification>
+owner: <Researcher|Analyst>
+parent: <immediate parent artifact id or root>
+supersedes: <prior same-stage id or none>
+confidence: <0.0-1.0>
+created: <YYYY-MM-DDTHH:MM:SSZ>
 ---
 ```
 
-The `parent` field creates a provenance chain. Every artifact links
-to the one it was derived from. The full chain from idea to insight is
-traceable: `insight -> validation -> proposal -> evaluation -> research -> idea`.
+`parent` always names the artifact directly consumed. A revision requested
+by Analyst parents the Analyst verdict that requested it.
 
-### Stage 1: Idea Brief (`ideas/`)
+## Session Rule
 
-```
-# [IDEA-001] <One-line title>
+Every role session:
 
-## Hypothesis
-What I think might be true about agentic harness optimization.
-One clear, falsifiable statement.
+1. Confirm the repository root and current role ownership in `STATUS.md`.
+2. Do one stage only. Keep it small enough for 10-15 minutes.
+3. Write at most one immutable stage artifact.
+4. Update `STATUS.md` and append one complete progress ENT block.
+5. Run ASCII and ID checks.
+6. Commit only the changed Forge paths as the active role.
+7. Exit. The watcher handles publication.
 
-## Why This Matters
-Why this could improve agent self-development. What gap in current
-understanding this addresses.
+If the role does not own the current stage, exit without writes.
 
-## What I Need to Prove
-2-3 specific claims that must be true for this to hold.
+## Researcher Ordering
 
-## Initial Confidence
-0.0-1.0, based on prior knowledge before research.
-```
+Researcher reads `ANCHOR.md`, `STATUS.md`, and this protocol first. Then it
+runs the blank-page and gap-list steps before reading LEARNINGS, prior
+artifacts, brain material, or web sources. This preserves the Feynman order.
 
-### Stage 2: Evidence Report (`research/`)
+## Analyst Ordering
 
-```
-# [RESEARCH-001] <Title matching the idea>
+Analyst reads control files and the acceptance criteria in the ancestors,
+but not the target body. It writes a short expected-results baseline first,
+then reads the research or build and issues PASS, REVISE, or REJECT.
 
-## Sources
-At least 3 independent sources per major claim. URL + key excerpt.
+## Learning Cycle
 
-## Findings
-What the evidence says. Organized by claim from the idea brief.
+Both roles read `LEARNINGS.md`. Analyst may add or strengthen one short
+method lesson after evaluate or verify when repeated pipeline evidence
+supports it. Humans never edit LEARNINGS.
 
-## Contradictions
-Evidence that contradicts the hypothesis. If none, explain why.
+## Scope
 
-## Updated Confidence
-0.0-1.0, adjusted for evidence.
-```
+- All writes stay inside this repository.
+- Read-only brain or web evidence is allowed.
+- If an external tool asks to write, repair, clone, rebuild, install, or
+  configure anything outside the Forge, skip that action.
+- No profile, shared-skill, cron, service, or runtime changes.
+- No locks or monitor scripts. The future 30-minute stagger and 15-minute
+  session cap prevent role overlap.
 
-### Stage 3: Evaluation Verdict (`evaluations/`)
+## Human Review
 
-```
-# [EVAL-001] <Title>
-
-## Verdict
-PASS or HALT. One word, then explanation.
-
-## Criteria
-Scored against: novelty, evidence strength, research feasibility,
-potential impact on agent design. 1-5 each.
-
-## Strengths
-What the evidence supports strongly.
-
-## Weaknesses
-What the evidence undermines or what is unknown.
-
-## Recommendation
-If PASS: what to focus on in the research plan.
-If HALT: graveyard or return to ideas/ with narrowed scope?
-```
-
-### Stage 4: Research Plan (`proposals/`)
-
-```
-# [PROPOSAL-001] <Title>
-
-## Research Question
-What specific question will the pipeline answer?
-
-## Method
-How the research will be conducted. What sources, what analysis.
-
-## Expected Insight
-What principle is expected to emerge if the hypothesis holds.
-
-## Counter-Hypothesis
-What alternative explanation could the evidence support?
-
-## Risk Matrix
-Top 3 risks + mitigation for each.
-```
-
-### Stage 5: Validation Result (`validations/`)
-
-```
-# [VALID-001] <Title>
-
-## Method
-How the plan was stress-tested. What criteria were used.
-
-## Result
-PASS or HALT for each dimension tested.
-
-## Weak Points Found
-What the stress-test revealed as fragile.
-
-## Mitigations Added
-What the plan now includes that it did not before.
-
-## Final Confidence
-0.0-1.0, after all validation.
-```
-
-### Stage 6: Insight (`insights/`)
-
-```
-# [INSIGHT-001] <Title>
-
-## Principle
-The durable principle discovered. One sentence. Transferable.
-
-## Evidence Summary
-What the full provenance chain proved. Key sources and findings.
-
-## Actionability
-What Suggi can DO with this insight. Concrete, specific.
-
-## Confidence
-0.0-1.0, final confidence in this principle.
-
-## Limitations
-What this insight does NOT cover. Boundaries and caveats.
-
-## Provenance Chain
-Linked list of all parent artifacts: idea -> research -> eval ->
-proposal -> validation
-```
-
-## The Graveyard (`graveyard/`)
-
-Ideas that failed a gate definitively. Each entry includes a
-post-mortem:
-
-```
-# [GRAVE-001] <Title>
-
-## What Died
-The idea and its provenance chain.
-
-## Why It Died
-Which gate it failed and why.
-
-## What We Learned
-The scar. What this failure teaches for future research.
-
-## Could It Be Revived?
-Under what conditions (if any) would this idea become viable again?
-```
-
-## Gate Rules
-
-1. Every stage transition requires an explicit PASS verdict.
-2. A HALT at evaluation: write post-mortem to graveyard/, unless a
-   narrowed scope could salvage it (return to ideas/).
-3. A HALT at validation: return to proposals/ with specific fixes.
-4. A HALT at insight: document what blocked the principle from
-   emerging, iterate on the proposal.
-5. No artifact is ever deleted. Archives preserve the full chain.
-
-## How the Forge Is Used
-
-Each working session:
-1. Read the active pipeline state (or ANCHOR if one exists)
-2. If no active pipeline: scan ideas/ for the next to develop
-3. If active pipeline: advance it one stage
-4. Write the artifact to the appropriate forge/ folder
-5. Pass through forge-verify (maker-checker gate)
-6. Log progress to logs/progress.log if present
-7. Commit + push
-
-## Provenance
-
-Every artifact's `parent` field creates a chain:
-
-```
-insights/insight-001.md
-  parent: validations/valid-001.md
-    parent: proposals/proposal-001.md
-      parent: evaluations/eval-001.md
-        parent: research/research-001.md
-          parent: ideas/idea-001.md
-```
-
-This is the forge's audit trail -- every insight is traceable to
-its evidence and its origin idea.
-
----
+Verification PASS sets `state: awaiting-review`, `stage: review`, and
+`owner: Human`. The future agents stop. Suggi may later approve, reject, or
+request revision through a separate interactive task.

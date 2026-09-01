@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build the brain-index from agentic-brain markdown files.
+Build the forge-index from agentic-forge markdown files.
 
 Usage:
     python index.py              # incremental build

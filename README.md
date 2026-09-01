@@ -1,61 +1,79 @@
 # Agentic Forge
 
-The agentic forge. Research is being done here.
+The Agentic Forge is a repository-only Researcher/Analyst pipeline. The
+canonical skill blueprints live in `governance/skills/`. They are not
+installed in any profile and no Forge cron jobs exist yet.
 
-## What This Repo Is
+## Simple Pipeline
 
-A structured research pipeline that converts raw ideas into durable,
-transferable insights. Each artifact passes through six stages with
-binary PASS/HALT gates at every step.
-
-## Pipeline
-
-```
-IDEA --> RESEARCH --> EVALUATE --> PROPOSE --> VALIDATE --> INSIGHT
-  |         |           |            |            |           |
- Gate      Gate        Gate         Gate        Gate        Gate
+```text
+Researcher: IDEATE -> PROPOSE -> RESEARCH
+Analyst:                          EVALUATE
+Researcher:                               BUILD
+Analyst:                                        VERIFY -> HUMAN REVIEW
 ```
 
-| Stage | Folder | Input | Output | Gate |
-|:--|:--|:--|:--|:--|
-| 1. Ideate | `forge/ideas/` | Raw insight from research | Scoped idea brief | Novel AND testable? |
-| 2. Research | `forge/research/` | Scoped idea brief | Evidence report with sources | Evidence supports? |
-| 3. Evaluate | `forge/evaluations/` | Evidence report | PASS/HALT verdict with reasoning | Credible AND viable? |
-| 4. Propose | `forge/proposals/` | PASS verdict | Research plan | Concrete AND feasible? |
-| 5. Validate | `forge/validations/` | Research plan | Stress-test result | Survives scrutiny? |
-| 6. Insight | `forge/insights/` | Validated plan + full chain | Durable principle | Actionable AND transferable? |
+| Stage | Owner | Output |
+|:--|:--|:--|
+| Ideate | Researcher | `forge/ideas/` |
+| Propose | Researcher | `forge/proposals/` |
+| Research | Researcher | `forge/research/` |
+| Evaluate | Analyst | `forge/evaluations/` |
+| Build | Researcher | `forge/builds/` |
+| Verify | Analyst | `forge/verifications/` |
 
-Full spec: `forge/protocol.md`.
+Each session does one small stage and finishes within 10-15 minutes.
+The roles never write outside this repository.
 
-## Repository Hygiene
+## Future Cadence -- Not Installed
 
-- **ASCII-only.** Every file is plain 7-bit ASCII. The local pre-commit
-  hook and the CI gate (`ascii-guard.yml`) both enforce it.
-- **Frontmatter IDs.** Generated with `date -u +'%Y%m%dT%H%M%SZ'`,
-  validated by `scripts/validate-ids.sh` in CI.
-- **Setup hooks once per machine:**
-  ```bash
-  bash scripts/setup-hooks.sh
-  ```
+When Suggi later deploys the profile-local copies:
 
-## Layout
+- Researcher runs on the hour, for example 13:00, 14:00, 15:00.
+- Analyst runs 30 minutes later, for example 13:30, 14:30, 15:30.
+- The 15-minute session limit leaves at least a 15-minute buffer.
 
-```
-ANCHOR.md            # the forge direction -- set by Suggi
-STATUS.md            # current pipeline cursor (where a fresh loop resumes)
-JOURNAL.md           # chronological lab notebook (append-only)
-LEARNINGS.md         # curated method memory
-forge/               # the research pipeline (protocol + stage folders)
-logbook/             # the forge logbook (protocol, progress.log, errors.log, archive/)
-governance/          # skills: the forge stage skills + loop skills (blueprint copies)
-scripts/             # sanitize-ascii.py, setup-hooks.sh, validate-ids.sh, logbook-archive.py
-.githooks/           # local pre-commit ASCII guard
-.github/workflows/   # CI: ascii-guard.yml, forge-logbook-archive.yml
-```
+That simple stagger is the coordination mechanism. There is no file lock,
+monitor script, wrapper, or runtime setup in this repository.
 
-## For Contributors
+## Canonical Skill Bundles
 
-1. Read `forge/protocol.md` before writing anything.
-2. Start at `forge/ideas/` -- never skip stages.
-3. Every artifact links to its parent (provenance chain).
-4. Nothing is deleted; use `forge/graveyard/` for dead ideas.
+Future Researcher bundle:
+
+- `forge-loop-researcher`
+- `forge-loop-feynman`
+- `forge-ideate`
+- `forge-propose`
+- `forge-research`
+- `forge-build`
+
+Future Analyst bundle:
+
+- `forge-loop-analyst`
+- `forge-evaluate`
+- `forge-verify`
+
+These are blueprints only. Copying or scheduling them is a separate future
+task requiring Suggi's instruction.
+
+## State and Memory
+
+- `ANCHOR.md`: eternal direction and the two optional research paths.
+- `STATUS.md`: one small current-state cursor.
+- `LEARNINGS.md`: agent-written cross-pipeline method memory.
+- `logbook/progress.log`: multiline ENT stage events.
+- `logbook/errors.log`: multiline ENT failures and fixes.
+- `forge/archive/`: cold history that should not be read every session.
+
+`JOURNAL.md` is intentionally absent. The logbook is the chronology.
+
+## Boundaries
+
+- Write only inside this repository.
+- Brain and web sources are read-only evidence.
+- Never write to agentic-brain or investing-hub from a Forge procedure.
+- Never edit profiles, shared skills, cron, services, or runtime config.
+- Never push directly; the VPS watcher publishes verified commits.
+- ASCII only. Preserve immutable artifact provenance.
+
+Full workflow: `forge/protocol.md`.

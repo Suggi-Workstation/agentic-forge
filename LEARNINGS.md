@@ -4,13 +4,21 @@ id: 20260812T171242Z
 tier: control
 author: Link
 ---
-# LEARNINGS.md -- Curated Method Memory
+# LEARNINGS.md -- Agent Method Memory
 
-Reusable lessons about how the Forge behaves and how to run research.
-Not every event belongs here; JOURNAL holds the events. A single
-surprising event is a learning hypothesis. It becomes a skill, a
-protocol rule, or a governance change only after repeated evidence
-and an approval gate.
+Reusable lessons about how the Forge researches and collaborates. Both
+roles read this file. The Analyst writes or updates lessons during the
+learning cycle; humans never edit it.
+
+## Admission Rules
+
+- Add a lesson only when repeated pipeline evidence supports it.
+- Name the evidence pipeline IDs and confidence.
+- Domain findings stay in builds; chronology stays in the logbook.
+- A lesson may improve future behavior but cannot authorize governance,
+  runtime, profile, or external-repository changes.
+- Keep entries short. Archive a stale lesson intact under `forge/archive/`
+  before replacing it; never silently delete history.
 
 ## Learnings
 

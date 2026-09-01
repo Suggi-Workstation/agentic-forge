@@ -1,6 +1,5 @@
-# brain-index config
-# Model: BAAI/bge-m3 (1024-dim) -- multilingual, hybrid dense+sparse+ColBERT
-# (dense-only via sentence-transformers; BM25 provides the sparse half)
+# forge-index config
+# Dense embeddings plus BM25 keyword retrieval.
 
 embedding:
   model: "unsloth/embeddinggemma-300m"
