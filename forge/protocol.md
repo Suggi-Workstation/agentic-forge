@@ -82,9 +82,9 @@ then reads the research or build and issues PASS, REVISE, or REJECT.
 
 ## Learning Cycle
 
-Both roles read `LEARNINGS.md`. Analyst may add or strengthen one short
-method lesson after evaluate or verify when repeated pipeline evidence
-supports it. Humans never edit LEARNINGS.
+Both roles read `LEARNINGS.md`. Either role may add or strengthen one short
+method lesson after its stage when repeated pipeline evidence supports it.
+Humans never edit LEARNINGS.
 
 ## Scope
 

@@ -29,10 +29,11 @@ finishes within 10-15 minutes.
    - `research` -> `forge-research`
    - `build` -> `forge-build`
 4. Write at most one stage artifact.
-5. Update the fixed fields in `STATUS.md` and append one multiline
+5. If repeated evidence supports one method lesson, update `LEARNINGS.md`.
+6. Update the fixed fields in `STATUS.md` and append one multiline
    `research` ENT block to `logbook/progress.log`.
-6. Run `bash scripts/validate-ids.sh` and the ASCII gate.
-7. Commit only the changed Forge files as Researcher, then exit.
+7. Run `bash scripts/validate-ids.sh` and the ASCII gate.
+8. Commit only the changed Forge files as Researcher, then exit.
 
 ## Failure
 

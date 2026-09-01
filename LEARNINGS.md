@@ -7,8 +7,8 @@ author: Link
 # LEARNINGS.md -- Agent Method Memory
 
 Reusable lessons about how the Forge researches and collaborates. Both
-roles read this file. The Analyst writes or updates lessons during the
-learning cycle; humans never edit it.
+Researcher and Analyst read and update lessons during the learning cycle;
+humans never edit this file.
 
 ## Admission Rules
 
