@@ -3,7 +3,8 @@ name: anchor
 id: 20260812T171239Z
 tier: control
 author: Suggi
-status: pending
+approval_locked: true
+approved_by: Suggi
 ---
 # ANCHOR.md -- Forge Direction
 
