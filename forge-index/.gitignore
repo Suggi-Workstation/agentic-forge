@@ -1,4 +1,4 @@
-# .gitignore for forge-index/
+# .gitignore for brain-index/
 # Index data: never commit
 __pycache__/
 *.pyc

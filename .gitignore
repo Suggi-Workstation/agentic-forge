@@ -1,7 +1,5 @@
 # Agent scratch space - never committed
 .agent_temp/
-.forge-lock/
-.forge-lock.guard
 # OS clutter
 .DS_Store
 Thumbs.db

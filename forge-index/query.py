@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Query the forge-index. Returns ranked file paths with snippets.
+Query the brain-index. Returns ranked file paths with snippets.
 
 Usage:
     python query.py "your question" --top-k 20

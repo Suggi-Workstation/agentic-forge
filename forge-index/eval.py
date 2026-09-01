@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Evaluate forge-index search quality against gold queries.
+Evaluate brain-index search quality against gold queries.
 
 Metrics: recall@20, MRR (Mean Reciprocal Rank), nDCG@20.
 

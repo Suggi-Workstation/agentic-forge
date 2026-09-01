@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build the forge-index from agentic-forge markdown files.
+Build the brain-index from agentic-brain markdown files.
 
 Usage:
     python index.py              # incremental build
@@ -22,7 +22,7 @@ import numpy as np
 
 # --- Config ---
 SCRIPT_DIR = Path(__file__).resolve().parent
-FORGE_ROOT = SCRIPT_DIR.parent
+BRAIN_ROOT = SCRIPT_DIR.parent
 
 with open(SCRIPT_DIR / "config.yaml") as f:
     cfg = yaml.safe_load(f)
@@ -156,7 +156,7 @@ def file_hash(path: str) -> str:
 
 
 def build_index(force: bool = False):
-    """Build or refresh the Forge index."""
+    """Build or refresh the brain index."""
     t0 = time.time()
 
     # --- Change detection ---
@@ -165,7 +165,7 @@ def build_index(force: bool = False):
                     ".png", ".jpg", ".gif", ".svg", ".ico"}
 
     files_now = {}
-    for rel, abs_path in iter_markdown_files(FORGE_ROOT, exclude_dirs, exclude_exts):
+    for rel, abs_path in iter_markdown_files(BRAIN_ROOT, exclude_dirs, exclude_exts):
         files_now[rel] = {"path": abs_path, "hash": file_hash(abs_path)}
 
     # Read previous manifest
@@ -188,7 +188,7 @@ def build_index(force: bool = False):
         import subprocess
         try:
             head = subprocess.check_output(
-                ["git", "rev-parse", "HEAD"], cwd=str(FORGE_ROOT), text=True
+                ["git", "rev-parse", "HEAD"], cwd=str(BRAIN_ROOT), text=True
             ).strip()
         except Exception:
             head = "unknown"
@@ -366,7 +366,7 @@ def build_index(force: bool = False):
     try:
         head = subprocess.check_output(
             ["git", "rev-parse", "HEAD"],
-            cwd=str(FORGE_ROOT), text=True
+            cwd=str(BRAIN_ROOT), text=True
         ).strip()
     except Exception:
         head = "unknown"
@@ -389,7 +389,7 @@ def check_freshness():
     """Check if index is stale. Returns (ok, message)."""
     import subprocess
 
-    heartbeat_path = DATA_DIR / "heartbeat.json"
+    heartbeat_path = SCRIPT_DIR / "heartbeat.json"
     if not heartbeat_path.exists():
         return False, "NO INDEX -- run 'python index.py --force' first"
 
@@ -399,7 +399,7 @@ def check_freshness():
     try:
         head = subprocess.check_output(
             ["git", "rev-parse", "HEAD"],
-            cwd=str(FORGE_ROOT), text=True
+            cwd=str(BRAIN_ROOT), text=True
         ).strip()
     except Exception:
         return True, "HEARTBEAT OK (git unavailable -- freshness unverified)"

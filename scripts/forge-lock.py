@@ -2,8 +2,6 @@
 """Atomic lease lock for Researcher and Analyst Forge runs."""
 
 import argparse
-from contextlib import contextmanager
-import fcntl
 import json
 import os
 import secrets
@@ -14,27 +12,12 @@ from pathlib import Path
 
 
 LOCK_NAME = ".forge-lock"
-GUARD_NAME = ".forge-lock.guard"
 LEASE_NAME = "lease.json"
 OWNERS = ("researcher", "analyst")
 
 
 class LockError(RuntimeError):
     """A safe, expected lock refusal."""
-
-
-@contextmanager
-def metadata_guard(root):
-    """Serialize every lease metadata operation across processes."""
-    root.mkdir(parents=True, exist_ok=True)
-    guard_path = root / GUARD_NAME
-    descriptor = os.open(guard_path, os.O_RDWR | os.O_CREAT, 0o600)
-    with os.fdopen(descriptor, "a+", encoding="ascii") as guard:
-        fcntl.flock(guard.fileno(), fcntl.LOCK_EX)
-        try:
-            yield
-        finally:
-            fcntl.flock(guard.fileno(), fcntl.LOCK_UN)
 
 
 def utc_now():
@@ -180,13 +163,12 @@ def main(argv=None):
     args = build_parser().parse_args(argv)
     root = args.root.resolve()
     try:
-        with metadata_guard(root):
-            if args.command == "acquire":
-                result = acquire(root, args.owner, args.lease_seconds)
-            elif args.command == "heartbeat":
-                result = heartbeat(root, args.token)
-            else:
-                result = release(root, args.token)
+        if args.command == "acquire":
+            result = acquire(root, args.owner, args.lease_seconds)
+        elif args.command == "heartbeat":
+            result = heartbeat(root, args.token)
+        else:
+            result = release(root, args.token)
     except LockError as exc:
         print(str(exc), file=sys.stderr)
         return 2

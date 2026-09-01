@@ -1,63 +1,123 @@
 ---
 name: template-forge-ideate
 tier: template
-stage: idea
-version: 2.0
+stage: ideas
+version: 1.0
 ---
 
-# Forge Idea Template
+# Forge Ideate Template -- Idea Brief Format
 
-Write `forge/ideas/<slug>-r01.md` with this exact section order.
+## What This Template Defines
 
-## Frontmatter
+The format for Stage 1 artifacts: scoped idea briefs in `forge/ideas/`.
+Every idea brief MUST follow this structure exactly. For the writing
+procedure and quality gates, see `skills/forge-ideate/SKILL.md`.
+
+## Frontmatter Schema
 
 ```yaml
 ---
-name: <slug>
-id: <YYYYMMDDTHHMMSSZ>
-pipeline: <same value as id>
-research_path: <agent-systems|value-investing-systems>
-stage: idea
-owner: Researcher
-status: complete
-parent: root
-supersedes: none
-confidence: <0.0-1.0>
-created: <YYYY-MM-DDTHH:MM:SSZ>
+name: <short-slug>
+id: <YYYYMMDDTHHMMSSZ>        # ISO 8601 UTC, generated with date -u +'%Y%m%dT%H%M%SZ'
+stage: ideas                   # always ideas
+parent: root                   # root if this is a new idea; otherwise id of triggering artifact
+status: active                 # active, halted, or complete
+confidence: <0.0-1.0>          # initial confidence before research
+created: <YYYY-MM-DD>
+tags: [<tag>, <tag>]           # lowercase, hyphens for spaces
 ---
 ```
 
-## Body
+## Frontmatter Rules
+
+- `name` is a short lowercase kebab-case slug, max 60 chars, unique.
+- `id` is ISO 8601 UTC. MUST generate with `date -u +'%Y%m%dT%H%M%SZ'`.
+  Never estimate, never round. Never reuse.
+- `stage` is always `ideas`.
+- `parent` is `root` for new ideas. For ideas derived from prior research,
+  use the parent artifact's id.
+- `status` starts as `active`. Changes to `halted` if the pipeline dies
+  here, `complete` when the full pipeline finishes.
+- `confidence` is 0.0-1.0 based on prior knowledge before any research.
+- `tags` use lowercase, hyphens for spaces.
+
+## Body Structure
+
+### Hypothesis
+*What do I think might be true?*
+
+One clear, falsifiable statement. Not a question, not a wish.
+"If X is true, then Y follows." The hypothesis MUST be testable
+with evidence from web search, brain search, or both.
+
+### Why This Matters
+*Why could this be a viable agentic business model?*
+
+The market signal, trend, or gap that inspired this idea. What
+problem does it solve? For whom? What evidence (even anecdotal)
+suggests this is worth investigating?
+
+### What I Need to Prove
+*What specific claims must be true for this to work?*
+
+2-3 specific, falsifiable claims. Each claim should be answerable
+with evidence from independent sources. If a claim cannot be tested,
+it is not a valid claim -- restate it until it is testable.
+
+### Initial Confidence
+*How likely is this to be viable, before research?*
+
+0.0-1.0. Be honest. Low confidence does not make an idea bad --
+it makes the uncertainty explicit. State what you would need to
+see to raise or lower this confidence.
+
+## Naming Convention
+
+Files are named: `<short-slug>.md`
+
+- `short-slug` -- kebab-case, max 60 chars. Unique within `forge/ideas/`.
+- Example: `ai-powered-code-review-service.md`
+
+## Example -- Minimal Valid Idea Brief
 
 ```markdown
-# <Title>
+---
+name: ai-code-review-service
+id: 20260801T120000Z
+stage: ideas
+parent: root
+status: active
+confidence: 0.4
+created: 2026-08-01
+tags: [code-review, developer-tools, saas]
+---
 
-## Research Path
-<Chosen path and why it has the highest current learning value.>
-
-## Research Question
-<One narrow, falsifiable question.>
+# [IDEA-001] AI-Powered Code Review as a Service
 
 ## Hypothesis
-<Best current answer before research.>
+Developers will pay for AI code review that catches bugs their
+existing CI/linter pipelines miss, especially logic errors and
+security vulnerabilities.
 
 ## Why This Matters
-<Decision or capability this could improve.>
+The code review market is large (GitHub, GitLab, Bitbucket all
+have built-in review). Existing tools catch syntax and style but
+miss logic errors. An AI agent that understands code semantics
+could fill this gap. Multiple "AI code reviewer" startups raised
+funding in 2024-2025, suggesting market validation.
 
-## Prior Work and Non-Duplication
-<Forge and brain searches performed; closest work and the unresolved gap.>
-
-## Claims to Test
-1. <Material claim and what could falsify it.>
-
-## Expected Build
-<Concrete framework, skill, protocol, test, architecture, or process package.>
-
-## Kill Criteria
-- <Evidence or condition that should stop this pipeline.>
+## What I Need to Prove
+1. Existing code review tools (CodeRabbit, CodeClimate, SonarQube)
+   do NOT catch semantic logic errors at scale -- their scope is
+   syntax, style, and known vulnerability patterns.
+2. Developers are willing to pay for AI code review beyond what
+   their platform already provides.
+3. An autonomous agent can perform code review with accuracy
+   comparable to a human senior developer on real-world codebases.
 
 ## Initial Confidence
-<0.0-1.0 with reason and what would change it.>
+0.4. The market signal (funded competitors) is real, but I do not
+yet know if they are succeeding or failing. The technical feasibility
+of AI code review is plausible given LLM capabilities, but accuracy
+on real codebases is unproven.
 ```
-
-No invented evidence, generic topic, parallel path, or implementation.
