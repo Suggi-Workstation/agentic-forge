@@ -1,6 +1,6 @@
-# brain-index config
-# Model: BAAI/bge-m3 (1024-dim) -- multilingual, hybrid dense+sparse+ColBERT
-# (dense-only via sentence-transformers; BM25 provides the sparse half)
+# forge-index config
+# Model: unsloth/embeddinggemma-300m (768-dim dense embeddings).
+# BM25 provides the sparse half of hybrid retrieval.
 
 embedding:
   model: "unsloth/embeddinggemma-300m"
@@ -34,7 +34,6 @@ search:
 index:
   data_dir: "~/.forge-index"
   exclude_dirs:
-    - "logbook"
     - "scripts"
     - ".github"
     - ".git"

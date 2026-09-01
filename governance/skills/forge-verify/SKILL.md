@@ -1,65 +1,80 @@
 ---
 name: forge-verify
-description: "Orchestrate maker-checker verification: an independent reviewer (different model, zero shared context) checks a forge artifact cold and renders APPROVE, FLAG, or REJECT."
+description: "Verify a Forge build package as the Analyst."
 user-invocable: false
 disable-model-invocation: false
 ---
 
-# Forge-Verify -- Maker-Checker Orchestration
+# Forge Verify -- Analyst Stage 6
 
-## What This Skill Does
+Independently verifies one Researcher build package. It produces an
+immutable verdict artifact; it never edits the build it checks.
 
-Orchestrates independent verification of a forge artifact. The checker
-must be a separate agent (different model, zero shared context) or, in
-the absence of a dedicated verifier agent, a cold independent review
-by the invoking agent itself -- never the author's warm self-check.
-This skill handles orchestration only; the verdict is rendered by an
-independent pass over the artifact.
+## When to Use
 
-## When to Invoke
+Use only when `STATUS.md` says `stage: verify`, `owner: Analyst`, and names
+a build in `forge/builds/`. Otherwise return `NO-OP` without writes.
 
-Invoked automatically by forge-loop step 8 after every forge stage
-commit. Can also be invoked manually by Suggi.
+## Preconditions -- HARD GATE
+
+- [ ] The Analyst loop holds the Forge lease. (PASS / HALT)
+- [ ] The tree was clean before this run. (PASS / HALT)
+- [ ] Build and complete parent chain resolve inside this repo. (PASS / HALT)
+- [ ] The build is not already superseded or verified. (PASS / HALT)
 
 ## Procedure
 
-### 1. Identify the Target
+1. Read `governance/skills/forge-verify/assets/template.md` and the startup
+   context required by `forge/protocol.md`.
+2. Before judging the build body, extract the accepted research claims and
+   acceptance tests from the proposal, research, and evaluation artifacts.
+   This is the comparison baseline.
+3. Read the build cold. Check every material claim against the research
+   citation that allegedly supports it. Read the cited source when the
+   chain does not contain enough evidence to verify representation.
+4. Test internal consistency: recommendation, design, sequence, tests,
+   risks, rollback, and limitations must agree. Identify the worst plausible
+   failure and whether the package structurally prevents or contains it.
+5. Check confinement. The package may recommend future changes elsewhere,
+   but this Forge run may create no external write or implementation.
+6. Render exactly one verdict:
+   - `PASS`: every material claim is traceable; the design is coherent,
+     testable, bounded, and review-ready.
+   - `HALT-REVISE`: name each failed criterion and return stage (`build`,
+     `research`, or `propose`).
+   - `HALT-REJECT`: the premise is false, unsafe, non-actionable, or cannot
+     be repaired without becoming a different pipeline.
+7. Generate the current UTC ID with `date -u +'%Y%m%dT%H%M%SZ'`. Write one
+   new `forge/verifications/<slug>-rNN.md` from the template. Never append a
+   verdict to the build and never edit an older verification.
+8. Return the artifact path, ID, verdict, return stage, and concise reason
+   to `forge-loop-analyst`. The loop owns status, logbook, validation, and
+   commit.
 
-The forge-loop passes the path to the newly committed forge artifact
-and the workspace it lives in.
+## Learning Admission
 
-### 2. Spawn an Independent Reviewer
+After a verification artifact is complete, `LEARNINGS.md` may be updated
+only when its method pattern already has the completed, non-rejected
+pipeline evidence required by that file's admission rules. Domain findings
+stay in the build.
 
-If a dedicated verifier agent is configured, spawn it with
-instructions:
+## Output Gate -- HARD GATE
 
-> Verify the artifact at `<artifact-path>` in workspace
-> `Suggi-Workstation/<workspace>`.
-> Render APPROVE, FLAG, or REJECT. Append verification block.
-> Commit and push.
+PASS only when:
 
-The reviewer agent must:
-- Run in its own workspace (isolated from the author)
-- Use a different model than the author
-- Have zero access to the author's session context
-- Read the artifact cold from the GitHub repo
-- Append a verification block (verdict + reasoning), commit, push
+- every material build claim maps to evidence in the parent chain;
+- every acceptance test has a concrete pass/fail condition;
+- limitations and counter-evidence are not suppressed;
+- verdict and return stage follow the state machine;
+- frontmatter and body match the template; and
+- the only new stage artifact is inside `forge/verifications/`.
 
-If no dedicated verifier agent exists, fall back to a COLD READ:
-the author re-reads the artifact as an independent reviewer would --
-fresh eyes, checking against the stage template, answering: does this
-artifact meet the stage's PASS criteria? Does it fabricate anything?
-Is the provenance chain intact? Render APPROVE, FLAG, or REJECT
-explicitly.
-
-### 3. Read the Verdict
-
-After the reviewer completes, read the artifact to extract the
-verdict from the appended verification block. Pass the verdict
-back to forge-loop for logging.
+Any missing item is HALT. A timeout, tool failure, or uncertainty is never
+treated as PASS.
 
 ## Related
 
-- `forge/protocol.md` -- pipeline specification
-- `skills/forge-loop/SKILL.md` -- invokes this skill
-- `governance/skills/forge-*/SKILL.md` -- the stage skills this gate verifies
+- `governance/skills/forge-verify/assets/template.md`
+- `governance/skills/forge-loop-analyst/SKILL.md`
+- `governance/skills/forge-build/SKILL.md`
+- `forge/protocol.md`

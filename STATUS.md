@@ -6,21 +6,20 @@ author: Link
 ---
 # STATUS.md -- Current Pipeline State
 
-The authoritative current-state snapshot. Updated whenever the pipeline
-moves, halts, recovers, or waits. A fresh loop resumes from this file
-alone. Values below are birth placeholders.
+The sole current-state cursor. Keep this field set and order fixed. Stage
+artifacts and logbook entries hold history; this file holds only what is
+true now.
 
-mode: idle
+state: ready
 pipeline: none
-anchor: pending
-stage: none
+research-path: none
+stage: ideate
+owner: Researcher
 active-artifact: none
-parent-chain: none
-last-gate: none
-verification: none
-next-action: none
-retry-count: 0
-last-commit: none
-last-published-commit: none
-stop-reason:
-updated: 2026-08-12T17:12 UTC
+revision: 0
+failure-count: 0
+last-verdict: none
+last-event: none
+next-action: Researcher may run forge-loop-researcher and select one anchor path.
+blocker: none
+updated: 2026-09-01T17:45:40Z
