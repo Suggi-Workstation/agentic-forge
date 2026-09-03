@@ -1,43 +1,64 @@
-version: "2.0"
-description: "Small Forge-native retrieval checks."
-
+version: '2.0'
+status: provisional-agent-curated
+description: Stage-complete Forge retrieval benchmark.
 queries:
-  - qid: f001
-    question: "What is the eternal mission of the Agentic Forge?"
-    gold_file: "ANCHOR.md"
-    domain: control
-
-  - qid: f002
-    question: "How do Researcher and Analyst handoffs work between stages?"
-    gold_file: "forge/protocol.md"
-    domain: protocol
-
-  - qid: f003
-    question: "What does the Researcher do in one short Forge session?"
-    gold_file: "governance/skills/forge-loop-researcher/SKILL.md"
-    domain: skills
-
-  - qid: f004
-    question: "How does the Analyst form an independent baseline?"
-    gold_file: "governance/skills/forge-loop-analyst/SKILL.md"
-    domain: skills
-
-  - qid: f005
-    question: "What must a final Forge build contain?"
-    gold_file: "governance/skills/forge-build/assets/template.md"
-    domain: templates
-
-  - qid: f006
-    question: "Who writes LEARNINGS and when is a lesson admitted?"
-    gold_file: "LEARNINGS.md"
-    domain: control
-
-  - qid: f007
-    question: "What future stagger is planned for Researcher and Analyst?"
-    gold_file: "README.md"
-    domain: documentation
-
-  - qid: f008
-    question: "How does Analyst evaluate research before build?"
-    gold_file: "governance/skills/forge-evaluate/SKILL.md"
-    domain: skills
+- qid: f001
+  question: What is the eternal mission of the Agentic Forge?
+  gold_files:
+  - ANCHOR.md
+  domain: control
+- qid: f002
+  question: How do Researcher and Analyst handoffs work between stages?
+  gold_files:
+  - forge/protocol.md
+  domain: protocol
+- qid: f003
+  question: What does the Researcher do in one short Forge session?
+  gold_files:
+  - governance/skills/forge-loop-researcher/SKILL.md
+  domain: skills
+- qid: f004
+  question: How does the Analyst form an independent baseline?
+  gold_files:
+  - governance/skills/forge-loop-analyst/SKILL.md
+  domain: skills
+- qid: f005
+  question: What must a final Forge build contain?
+  gold_files:
+  - governance/skills/forge-build/assets/template.md
+  domain: templates
+- qid: f006
+  question: Who writes LEARNINGS and when is a lesson admitted?
+  gold_files:
+  - LEARNINGS.md
+  domain: control
+- qid: f007
+  question: What future stagger is planned for Researcher and Analyst?
+  gold_files:
+  - README.md
+  domain: documentation
+- qid: f008
+  question: How does Analyst evaluate research before build?
+  gold_files:
+  - governance/skills/forge-evaluate/SKILL.md
+  domain: skills
+- qid: f009
+  question: How does Researcher select one narrow idea for the Forge?
+  gold_files:
+  - governance/skills/forge-ideate/SKILL.md
+  domain: skills
+- qid: f010
+  question: How does Researcher turn an idea into acceptance criteria?
+  gold_files:
+  - governance/skills/forge-propose/SKILL.md
+  domain: skills
+- qid: f011
+  question: How does Researcher gather and record evidence for a proposal?
+  gold_files:
+  - governance/skills/forge-research/SKILL.md
+  domain: skills
+- qid: f012
+  question: How does Analyst verify a build before human review?
+  gold_files:
+  - governance/skills/forge-verify/SKILL.md
+  domain: skills

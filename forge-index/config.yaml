@@ -1,5 +1,5 @@
 # forge-index config
-# Dense embeddings plus BM25 keyword retrieval.
+# EmbeddingGemma dense retrieval plus BM25 and RRF.
 
 embedding:
   model: "unsloth/embeddinggemma-300m"
@@ -17,7 +17,6 @@ reranker:
 chunking:
   max_chars: 1500
   overlap_chars: 200
-  heading_aware: true
 
 bm25:
   k1: 1.5
