@@ -1,6 +1,6 @@
-version: '2.0'
+version: '3.0'
 status: provisional-agent-curated
-description: Stage-complete Forge retrieval benchmark.
+description: Proposal-ending Forge workflow and template retrieval benchmark.
 queries:
 - qid: f001
   question: What is the eternal mission of the Agentic Forge?
@@ -20,12 +20,12 @@ queries:
 - qid: f004
   question: How does the Analyst form an independent baseline?
   gold_files:
-  - governance/skills/forge-loop-analyst/SKILL.md
+  - governance/skills/forge-evaluate/SKILL.md
   domain: skills
 - qid: f005
-  question: What must a final Forge build contain?
+  question: What must an implementable final Forge proposal contain?
   gold_files:
-  - governance/skills/forge-build/assets/template.md
+  - governance/template-proposal.md
   domain: templates
 - qid: f006
   question: Who writes LEARNINGS and when is a lesson admitted?
@@ -38,7 +38,7 @@ queries:
   - README.md
   domain: documentation
 - qid: f008
-  question: How does Analyst evaluate research before build?
+  question: How does Analyst evaluate research before a final proposal?
   gold_files:
   - governance/skills/forge-evaluate/SKILL.md
   domain: skills
@@ -48,7 +48,7 @@ queries:
   - governance/skills/forge-ideate/SKILL.md
   domain: skills
 - qid: f010
-  question: How does Researcher turn an idea into acceptance criteria?
+  question: How does Researcher answer evaluation and specify concrete changes?
   gold_files:
   - governance/skills/forge-propose/SKILL.md
   domain: skills
@@ -58,7 +58,50 @@ queries:
   - governance/skills/forge-research/SKILL.md
   domain: skills
 - qid: f012
-  question: How does Analyst verify a build before human review?
+  question: How does Analyst review the actual proposal before human approval?
   gold_files:
-  - governance/skills/forge-verify/SKILL.md
+  - governance/template-review.md
+  domain: templates
+- qid: f013
+  question: How can reflections produce research ideas without mistaking repeated stories for independent evidence?
+  gold_files:
+  - ANCHOR.md
+  - governance/skills/forge-ideate/SKILL.md
+  domain: discovery
+- qid: f014
+  question: How are graveyard entries and accepted or pending proposals checked before starting duplicate research?
+  gold_files:
+  - governance/skills/forge-ideate/SKILL.md
+  - governance/template-idea.md
+  domain: discovery
+- qid: f015
+  question: Which identifier connects all revisions of an idea research evaluation and proposal?
+  gold_files:
+  - forge/protocol.md
+  domain: provenance
+- qid: f016
+  question: What happens when revision cycles exceed the budget or a rejected idea needs reopening?
+  gold_files:
+  - forge/protocol.md
+  domain: protocol
+- qid: f017
+  question: Can a reflection reveal new gaps after the initial Feynman explanation?
+  gold_files:
+  - governance/skills/forge-loop-feynman/SKILL.md
   domain: skills
+- qid: f018
+  question: What evidence contradictions alternatives and feedback responses belong in a research report?
+  gold_files:
+  - governance/template-research.md
+  domain: templates
+- qid: f019
+  question: How should an evaluation record its target baseline findings verdict and learning decision?
+  gold_files:
+  - governance/template-evaluation.md
+  domain: templates
+- qid: f020
+  question: When may the Analyst write method learnings and when must Researcher leave them unchanged?
+  gold_files:
+  - LEARNINGS.md
+  - governance/skills/forge-loop-analyst/SKILL.md
+  domain: control

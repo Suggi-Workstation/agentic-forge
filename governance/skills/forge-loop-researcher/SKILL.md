@@ -6,43 +6,44 @@ disable-model-invocation: false
 ---
 # Forge Loop -- Researcher
 
-This is the future Researcher entrypoint. It advances at most one stage and
-finishes within 10-15 minutes.
+The Researcher entrypoint advances at most one stage per bounded session.
+It is a canonical blueprint, not an installed or scheduled runtime skill.
 
 ## Scope Gate
 
-- Resolve the current git root and write only inside it.
-- Never edit profiles, shared skills, cron, services, runtime config,
-  agentic-brain, or investing-hub.
-- Brain and web evidence are read-only.
-- Never push directly; commit and let the watcher publish.
+Apply the Session Transaction and Scope in `forge/protocol.md` before any
+write. Resolve the authorized Forge root, not an arbitrary current repo.
+PASS requires matching role/cursor and known clean inputs; HALT on dirty,
+conflicting, missing, or out-of-scope state. Use the configured model.
 
 ## Procedure
 
-1. Read `ANCHOR.md`, `STATUS.md`, and `forge/protocol.md`.
+1. Read `ANCHOR.md`, `STATUS.md`, `forge/protocol.md`, and `LEARNINGS.md`.
+   Method memory is available before idea selection, not only afterwards.
 2. If `owner` is not Researcher or `state` is awaiting-review, return NO-OP
    without writes.
-3. Invoke exactly one skill from the current stage; that skill owns the
-   Feynman ordering and artifact body:
-   - `ideate` -> `forge-ideate`
-   - `propose` -> `forge-propose`
-   - `research` -> `forge-research`
-   - `build` -> `forge-build`
-4. Write at most one stage artifact.
-5. If repeated evidence supports one method lesson, update `LEARNINGS.md`.
-6. Update the fixed fields in `STATUS.md` and append one multiline
-   `research` ENT block to `logbook/progress.log`.
-7. Run `bash scripts/validate-ids.sh` and the ASCII gate.
-8. Commit only the changed Forge files as Researcher, then exit.
+3. Read and execute exactly one canonical skill under `governance/skills/`:
+   - `ideate` -> `forge-ideate/SKILL.md`
+   - `research` -> `forge-research/SKILL.md`
+   - `propose` -> `forge-propose/SKILL.md`
+   Any other owned stage HALTs. The selected skill owns its template and
+   Feynman procedure; reading a blueprint is not permission to install it.
+4. On a valid stage result, complete the protocol's artifact/STATUS/log
+   transaction and commit only the intended Forge files as the actual
+   author. A new evidence gap follows the protocol's Analyst handoff;
+   timeout follows its resume handling. NO-OP produces no writes.
+5. LEARNINGS is read-only for Researcher. Never add, edit, or retire a
+   lesson here, even if a discovery seems useful. Analyst owns that gate.
+6. Exit after this transaction; do not start the next Researcher stage.
 
 ## Failure
 
-For a real tool or write failure, keep the cursor on the same stage and
-append one multiline `error` ENT block. Do not turn lack of evidence into a
-confident result.
+Use protocol recovery: keep the input/stage, clean only your own partial
+writes, and record real errors. Do not discard unexplained prior changes,
+declare unfinished work complete, or repair external systems.
 
 ## Completion Gate
 
-PASS when one bounded stage is complete, the artifact/STATUS/log agree, the
-checks pass, and the session stayed inside 15 minutes. Otherwise NO-OP or
-HALT cleanly.
+PASS requires the selected skill and protocol gates, consistent handoff,
+unchanged LEARNINGS, and no chained stage. Otherwise HALT faulty work;
+no-lead or wrong-owner exits are legitimate NO-OPs, not fabricated progress.

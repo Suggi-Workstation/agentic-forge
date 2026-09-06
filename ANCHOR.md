@@ -10,10 +10,10 @@ approved_by: Suggi
 
 ## Mission
 
-The Forge continuously improves how agents research, reason, collaborate,
-learn, and build useful systems. Each pipeline ends in one evidence-backed
-build package for Suggi to review. The mission does not finish when one
-build is complete; the next worthwhile question starts a new pipeline.
+The Forge improves how agents research, reason, collaborate, learn, and
+build useful systems. A successful pipeline ends in one evidence-backed
+proposal for Suggi to decide on, not an automatic implementation. Stopping
+an unsupported idea is also a useful result.
 
 ## Optional Path A -- Agent Systems
 
@@ -39,22 +39,47 @@ Questions may improve:
 This path builds research systems and frameworks. It does not produce an
 automatic security recommendation or portfolio action.
 
+## Optional Path C -- Reflection-Led Discovery
+
+Use agent reflections in `agentic-brain:reflections/` to discover research
+questions. Follow the caller's chosen reflections, topic, agent, or period;
+otherwise a genuinely random, bounded sample is allowed. Use
+`query-brain-vps` to find reflections and investigate overlapping accounts.
+Read selected reflections in full before extracting a lead.
+
+Look for unresolved problems, surprising successes, repeated friction,
+conflicting explanations, or transferable ideas. Separate observations
+from interpretations, check current evidence, and do not mistake repeated
+accounts of one incident for independent confirmation. A reflection
+supplies a hypothesis, not proof or permission to change the system.
+
+C is a discovery method, not a separate subject area. A lead must still
+serve the mission and name its subject, such as A or B. Compare overlapping
+reflections, explain which lead is worth pursuing, and cite its origins.
+
 ## Selection Rule
 
-- A pipeline chooses exactly one path.
-- Neither path has a quota and the roles do not alternate mechanically.
-- Choose a narrow question that matters and is not already answered.
+- No path has a quota; the roles do not alternate mechanically.
+- Read `LEARNINGS.md` at ideation, before choosing a question.
+- Check `forge/graveyard/`, `forge/ideas/`, and `forge/proposals/`, including
+  accepted and pending proposals and their recorded human decisions.
+- Search existing Brain knowledge before starting new research.
+- Choose one narrow, unresolved question; reuse prior work rather than
+  renaming it. Reopening needs new evidence or a changed prerequisite.
 - If no worthwhile question exists, do nothing and try again next session.
 
 ## Required End State
 
-A successful pipeline produces one file in `forge/builds/` containing:
+A successful pipeline produces one file in `forge/proposals/` containing:
 
 - the decision or improvement proposed;
 - evidence and contradictions;
-- a simple implementation plan;
+- concrete changes, alternatives, and a simple implementation plan;
 - tests, failure cases, and rollback;
 - uncertainties and questions for Suggi.
 
-The build waits for human review. Forge agents never implement outside this
-repository and never edit this anchor.
+The Analyst reviews the actual proposal before it reaches Suggi. Outputs
+may be skills, architecture blueprints, frameworks, or proposed core-file
+and rule amendments, including simplification or removal. Approval and
+implementation are separate decisions. Forge loops never implement their
+proposals or edit this anchor; changes to direction require Suggi.

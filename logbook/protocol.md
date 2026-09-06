@@ -25,7 +25,7 @@ Entries are append-only and counters are sequential per file.
 ## [ENT-001] | 2026-09-01 19:47 UTC | Researcher | research | ref: forge/ideas/example-r01.md | see: 20260901T194700Z
 Stage: ideate. Result: PASS.
 Artifact: 20260901T194700Z.
-Next: propose / Researcher.
+Next: research / Researcher.
 ```
 
 Rules:
@@ -40,17 +40,21 @@ Rules:
 ## Session Use
 
 1. Read this protocol and the tails of both active logs.
-2. Append one progress entry after a completed stage.
+2. Append one progress entry after a completed stage, evidence-gap handoff,
+   meaningful time-budget checkpoint, or explicitly directed human decision
+   under `forge/protocol.md`. Do not describe an unfinished stage as complete.
 3. Append one errors entry only when a real failure occurred.
 4. Commit the entry with the stage transaction.
 
-The future 30-minute role stagger prevents simultaneous writers. No file
-lock is part of this system.
+The future role stagger assumes non-overlapping sessions, not guaranteed
+mutual exclusion. Unexpected concurrent edits require a halt. No file lock
+is part of this blueprint.
 
 ## Archiving
 
-`scripts/logbook-archive.py` and
-`.github/workflows/logbook-archive.yml` remain identical to the Brain.
-When any active log exceeds 500 lines, CI archives complete oldest ENT
-blocks under `logbook/archive/<YYYY-MM>/` and keeps roughly 400 active
-lines. ENT IDs never reset.
+`scripts/logbook-archive.py`, invoked by
+`.github/workflows/logbook-archive.yml`, owns the line limits and retention.
+It moves complete oldest ENT blocks to
+`logbook/archive/<name>-<YYYY-MM-DD>.log`. Enumerate archived `progress-*.log`
+files when checking human decisions; do not assume monthly subdirectories.
+ENT IDs never reset.
