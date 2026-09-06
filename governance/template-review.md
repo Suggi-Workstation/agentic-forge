@@ -23,7 +23,7 @@ do not invent test execution. Distinguish blocking issues from suggestions.
 Choose READY, REVISE, REFRAME, REJECT, or DEFER under the protocol.
 READY names this exact proposal for Suggi and grants no approval. REVISE
 specifies research for evidence gaps or propose for design-only fixes.
-State next stage/owner, prior corrective-cycle count and any human extension,
+State next stage, prior corrective-cycle count and any human extension,
 required changes, or the reason and reopening condition for closure.
 
 ## Learning Decision

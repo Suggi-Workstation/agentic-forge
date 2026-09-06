@@ -8,17 +8,17 @@ queries:
   - ANCHOR.md
   domain: control
 - qid: f002
-  question: How do Researcher and Analyst handoffs work between stages?
+  question: How do idea research evaluation and proposal handoffs work between stages?
   gold_files:
   - forge/protocol.md
   domain: protocol
 - qid: f003
-  question: What does the Researcher do in one short Forge session?
+  question: What does the research loop do in one short Forge session?
   gold_files:
-  - governance/skills/forge-loop-researcher/SKILL.md
+  - governance/skills/forge-loop-research/SKILL.md
   domain: skills
 - qid: f004
-  question: How does the Analyst form an independent baseline?
+  question: How does evaluation form an independent baseline?
   gold_files:
   - governance/skills/forge-evaluate/SKILL.md
   domain: skills
@@ -28,37 +28,37 @@ queries:
   - governance/template-proposal.md
   domain: templates
 - qid: f006
-  question: Who writes LEARNINGS and when is a lesson admitted?
+  question: Which stages may write LEARNINGS and when is a lesson admitted?
   gold_files:
   - LEARNINGS.md
   domain: control
 - qid: f007
-  question: What future stagger is planned for Researcher and Analyst?
+  question: What future stagger is planned for research and evaluation loops?
   gold_files:
   - README.md
   domain: documentation
 - qid: f008
-  question: How does Analyst evaluate research before a final proposal?
+  question: How is research evaluated before a final proposal?
   gold_files:
   - governance/skills/forge-evaluate/SKILL.md
   domain: skills
 - qid: f009
-  question: How does Researcher select one narrow idea for the Forge?
+  question: How does ideation select one narrow idea for the Forge?
   gold_files:
   - governance/skills/forge-ideate/SKILL.md
   domain: skills
 - qid: f010
-  question: How does Researcher answer evaluation and specify concrete changes?
+  question: How does a proposal answer evaluation and specify concrete changes?
   gold_files:
   - governance/skills/forge-propose/SKILL.md
   domain: skills
 - qid: f011
-  question: How does Researcher gather and record evidence for a proposal?
+  question: How does research gather and record evidence for a proposal?
   gold_files:
   - governance/skills/forge-research/SKILL.md
   domain: skills
 - qid: f012
-  question: How does Analyst review the actual proposal before human approval?
+  question: How does final review check the actual proposal before human approval?
   gold_files:
   - governance/template-review.md
   domain: templates
@@ -100,8 +100,8 @@ queries:
   - governance/template-evaluation.md
   domain: templates
 - qid: f020
-  question: When may the Analyst write method learnings and when must Researcher leave them unchanged?
+  question: When may completed evaluation or final review write method learnings and when must ideation research and proposals leave them unchanged?
   gold_files:
   - LEARNINGS.md
-  - governance/skills/forge-loop-analyst/SKILL.md
+  - governance/skills/forge-loop-evaluate/SKILL.md
   domain: control

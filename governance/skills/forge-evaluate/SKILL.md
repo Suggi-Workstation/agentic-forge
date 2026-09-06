@@ -6,20 +6,21 @@ disable-model-invocation: false
 ---
 # Forge Evaluate
 
-Independently review one Researcher artifact in a separate Analyst context.
+Independently review one research or proposal artifact under the protocol's
+independent-agent/context requirement.
 The same skill handles research evaluation and final proposal review;
-there is no third agent or automatic model switch.
+there is no fixed agent roster or automatic model switch.
 
 ## Procedure
 
-1. Run through the Analyst loop and read `forge/protocol.md` and LEARNINGS.
+1. Run through `forge-loop-evaluate` and read `forge/protocol.md` and LEARNINGS.
    At `evaluate`, use `governance/template-evaluation.md`; at `final-review`,
    use `governance/template-review.md`. Any other stage is a HALT.
 2. Inspect target metadata without reading its body. Read the root/current
    idea and required antecedents: for final review, include the research,
    its evaluation, and prior requested corrections. Record a short baseline
    of expected evidence and failure conditions before opening the target
-   body. Do not inherit the Researcher's private reasoning.
+   body. Do not inherit the drafting session's private reasoning.
 3. Read the entire target. Check its actual claims against the baseline,
    primary sources, contrary evidence, and the exact artifact links. Check
    material citations independently; a reflection or earlier verdict does
@@ -36,7 +37,7 @@ there is no third agent or automatic model switch.
 6. Write one evaluation or review under the corresponding template gate.
    REJECT/DEFER goes directly to `forge/graveyard/`; all other verdicts go
    to `forge/evaluations/`. The verdict itself is the closure record when
-   stopping. Do not modify the Researcher's artifact.
+   stopping. Do not modify the target artifact.
 7. Only after completing this evaluation or final review, apply the
    admission gate in LEARNINGS. Update an existing method lesson or add
    one only if supported; otherwise leave LEARNINGS unchanged. Return the

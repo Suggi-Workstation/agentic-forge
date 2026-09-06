@@ -26,8 +26,8 @@ Use value-investing principles for investing questions.
 
 ## Response to Feedback and Remaining Questions
 
-Answer each material Analyst finding with evidence, a correction, or a
-reasoned disagreement. Mark unresolved blockers and decision-relevant next
+Answer each material evaluation/review finding with evidence, a correction,
+or a reasoned disagreement. Mark unresolved blockers and decision-relevant next
 questions. On the first report, say no prior evaluation exists. If optional
 confidence is present, explain its evidential basis and limitations.
 

@@ -7,15 +7,15 @@ disable-model-invocation: false
 # Forge Ideate
 
 Create one useful question, not a research report or an early proposal.
-Run only through the Researcher loop at `ideate`; follow the common
+Run only through `forge-loop-research` at `ideate`; follow the common
 transaction in `forge/protocol.md` and `governance/template-idea.md`.
 
 ## Procedure
 
 1. Read ANCHOR, STATUS, protocol, and LEARNINGS before selecting a lead.
-   For a reframe, read the existing idea and Analyst verdict; preserve the
-   original pipeline ID. PASS when the assignment and method lessons are
-   understood; HALT on missing or conflicting inputs.
+   For a reframe, read the existing idea and evaluation/review verdict;
+   preserve the original pipeline ID. PASS when the assignment and method
+   lessons are understood; HALT on missing or conflicting inputs.
 2. Enumerate files in `forge/graveyard/`, `forge/ideas/`, and
    `forge/proposals/` with `search_files`. Search the candidate problem and
    synonyms, read plausible overlaps, and follow their research and verdict

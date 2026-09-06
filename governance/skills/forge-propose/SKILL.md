@@ -7,12 +7,12 @@ disable-model-invocation: false
 # Forge Propose
 
 Turn evaluated evidence into a concrete blueprint for Suggi. This is the
-final Researcher output, not a research-plan stage and not implementation.
+proposal artifact, not a research-plan stage and not implementation.
 Use `forge/protocol.md` and `governance/template-proposal.md`.
 
 ## Procedure
 
-1. Run only through the Researcher loop at `propose`. Read LEARNINGS, the
+1. Run only through `forge-loop-research` at `propose`. Read LEARNINGS, the
    root/current idea, current research and its exact ADVANCE evaluation,
    and any revision request or human decision. HALT if the evaluation
    covers a different research revision or has unresolved blocking work.
@@ -24,9 +24,9 @@ Use `forge/protocol.md` and `governance/template-proposal.md`.
    alternatives, scope/non-goals, dependencies, ordered implementation,
    acceptance/regression checks, worst failure, and reversal. Label new
    files as proposed; do not imply they exist or tests have already run.
-4. If new decision-critical evidence is needed, request Analyst evaluation
+4. If new decision-critical evidence is needed, request evaluation
    of the current research through the protocol's evidence-gap handoff;
-   record the exact gap and write no proposal. Analyst decides the bounded
+   record the exact gap and write no proposal. Evaluation decides the bounded
    research correction or closure. Do not self-authorize more research or
    hide a research gap in implementation detail.
 5. Complete the proposal template and write one file in `forge/proposals/`.

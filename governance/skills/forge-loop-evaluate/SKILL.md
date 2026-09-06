@@ -1,29 +1,30 @@
 ---
-name: forge-loop-analyst
-description: "Run one short Analyst turn in the Forge."
+name: forge-loop-evaluate
+description: "Run one evaluation or final-review stage in the Forge."
 user-invocable: false
 disable-model-invocation: false
 ---
-# Forge Loop -- Analyst
+# Forge Loop -- Evaluate
 
-The Analyst entrypoint evaluates research or reviews a final proposal,
+This entrypoint evaluates research or reviews a final proposal,
 one bounded stage per session. It does not install or schedule itself.
 
 ## Scope Gate
 
 Apply the Session Transaction and Scope in `forge/protocol.md`. Before
-any write, PASS requires the authorized Forge root, valid ownership, and
-known clean inputs; otherwise HALT. Use a separate Analyst context and the
-configured model, not a self-review by the Researcher.
+any write, PASS requires the authorized Forge root, a supported stage, and
+known clean inputs; otherwise HALT. Before evaluation starts, verify the
+protocol's independent-agent/context requirement. Use the configured model.
 
 ## Procedure
 
 1. Read `ANCHOR.md`, `STATUS.md`, `forge/protocol.md`, and `LEARNINGS.md`.
-2. If `owner` is not Analyst or `state` is awaiting-review, return NO-OP
-   without writes.
+2. Validate the cursor under the protocol. At `ideate`, `research`,
+   `propose`, or `awaiting-review`, return NO-OP without writes. Unknown or
+   inconsistent state/stage HALTs, rather than being treated as unsupported work.
 3. At `evaluate` or `final-review`, read and execute
    `governance/skills/forge-evaluate/SKILL.md` in its corresponding mode.
-   Any other owned stage HALTs. The skill records a cold baseline before
+   The skill records a cold baseline before
    reading the target body and selects the appropriate template.
 4. Complete one verdict, including the exact next stage or graveyard
    closure. No missing source, timeout, or unperformed test implies READY.
@@ -48,4 +49,4 @@ edits require a recovery decision, never a guessed verdict or reset.
 
 PASS requires the template/protocol gates, a checked independent verdict,
 correct handoff and budget, and every learning edit passing its separate
-admission gate. Otherwise HALT faulty writes; wrong ownership is NO-OP.
+admission gate. Otherwise HALT faulty writes; a valid unsupported stage is NO-OP.

@@ -6,9 +6,9 @@ disable-model-invocation: false
 ---
 # Forge Feynman Loop
 
-Use inside a Researcher stage for a provisional explanation, explicit gaps,
-evidence checks, and a clearer synthesis. It writes nothing by itself.
-It does not replace the independent Analyst evaluation.
+Use inside `ideate`, `research`, or `propose` for a provisional explanation,
+explicit gaps, evidence checks, and a clearer synthesis. It writes nothing
+by itself and does not replace independent evaluation.
 
 ## Order
 
@@ -24,7 +24,7 @@ It does not replace the independent Analyst evaluation.
 5. Rebuild the explanation from checked evidence. Separate what is known,
    inferred, disputed, and still unknown; simplify without hiding limits.
 6. Return the result to the calling stage and its template gate. Meaningful
-   uncertainty can be reported for Analyst assessment; do not force closure.
+   uncertainty can be reported for evaluation; do not force closure.
 
 ## Gate
 

@@ -22,7 +22,8 @@ Record the duplicate search scope and compared graveyard, idea, proposal,
 and Brain paths. Include accepted/pending proposal dispositions and their
 exact decision references, or say that no explicit decision exists.
 Explain the genuinely unresolved difference, or stop rather than duplicate.
-For a reframe, identify the Analyst verdict and answer its material findings.
+For a reframe, identify the evaluation/review verdict and answer its
+material findings.
 
 ## Research Plan
 

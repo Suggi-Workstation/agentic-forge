@@ -19,7 +19,7 @@ state whether it blocks advancement. No mandatory numerical score exists.
 ## Verdict and Handoff
 
 Choose ADVANCE, REVISE, REFRAME, REJECT, or DEFER under the protocol.
-State the exact next stage/owner, decisive reasons, and required evidence
+State the exact next stage, decisive reasons, and required evidence
 or corrections. Count prior corrective cycles and cite any human extension.
 For closure, explain why work stops and what would justify reopening.
 ADVANCE means a proposal is justified, not that the idea is approved.

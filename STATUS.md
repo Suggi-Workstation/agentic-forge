@@ -12,7 +12,6 @@ short. Stage artifacts and logbook entries hold the detail.
 state: ready
 pipeline: none
 stage: ideate
-owner: Researcher
 active-artifact: none
-next-action: Researcher may run forge-loop-researcher.
-updated: 2026-09-06T17:26:05Z
+next-action: Run ideate through forge-loop-research.
+updated: 2026-09-06T18:07:39Z

@@ -22,16 +22,17 @@ Entries are append-only and counters are sequential per file.
 ## Format
 
 ```text
-## [ENT-001] | 2026-09-01 19:47 UTC | Researcher | research | ref: forge/ideas/example-r01.md | see: 20260901T194700Z
+## [ENT-001] | 2026-09-01 19:47 UTC | <actual agent> | research | ref: forge/ideas/example-r01.md | see: 20260901T194700Z
 Stage: ideate. Result: PASS.
 Artifact: 20260901T194700Z.
-Next: research / Researcher.
+Next: research.
 ```
 
 Rules:
 
 - Derive the next ENT ID from that file's active and archived entries.
 - Use UTC and one major fact per short body line.
+- Record the actual agent in the header; use stage names for handoffs.
 - Put one blank line before every entry header.
 - Never edit, delete, or renumber an old entry.
 - Do not write no-op entries.
@@ -46,7 +47,7 @@ Rules:
 3. Append one errors entry only when a real failure occurred.
 4. Commit the entry with the stage transaction.
 
-The future role stagger assumes non-overlapping sessions, not guaranteed
+The future loop stagger assumes non-overlapping sessions, not guaranteed
 mutual exclusion. Unexpected concurrent edits require a halt. No file lock
 is part of this blueprint.
 

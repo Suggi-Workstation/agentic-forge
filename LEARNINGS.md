@@ -7,9 +7,10 @@ author: Link
 # LEARNINGS.md -- Agent Method Memory
 
 Reusable lessons about how the Forge researches and collaborates. Only
-the Analyst writes lessons, after completing `evaluate` or `final-review`.
-The Researcher reads this file at the start of ideation and before later
-work, but never updates it. Lessons are agent-written, not human-authored.
+completed `evaluate` or `final-review` stages may write lessons, regardless
+of which authorized agent executes them. Read this file at the start of
+ideation and before later work. It is read-only during `ideate`, `research`,
+and `propose`. Lessons are agent-written, not human-authored.
 
 ## Admission Rules
 
@@ -31,12 +32,13 @@ work, but never updates it. Lessons are agent-written, not human-authored.
   evidence in the same reviewed commit. Git preserves prior wording; no
   separate archive folder is used.
 
-## Analyst Admission Gate
+## Learning Admission Gate
 
-Before changing a lesson, PASS requires a completed Analyst evaluation or
-final review, checked repeated evidence, a non-duplicate method lesson,
-and no implied governance or deployment permission. Otherwise HALT the
-learning edit; keep the legitimate stage result and this file unchanged.
+Before changing a lesson, PASS requires the current `evaluate` or
+`final-review` stage to be completed, checked repeated evidence, a
+non-duplicate method lesson, and no implied governance or deployment
+permission. Otherwise HALT the learning edit; keep the legitimate stage
+result and this file unchanged.
 
 ## Learnings
 

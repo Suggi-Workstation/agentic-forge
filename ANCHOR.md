@@ -21,7 +21,7 @@ Questions may improve:
 
 - agent design, harnesses, context, memory, tools, and architecture;
 - agent skills, self-correction, learning, and long-term growth;
-- Researcher/Analyst collaboration and maker-checker workflows;
+- collaboration across research, evaluation, and proposal workflows;
 - shared-brain quality, retrieval, observability, and coordination;
 - practical methods used by strong AI labs and agent builders.
 
@@ -59,7 +59,7 @@ reflections, explain which lead is worth pursuing, and cite its origins.
 
 ## Selection Rule
 
-- No path has a quota; the roles do not alternate mechanically.
+- No path has a quota; subject paths do not alternate mechanically.
 - Read `LEARNINGS.md` at ideation, before choosing a question.
 - Check `forge/graveyard/`, `forge/ideas/`, and `forge/proposals/`, including
   accepted and pending proposals and their recorded human decisions.
@@ -78,7 +78,7 @@ A successful pipeline produces one file in `forge/proposals/` containing:
 - tests, failure cases, and rollback;
 - uncertainties and questions for Suggi.
 
-The Analyst reviews the actual proposal before it reaches Suggi. Outputs
+Final review checks the actual proposal before it reaches Suggi. Outputs
 may be skills, architecture blueprints, frameworks, or proposed core-file
 and rule amendments, including simplification or removal. Approval and
 implementation are separate decisions. Forge loops never implement their
