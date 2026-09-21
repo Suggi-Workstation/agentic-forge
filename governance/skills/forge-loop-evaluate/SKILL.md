@@ -1,43 +1,52 @@
 ---
 name: forge-loop-evaluate
-description: "Run one evaluation or final-review stage in the Forge."
+description: "Run one Forge ideation, evaluation, or final review."
 user-invocable: false
 disable-model-invocation: false
 ---
-# Forge Loop -- Evaluate
+# Forge Loop -- Ideate and Evaluate
 
-This entrypoint evaluates research or reviews a final proposal,
+This entrypoint originates ideas, evaluates research, or reviews a final proposal,
 one bounded stage per session. It does not install or schedule itself.
 
 ## Scope Gate
 
 Apply the Session Transaction and Scope in `forge/protocol.md`. Before
 any write, PASS requires the authorized Forge root, a supported stage, and
-known clean inputs; otherwise HALT. Before evaluation starts, verify the
+known clean inputs; otherwise HALT. Before evaluation or final review, verify the
 protocol's independent-agent/context requirement. Use the configured model.
 
 ## Procedure
 
 1. Read `ANCHOR.md`, `STATUS.md`, `forge/protocol.md`, and `LEARNINGS.md`.
-2. Validate the cursor under the protocol. At `ideate`, `research`,
-   `propose`, or `awaiting-review`, return NO-OP without writes. Unknown or
-   inconsistent state/stage HALTs, rather than being treated as unsupported work.
-3. At `evaluate` or `final-review`, read and execute
+2. Validate the entire STATUS board and apply the protocol's Pipeline Board
+   and Selection rule: oldest eligible evaluation/final review first, then
+   oldest requested reframe. With neither, attempt one new idea from ANCHOR,
+   even if other pipelines await research or Suggi. Invalid rows or missing
+   inputs HALT the invocation; they are not permission to start new work.
+3. At `ideate`, read and execute `governance/skills/forge-ideate/SKILL.md`.
+   A new idea adds its own row without changing waiting pipelines; a reframe
+   retains its pipeline and correction history. Keep LEARNINGS read-only,
+   complete only the idea transaction and exit. No new lead is a write-free
+   NO-OP; a requested reframe with no viable correction follows protocol HALT.
+4. At `evaluate` or `final-review`, read and execute
    `governance/skills/forge-evaluate/SKILL.md` in its corresponding mode.
    The skill records a cold baseline before
    reading the target body and selects the appropriate template.
-4. Complete one verdict, including the exact next stage or graveyard
+5. Complete one verdict, including the exact next stage or graveyard
    closure. No missing source, timeout, or unperformed test implies READY.
    Record the intended learning decision before freezing that artifact.
-5. Only after that completed evaluation or final review, apply LEARNINGS'
+6. Only after that completed evaluation or final review, apply LEARNINGS'
    admission gate. Make justified method edits or leave the file unchanged;
    never rewrite the completed verdict or manufacture a lesson quota. If
    a planned learning edit cannot pass its gate, report that in the progress
    event and leave LEARNINGS unchanged.
-6. Complete the protocol transaction for the verdict, allowed learning
-   edits, STATUS, and one review ENT event; commit as the actual author.
+7. Complete the protocol transaction for the verdict, allowed learning
+   edits, the selected STATUS row, and one review ENT event identifying its
+   Pipeline. Preserve all other rows; commit as the actual author.
    This loop owns the transaction, not a second stage or a second verdict.
-7. Exit. READY waits for Suggi; it grants no implementation authority.
+8. Exit. READY makes only that pipeline wait for Suggi; other pipelines
+   remain eligible in later invocations. It grants no implementation authority.
 
 ## Failure
 
@@ -47,6 +56,8 @@ edits require a recovery decision, never a guessed verdict or reset.
 
 ## Completion Gate
 
-PASS requires the template/protocol gates, a checked independent verdict,
-correct handoff and budget, and every learning edit passing its separate
-admission gate. Otherwise HALT faulty writes; a valid unsupported stage is NO-OP.
+PASS requires the selected template/protocol gates, correct single-pipeline
+handoff, unchanged unselected rows, and no chained stage. At evaluation or
+final review, also require an independent verdict, correct correction budget,
+and every learning edit passing its separate admission gate. Ideation keeps
+LEARNINGS unchanged. Otherwise HALT faulty writes; no worthwhile new lead is NO-OP.

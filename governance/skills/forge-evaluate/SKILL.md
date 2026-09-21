@@ -14,6 +14,7 @@ there is no fixed agent roster or automatic model switch.
 ## Procedure
 
 1. Run through `forge-loop-evaluate` and read `forge/protocol.md` and LEARNINGS.
+   Use the selected STATUS row and its pipeline only.
    At `evaluate`, use `governance/template-evaluation.md`; at `final-review`,
    use `governance/template-review.md`. Any other stage is a HALT.
 2. Inspect target metadata without reading its body. Read the root/current
@@ -34,7 +35,8 @@ there is no fixed agent roster or automatic model switch.
    Count prior corrective verdicts and any explicit human budget extension
    before requesting another cycle. Name exact blocking questions and what
    evidence would change the decision. A score cannot overrule a blocker.
-6. Write one evaluation or review under the corresponding template gate.
+6. Write one evaluation or review under the corresponding template gate,
+   including the protocol's ordered metadata and Sources Format.
    REJECT/DEFER goes directly to `forge/graveyard/`; all other verdicts go
    to `forge/evaluations/`. The verdict itself is the closure record when
    stopping. Do not modify the target artifact.
@@ -49,4 +51,5 @@ Before the verdict write, PASS requires the recorded cold baseline,
 independent evidence checks, exact target, explicit disposition within
 budget, and the template checklist. Otherwise HALT; no assumed approval.
 Afterwards, learning edits independently PASS the LEARNINGS gate or do not
-occur. The loop verifies the artifact, cursor, event, and commit together.
+occur. The loop verifies the artifact, selected row, Pipeline event, and
+commit together, including preservation of other pipelines.

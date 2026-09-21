@@ -1,6 +1,8 @@
 # Research Template
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `research`.
+Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
+`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
 Destination: `forge/research/`. Link the root/current idea, any prior
 research revision, and the feedback that this report addresses.
 
@@ -31,13 +33,21 @@ or a reasoned disagreement. Mark unresolved blockers and decision-relevant next
 questions. On the first report, say no prior evaluation exists. If optional
 confidence is present, explain its evidential basis and limitations.
 
+## Sources
+
+Use the protocol's Sources Format: a numbered Library-style bibliography
+with author/organization, title, known date, checked passage/use, URL or
+repository path, and source-quality label. Match every body citation to
+its entry. This is the final artifact section; do not copy the checklist.
+
 ## Checklist -- Before Writing
 
 PASS requires every item; any missing item HALTs artifact creation.
 
-- [ ] Metadata and exact input/revision links meet the protocol contract.
+- [ ] Metadata order and exact input/revision links meet the protocol contract.
 - [ ] Investigated questions and reproducible source checks are documented.
 - [ ] Consequential claims are independently supported or explicitly unknown.
 - [ ] Contradictions, source dependence, alternatives, and limitations appear.
 - [ ] Every material feedback item has an explicit response or blocker.
 - [ ] No invented sources, performed tests, approval, or learning edit.
+- [ ] Sources follow the numbered bibliography format; citations and entries agree.

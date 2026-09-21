@@ -1,6 +1,8 @@
 # Idea Template
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `idea`.
+Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
+`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
 Destination: `forge/ideas/`. The root idea r01 starts the shared pipeline ID;
 a reframe keeps that ID. Render the sections below as the artifact body,
 replacing instructional text with evidence-backed content.
@@ -32,14 +34,22 @@ alternatives (including doing nothing), and achievable acceptance criteria.
 Keep the next research unit small; record unknowns rather than conclusions.
 If confidence is supplied, justify it and what would change it.
 
+## Sources
+
+Use the protocol's Sources Format: a numbered Library-style bibliography
+with author/organization, title, known date, checked passage/use, URL or
+repository path, and source-quality label. Match every body citation to
+its entry. This is the final artifact section; do not copy the checklist.
+
 ## Checklist -- Before Writing
 
 PASS requires every item; any missing item HALTs artifact creation.
 
-- [ ] Metadata, pipeline, revision, and links meet the protocol contract.
+- [ ] Metadata order, pipeline, revision, and links meet the protocol contract.
 - [ ] LEARNINGS was read before selection; mission fit and value are clear.
 - [ ] Graveyard, ideas, proposals (accepted and pending), and Brain checked.
 - [ ] Relevant matches were read and the non-duplicate gap is explained.
 - [ ] Reflection origin/overlap/current-state checks are recorded if used.
 - [ ] Hypothesis, alternative, disconfirmation, and bounded plan are explicit.
 - [ ] Reframes answer feedback and keep the same pipeline; no empty fields.
+- [ ] Sources follow the numbered bibliography format; citations and entries agree.

@@ -1,6 +1,8 @@
 # Proposal Template
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `proposal`.
+Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
+`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
 Destination: `forge/proposals/`. Link the root/current idea, current research
 and its ADVANCE evaluation, previous proposal revision, and review/decision
 feedback when present. This file requests a decision; it does not grant one.
@@ -34,13 +36,21 @@ prevention, costs/tradeoffs, rollback or reversal, and residual uncertainty.
 Distinguish checks already performed during research from future tests.
 Implementation and deployment remain separately authorized work.
 
+## Sources
+
+Use the protocol's Sources Format: a numbered Library-style bibliography
+with author/organization, title, known date, checked passage/use, URL or
+repository path, and source-quality label. Match every body citation to
+its entry. This is the final artifact section; do not copy the checklist.
+
 ## Checklist -- Before Writing
 
 PASS requires every item; any missing item HALTs proposal creation.
 
-- [ ] Metadata and exact evaluated-research/revision links meet the protocol.
+- [ ] Metadata order and exact evaluated-research/revision links meet the protocol.
 - [ ] Current research has a matching ADVANCE evaluation; blockers resolved.
 - [ ] Feedback, evidence, counterevidence, alternatives, and non-goals included.
 - [ ] Change specification is feasible and detailed enough to implement.
 - [ ] Acceptance/regression/negative tests and worst-case reversal specified.
 - [ ] Future work is not claimed as performed, approved, or deployed.
+- [ ] Sources follow the numbered bibliography format; citations and entries agree.

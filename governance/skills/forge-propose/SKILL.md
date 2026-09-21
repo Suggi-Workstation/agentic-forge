@@ -12,7 +12,8 @@ Use `forge/protocol.md` and `governance/template-proposal.md`.
 
 ## Procedure
 
-1. Run only through `forge-loop-research` at `propose`. Read LEARNINGS, the
+1. Run only through `forge-loop-research` at the selected row's `propose` stage.
+   Read LEARNINGS, the
    root/current idea, current research and its exact ADVANCE evaluation,
    and any revision request or human decision. HALT if the evaluation
    covers a different research revision or has unresolved blocking work.
@@ -29,7 +30,8 @@ Use `forge/protocol.md` and `governance/template-proposal.md`.
    record the exact gap and write no proposal. Evaluation decides the bounded
    research correction or closure. Do not self-authorize more research or
    hide a research gap in implementation detail.
-5. Complete the proposal template and write one file in `forge/proposals/`.
+5. Complete the proposal template, ordered metadata, and Sources Format
+   in the protocol; write one file in `forge/proposals/`.
    Link the exact research, evaluation, and any reviewed prior proposal.
    Leave all previous artifacts unchanged. Return it to the loop for the
    final-review handoff; never claim approval or start implementation.

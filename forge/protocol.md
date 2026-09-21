@@ -20,13 +20,18 @@ research evaluation, final proposal review, and human authorization.
 
 Stages define permissions and routing, not agent identities. Any authorized
 agent may run a supported stage; deployment assignments are outside this
-blueprint. The loop skills are `forge-loop-research` for `ideate`, `research`,
-and `propose`, and `forge-loop-evaluate` for `evaluate` and `final-review`.
+blueprint. The loop skills are `forge-loop-research` for `research` and
+`propose`, and `forge-loop-evaluate` for `ideate`, `evaluate`, and `final-review`.
 Record the actual agent in artifact authorship and log events, never as a
 substitute for stage eligibility. Evaluation and final review require an
 agent other than the target artifact's author, in a separate context that
 does not inherit the drafting session's private reasoning. Check target
 authorship before proceeding; HALT if this independence cannot be met.
+
+Research must be authored by an agent other than the current idea's author.
+The ideator may later evaluate another agent's research, but must record
+the evaluation baseline before reading that report's body. Separate authors
+and contexts do not eliminate confirmation bias or correlated model errors.
 
 | Stage | Output tier | Completed result and next stage |
 |:--|:--|:--|
@@ -60,7 +65,9 @@ for human clarification, not another cycle.
 
 ## Artifact Contract
 
-Required frontmatter for completed artifacts:
+Frontmatter for completed artifacts uses this exact key order. `tags` and
+`confidence` are optional at every tier, including ideas; omit either when
+not useful, without moving the remaining keys. All other shown keys are required.
 
 ```yaml
 ---
@@ -69,13 +76,15 @@ id: <YYYYMMDDTHHMMSSZ>
 tier: <idea|research|evaluation|proposal|review>
 pipeline: <idea r01 id>
 author: <actual author>
+tags: []
 links: []
+confidence: <low|medium|high>
 ---
 ```
 
-Optional fields: `tags` (short list) and `confidence` (`low`, `medium`, or
-`high`, justified in the body; not a calibrated probability). Use only this
-field set; do not add other artifact metadata. Skills retain their tool-facing
+Use a short list for `tags`. Justify `confidence` in the body; it is not a
+calibrated probability. Use only this field set; do not add other artifact
+metadata. Skills retain their tool-facing
 fields: `name`, `description`, `user-invocable`, `disable-model-invocation`.
 
 Generate each ID with `terminal(command="date -u +%Y%m%dT%H%M%SZ")` and
@@ -103,20 +112,95 @@ Templates live directly in `governance/`: `template-idea.md`,
 and `template-review.md`. Their checklists own the body format; stage skills
 own procedure, and this protocol owns metadata, state, and publication.
 
+### Sources Format
+
+Every completed artifact ends with `## Sources`, using the Library's
+numbered bibliography style, not bare `[1] URL` lines. Each entry contains
+the author or organization, verified title, publication date/year when
+available, relevant section/page or use, a URL or exact repository path,
+and a source-quality label: `[high]`, `[medium]`, or `[low]`.
+
+```text
+1. <Author or organization>. <Title>, <verified date/year and section>.
+   <What was checked; abstract/archive/secondary access if applicable>.
+   <URL or repository path> [high]
+```
+
+Choose the quality label from the actual source; the example is not a
+default rating or confidence in the artifact's conclusion. Do not invent
+missing dates, authors, page numbers, or sources. Identify internal documents
+by title and exact path; prior artifacts do not replace independent evidence.
+Body citations use `[1]`, `[2]`, etc. matching consecutive entries, with
+pinpoint passages for material claims. No dangling citations or unused
+bibliography padding. Frontmatter links do not replace this bibliography.
+Template checklists are pre-write instructions, not final artifact sections.
+
+## Pipeline Board and Selection
+
+`STATUS.md` is the only current-state board. Its Markdown table has one
+single-line row per open pipeline, with columns in this order:
+`pipeline`, `state`, `stage`, `active-artifact`, `next-action`, `updated`.
+The table header with no data rows means no open pipelines; do not add a
+`none` placeholder row or a competing global cursor. Keep rows sorted by
+pipeline ID for readability. Closed work remains in artifacts and logs.
+
+Validate every row before selecting work:
+
+- `pipeline` is a unique root idea r01 ID, not an agent name or slug.
+- `state: active` has a stage from the handoff table and an existing exact
+  input artifact from that pipeline. `ideate` here is a requested reframe,
+  not permission to replace a waiting pipeline with a new idea.
+- `state: awaiting-review` has `stage: human-review` and its READY review
+  as input. This row waits for Suggi; other pipelines may continue.
+- `next-action` is concise; `updated` is a tool-derived UTC timestamp.
+  Validate the input chain and disposition, not just the stage spelling:
+  `evaluate` consumes a completed research report, `final-review` a proposal,
+  and `propose` requires a matching ADVANCE evaluation of the current research.
+  Revisions/reframes must have the applicable verdict or human decision.
+
+After validation, select exactly one assignment:
+
+1. The research loop selects active rows at `research` or `propose`.
+2. The evaluation loop first selects active rows at `evaluate` or
+   `final-review`. If none exist, select an active `ideate` reframe row.
+3. Within each eligible group, select the oldest `updated` timestamp;
+   break ties by ascending pipeline ID. Do not select by table position.
+4. If the research loop has no eligible row, return NO-OP without writes.
+   If the evaluation loop has neither a review nor a reframe, read ANCHOR
+   fully and attempt one new ideation, even when other rows are waiting
+   for research or human review. Check all open and closed work for duplicates.
+5. New ideation adds a row only after completing an idea. It uses a fresh
+   pipeline ID and unused slug; it never overwrites a waiting row. No
+   worthwhile new lead means NO-OP. A requested reframe with no viable
+   correction HALTs for human clarification rather than creating a different
+   pipeline or repeatedly logging empty progress.
+
+No pipeline may skip evaluation or human review because another is ready.
+Each invocation does one stage, not one stage per row and not an endless
+ideation loop. Multiple open pipelines permit interleaving; they do not
+authorize overlapping writers or add runtime concurrency protection.
+
+Selection gate: before any stage, PASS requires a valid board, eligible
+oldest assignment (or authorized new-idea fallback), checked inputs and
+authorship. Any invalid row or conflicting input HALTs the invocation;
+do not hide corruption by selecting another pipeline.
+
 ## Graveyard and Human Decisions
 
 Write a `REJECT` or `DEFER` evaluation/review directly to `forge/graveyard/`
 with the same tier and naming convention. That verdict is the closure
 record: reason, evidence, and reopening condition. Do not create a second
 postmortem or move the evidence chain. Count revisions across both verdict
-folders. Reset STATUS to ready for an unrelated next idea.
+folders. Remove only the closed pipeline's STATUS row after recording its
+closure. Never reset or discard another pipeline's row.
 
-After `READY`, both loops stop until Suggi decides. A human-directed task
+After `READY`, that pipeline waits until Suggi decides; both loops may
+continue their eligible work in other pipelines. A human-directed task
 records the exact proposal path/ID, decision (`approved`, `changes`,
 `deferred`, or `rejected`), reasons, and Suggi's instruction in the append-only
 progress log as the actual recording agent. Do not edit the proposal to
-rewrite history. `approved`, `deferred`, or `rejected` releases the cursor
-to ready; `changes` returns that same pipeline to the explicitly requested
+rewrite history. `approved`, `deferred`, or `rejected` removes only that
+pipeline's row; `changes` returns that same row to `state: active` and the requested
 `ideate`, `research`, or `propose` stage, with another final review required.
 If the correction budget is exhausted, obtain an explicit bounded extension
 from Suggi and record it in that decision event; never reset the historical count.
@@ -133,14 +217,12 @@ and a recorded budget; do not evade closure by creating a renamed duplicate.
 1. Resolve the authorized Forge git root. Read `ANCHOR.md`, `STATUS.md`,
    this protocol, `LEARNINGS.md`, and `logbook/protocol.md`. Check git status
    and recent log events before acting. Unknown dirty state, missing inputs,
-   or inconsistent cursor/artifacts -> HALT for recovery, never guess.
-2. Validate the cursor before routing. `ready` means `pipeline: none`,
-   `stage: ideate`, `active-artifact: none`. `state: active` requires a
-   pipeline ID, a stage in the handoff table, and the exact input artifact.
-   `awaiting-review` requires `stage: human-review`, the pipeline ID, and its
-   READY review as input. Unknown or inconsistent state/stage -> HALT.
-   A valid stage outside the invoked loop's supported set, or
-   `awaiting-review`, exits without writes. Agent names never select a loop.
+   or inconsistent board/artifacts -> HALT for recovery, never guess.
+2. Apply Pipeline Board and Selection. Record the selected pipeline, input,
+   stage, current HEAD, board, and log state before substantive work. A new
+   idea has no pipeline ID until its root artifact is generated. Agent names
+   never substitute for stage eligibility. Read only the selected chain in
+   depth, while preserving the other rows and checking cross-pipeline duplicates.
 3. Execute one small stage in a 10-15 minute session, never chaining stages.
    Use the template gate before writing one completed artifact. `ideate`,
    `research`, and `propose` use the Feynman loop; `evaluate` and `final-review`
@@ -151,19 +233,26 @@ and a recorded budget; do not evade closure by creating a renamed duplicate.
    under `LEARNINGS.md`'s admission gate. `ideate`, `research`, and `propose`
    keep learnings read-only, regardless of the executing agent's identity.
    No justified change means no learning edit.
-5. Set STATUS to the handoff: `pipeline` is the root idea ID, `active-artifact`
-   is this output, and `stage` names the next action. `READY` instead
-   sets `state: awaiting-review`, `stage: human-review`.
-   Exceptions take precedence: REJECT/DEFER resets all ready-cursor values;
-   an evidence-gap handoff retains the pipeline and names the current
-   research input, not a nonexistent new artifact. Set a concise next-action
-   and tool-derived UTC updated time; keep the fixed STATUS field set.
+5. Before writing, recheck HEAD, the board, logs, and working tree against
+   the recorded snapshot. Unexpected changes or another active writer require
+   HALT and recovery; never replace the whole board from a stale snapshot.
+   Update only the selected STATUS row, or add the completed new idea's row.
+   Nonterminal handoffs explicitly use `state: active`; `pipeline` is the
+   root idea ID, `active-artifact` is the output, and `stage` is the next action.
+   `READY` sets `state: awaiting-review`, `stage: human-review` for that row.
+   REJECT/DEFER removes only that row. An evidence-gap handoff names the
+   current research input, not a nonexistent new artifact. Set a concise
+   next-action and tool-derived UTC updated time. Preserve all other rows.
 6. Append one complete ENT progress event with the result and exact handoff
    per `logbook/protocol.md`. For time exhaustion, keep the same stage/input,
    record a concise resume point and verified source links, and commit only
-   STATUS/log changes: no completed artifact and no false advance. Real tool
-   failures go to the error log; remove only this session's partial writes.
-7. Re-read changed content. Validate the template, metadata, links, cursor,
+   the selected row/log changes: no completed artifact and no false advance.
+   If new ideation times out before creating a root, append only a meaningful
+   checkpoint with `Pipeline: none`; leave the board unchanged and do not
+   reserve a fabricated ID. Real tool failures go to the error log; remove
+   only this session's partial writes.
+7. Re-read changed content. Validate the template, metadata order, Sources,
+   links, board and preservation of every unselected row,
    ASCII, and absence of secrets. Review the entire diff and stage only
    intended paths. Through `terminal`, run `git diff --cached --check` and
    `bash scripts/validate-ids.sh` to check tracked/newly staged files together.
@@ -172,8 +261,15 @@ and a recorded budget; do not evade closure by creating a renamed duplicate.
    The watcher publishes; never push directly.
    An interrupted/uncommitted transaction requires recovery, not a new stage.
 
-PASS: every pre-write and post-write check succeeds and artifact, STATUS,
-and event agree. HALT: any check fails; do not commit or advance faulty work.
+PASS: every applicable pre-write and post-write check succeeds. For a
+completed nonterminal stage, the artifact, selected STATUS row, and event
+agree on the pipeline and handoff. For closure, the verdict and event agree
+and only that pipeline's row is absent. Evidence-gap handoffs and checkpoints
+require no new completed artifact: verify the specified input, stage, and
+event against the outcome rules above. A pre-root checkpoint uses
+`Pipeline: none` and leaves the board unchanged. All unselected rows remain
+unchanged. NO-OP produces no writes. HALT: any check fails; do not advance
+faulty work.
 A correctly evidenced negative verdict is a successful evaluation, not a
 failed procedural gate. Report publication as pending until remotely verified.
 
@@ -204,10 +300,19 @@ adoption. These are blueprint checks, not a claim of live deployment.
 | Research has an important unresolved evidence gap | Evaluation returns targeted REVISE or DEFER, not ADVANCE by default. |
 | A proposal adds an unsupported implementation detail | Final review blocks readiness and names research/proposal correction. |
 | Corrective budget would be exceeded | DEFER with a reopening condition; no counter reset. |
-| Evidence establishes the idea is not worth pursuing | Graveyard verdict, preserved chain, ready cursor. |
+| Evidence establishes the idea is not worth pursuing | Graveyard verdict, preserved chain, remove only that pipeline's row. |
 | One isolated incident suggests a new method rule | Record tentative finding in evaluation; do not add a reusable lesson. |
 | `ideate`, `research`, or `propose` completes | LEARNINGS remains unchanged, regardless of the executing agent. |
 | A different authorized agent runs the same supported stage | Same routing and write permissions; actual authorship changes, not the workflow. |
 | The target's author attempts its evaluation or final review | HALT before the verdict; stage-neutral naming does not permit self-review. |
-| READY or a valid stage outside the invoked loop's supported set | No autonomous writes or implementation. |
-| Unknown or inconsistent cursor state/stage | HALT rather than disguise an invalid cursor as NO-OP. |
+| Researcher has no research/propose row | Write-free NO-OP; never ideate or self-review. |
+| Analyst has a pending report or final proposal | Oldest eligible review first; no new idea in that run. |
+| Analyst has no review but has a reframe | Ideate within that same pipeline; preserve its ID and budget. |
+| Analyst has no review/reframe; other pipelines await research or Suggi | Attempt one distinct new idea from ANCHOR; preserve waiting rows. |
+| Empty board | Analyst attempts one idea; Researcher is NO-OP. |
+| Two eligible rows or equal updated timestamps | Oldest updated first, then ascending pipeline ID. |
+| READY for pipeline A while B is runnable | A waits untouched; B may proceed, without implementation. |
+| Research author is the current idea author | HALT before research; framing and evidence gathering stay separate. |
+| Unknown/duplicate row, missing input, or wrong pipeline | HALT the invocation, not a selective NO-OP. |
+| Board or repository changes after selection | HALT stale publication; never overwrite another row or log entry. |
+| Completed document has reordered metadata or bare-URL Sources | HALT artifact write until the common format and template checks pass. |

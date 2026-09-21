@@ -1,6 +1,8 @@
 # Evaluation Template
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `evaluation`.
+Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
+`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
 Destination: `forge/evaluations/`, or `forge/graveyard/` for REJECT/DEFER.
 Link the exact research target, root/current idea, and any prior evaluation.
 
@@ -30,13 +32,21 @@ State either the supported method lesson/change eligible for the LEARNINGS
 admission gate after this evaluation, or why LEARNINGS stays unchanged.
 Tentative single-incident observations remain here, not reusable lessons.
 
+## Sources
+
+Use the protocol's Sources Format: a numbered Library-style bibliography
+with author/organization, title, known date, checked passage/use, URL or
+repository path, and source-quality label. Match every body citation to
+its entry. This is the final artifact section; do not copy the checklist.
+
 ## Checklist -- Before Writing
 
 PASS requires every item; any missing item HALTs the verdict write.
 
-- [ ] Metadata, exact target, input links, and revision meet the protocol.
+- [ ] Metadata order, exact target, input links, and revision meet the protocol.
 - [ ] Baseline preceded target-body reading; important sources were checked.
 - [ ] Findings identify both supporting and contrary evidence and blockers.
 - [ ] Verdict, budget, destination, and next stage agree with the protocol.
 - [ ] Closure has a reason and reopening condition; feedback is actionable.
 - [ ] Learning decision is explicit and does not invent repeated evidence.
+- [ ] Sources follow the numbered bibliography format; citations and entries agree.

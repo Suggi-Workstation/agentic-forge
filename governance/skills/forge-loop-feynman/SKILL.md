@@ -12,7 +12,7 @@ by itself and does not replace independent evaluation.
 
 ## Order
 
-1. Read the assignment, controls, LEARNINGS, and required prior work. At
+1. Read the selected pipeline's assignment, controls, LEARNINGS, and required prior work. At
    ideation, source discovery and duplicate/reflection checks may precede
    the question itself; do not pretend those sources were never read.
 2. Before further targeted research, explain the candidate in plain words

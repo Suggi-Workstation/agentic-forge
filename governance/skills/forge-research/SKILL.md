@@ -12,7 +12,9 @@ and `governance/template-research.md` before writing.
 
 ## Procedure
 
-1. Read the root and current idea, LEARNINGS, and the exact STATUS input.
+1. Read the root and current idea, LEARNINGS, and the selected STATUS row's input.
+   Check that the current idea's author is not the research author; otherwise
+   HALT under the protocol's stage-independence rule.
    On revision, also read the evaluation/review findings and affected prior
    research or proposal. Confirm a single pipeline and the specific questions.
 2. Use `governance/skills/forge-loop-feynman/SKILL.md`: provisional explanation,
@@ -27,7 +29,8 @@ and `governance/template-research.md` before writing.
    investing questions, use the ANCHOR's Buffett/Munger criteria rather
    than generic optimization. Check decisive premises against independent
    evidence, or mark them unknown; never fabricate a source quota.
-5. Write one report in `forge/research/` under the template's checklist.
+5. Write one report in `forge/research/` under the template's checklist and
+   the protocol's ordered metadata and Sources Format.
    Negative findings and a well-documented lack of evidence are legitimate
    results for evaluation. A timed-out or unperformed investigation
    is not a completed report; use the protocol's resume handling instead.

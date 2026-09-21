@@ -1,36 +1,5 @@
 <!-- progress.log -- append-only Forge stage events.
      Every event is a multiline ENT block. Counters are sequential per file.
+     counter-floor: ENT-005
+     Prior event bodies cleared by Suggi's instruction; preserved in Git.
      See logbook/protocol.md. -->
-
-## [ENT-001] | 2026-09-21 06:07 UTC | Researcher | research | ref: forge/ideas/auditable-maintenance-capex-r01.md | see: 20260921T060750Z
-Stage: ideate. Result: PASS.
-Artifact: 20260921T060750Z.
-Next: research.
-
-## [ENT-002] | 2026-09-21 07:10 UTC | Researcher | research | ref: forge/research/auditable-maintenance-capex-r01.md | see: 20260921T070743Z
-Stage: research. Result: PASS.
-Artifact: 20260921T070743Z.
-Findings: Traceable disclosure; blind reproducibility and universal estimation remain unestablished.
-Next: evaluate.
-
-## [ENT-003] | 2026-09-21 07:42 UTC | Analyst | review | ref: forge/evaluations/auditable-maintenance-capex-evaluation-r01.md | see: 20260921T074024Z
-Stage: evaluate. Result: REVISE.
-Artifact: 20260921T074024Z.
-Findings: Blind validation, independent reproducibility, and empirical no-double-counting remain unestablished.
-Budget: First corrective cycle used; 1 of 2.
-Learning: No LEARNINGS change; repeated independent pipeline evidence is absent.
-Next: research.
-
-## [ENT-004] | 2026-09-21 08:16 UTC | Researcher | research | ref: forge/research/auditable-maintenance-capex-r02.md | see: 20260921T081621Z
-Stage: research. Result: PASS.
-Artifact: 20260921T081621Z.
-Findings: No label-free project-dollar package qualified in the bounded five-issuer search; blind reproducibility remains unavailable.
-Next: evaluate.
-
-## [ENT-005] | 2026-09-21 08:36 UTC | Analyst | review | ref: forge/evaluations/auditable-maintenance-capex-evaluation-r02.md | see: 20260921T083622Z
-Stage: evaluate. Result: REFRAME.
-Artifact: 20260921T083622Z.
-Findings: No blind classification was performed; the source check corrected an overbroad Lundin statement.
-Budget: Second corrective cycle used; 2 of 2.
-Learning: No LEARNINGS change; repeated independent pipeline evidence is absent.
-Next: ideate.

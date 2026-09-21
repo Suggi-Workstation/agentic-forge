@@ -7,12 +7,14 @@ disable-model-invocation: false
 # Forge Ideate
 
 Create one useful question, not a research report or an early proposal.
-Run only through `forge-loop-research` at `ideate`; follow the common
+Run only through `forge-loop-evaluate` at `ideate`; follow the common
 transaction in `forge/protocol.md` and `governance/template-idea.md`.
 
 ## Procedure
 
-1. Read ANCHOR, STATUS, protocol, and LEARNINGS before selecting a lead.
+1. Read ANCHOR in full, STATUS, protocol, and LEARNINGS before selecting a lead.
+   The loop selects new ideation only when no evaluation, final review, or
+   reframe is eligible; existing waiting pipelines remain on the board.
    For a reframe, read the existing idea and evaluation/review verdict;
    preserve the original pipeline ID. PASS when the assignment and method
    lessons are understood; HALT on missing or conflicting inputs.
@@ -34,14 +36,16 @@ transaction in `forge/protocol.md` and `governance/template-idea.md`.
    method-memory reading come before the candidate's blank-page explanation.
    State a provisional hypothesis, alternative explanation, and unknowns;
    then check sources. New findings may expand or change the question.
-5. Compare the final candidate again against prior work. If it is covered,
-   already resolved, or closed without justified reopening, return NO-OP
-   without a new artifact. A requested same-pipeline reframe is not a
+5. Compare the final candidate again against prior work. For new ideation,
+   if it is covered, already resolved, or closed without justified reopening,
+   return NO-OP without a new artifact. If a requested reframe has no viable
+   correction, HALT for human clarification under the protocol. It is not a
    duplicate solely because its own earlier idea exists: explain the
    substantive correction and preserve the root ID and slug. If required
    prior-work checks are unavailable, HALT rather than claim novelty.
    A new label is not a new question.
-6. Apply the idea template checklist. Write one idea with a small research
+6. Apply the idea template checklist, ordered metadata, and Sources Format
+   in the protocol. Write one idea with a small research
    plan in `forge/ideas/`; return its path and the protocol handoff to the
    loop. Do not perform the full research stage or write LEARNINGS here.
 

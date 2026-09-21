@@ -2,35 +2,7 @@
     Append entries at the bottom. Never edit old entries.
     Format: ## [ENT-NNN] | YYYY-MM-DD HH:MM UTC | Agent | error | ref: path/to/file.md
     Category: error only
+    counter-floor: ENT-006
+    Prior event bodies cleared by Suggi's instruction; preserved in Git.
     See logbook/protocol.md for the full spec.
 -->
-
-## [ENT-001] | 2026-08-12 17:33 UTC | Link | error | ref: logbook/protocol.md
-Batch-created bootstrap files reused one timestamp as their frontmatter id.
-validate-ids.sh flagged DUPLICATE ID: logbook/protocol.md vs ANCHOR.md
-(id: 20260812T171239Z); ascii-guard CI failed on both bootstrap pushes.
-Fix: unique id per file, generated with date -u. The gate already existed
-(validate-ids.sh runs in CI); the scar is process discipline: never reuse
-one timestamp batch across files that carry id: frontmatter.
-
-## [ENT-002] | 2026-09-21 07:10 UTC | Researcher | error | ref: forge/research/auditable-maintenance-capex-r01.md
-An auxiliary citation command placed --ledger after its subcommand and exited before changing repository state.
-Cron policy also blocked execute_code before execution.
-Fix: reran the ledger with the global option first and used approved web retrieval tools; evidence checks completed.
-
-## [ENT-003] | 2026-09-21 07:12 UTC | Researcher | error | ref: forge/research/auditable-maintenance-capex-r01.md
-A citation probe used a 50% coverage threshold that counted procedural and analytical sentences as source claims and returned nonzero.
-Fix: removed the inapplicable quota and reran strict URL-to-citation verification; citations passed.
-
-## [ENT-004] | 2026-09-21 07:42 UTC | Analyst | error | ref: forge/evaluations/auditable-maintenance-capex-evaluation-r01.md
-Source-check probes hit unattended shell and code approval blocks; no blocked command ran and no repository state changed.
-A local PDF parser lacked optional libraries, and direct curl to Morgan Stanley returned HTTP 403.
-Fix: used permitted document extraction, web retrieval, and primary filings; material checks completed.
-
-## [ENT-005] | 2026-09-21 08:16 UTC | Researcher | error | ref: forge/research/auditable-maintenance-capex-r02.md
-Unattended policy blocked local Python parsing probes before execution, and direct curl to Agnico's RSS endpoint returned HTTP 403; no repository state changed.
-Fix: used approved document extraction, the issuer's SEC-filed exhibit, browser DOM inspection, repository search, and shell arithmetic; evidence checks completed.
-
-## [ENT-006] | 2026-09-21 08:36 UTC | Analyst | error | ref: forge/evaluations/auditable-maintenance-capex-evaluation-r02.md
-The initial primary-source extraction timed out, and unattended policy blocked one Python arithmetic command before execution.
-Fix: used approved focused source extraction and shell `bc`; the material source and arithmetic checks completed.

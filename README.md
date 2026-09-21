@@ -27,6 +27,13 @@ Each session attempts one small stage in 10-15 minutes. An unfinished
 stage does not advance. Suggi approves, requests changes, defers, or rejects
 the exact proposal; implementation needs separate authorization.
 
+The evaluation loop originates ideas and performs evaluations/final reviews;
+the research loop researches those ideas and writes proposals. Each pipeline
+alternates between the two roles. Multiple pipelines can remain open:
+continue eligible work first, then the evaluation loop may originate one
+new idea if no review or reframe is ready. Waiting pipelines stay intact.
+This is interleaved work across invocations, not permission for concurrent writes.
+
 ## Future Cadence -- Not Installed
 
 When Suggi later deploys the profile-local copies:
@@ -41,21 +48,21 @@ in this blueprint. Unexpected concurrent edits require a halt.
 
 ## Canonical Skill Bundles
 
-Research workflow (`ideate`, `research`, `propose`):
+Research workflow (`research`, `propose`):
 
 - `forge-loop-research`
 - `forge-loop-feynman`
-- `forge-ideate`
 - `forge-propose`
 - `forge-research`
 
-Evaluation workflow (`evaluate`, `final-review`):
+Idea and evaluation workflow (`ideate`, `evaluate`, `final-review`):
 
 - `forge-loop-evaluate`
+- `forge-ideate` (also uses `forge-loop-feynman`)
 - `forge-evaluate`
 
 Agent assignments are deployment choices, not part of these skill names or
-the state cursor. `forge/protocol.md` defines stage eligibility and independent
+the pipeline board. `forge/protocol.md` defines stage eligibility and independent
 evaluation; actual authorship remains in artifacts and log events.
 `forge-evaluate` handles both research evaluation and final proposal review.
 Templates are separate files directly under `governance/`:
@@ -68,10 +75,10 @@ task requiring Suggi's instruction.
 ## State and Memory
 
 - `ANCHOR.md`: agent/investing subjects and reflection-led discovery.
-- `STATUS.md`: one small current-state cursor.
+- `STATUS.md`: one row per open pipeline; selection and row updates follow the protocol.
 - `LEARNINGS.md`: method lessons written only after `evaluate` or
   `final-review`; read from the start of idea selection and during later work.
-- `logbook/progress.log`: multiline ENT stage events.
+- `logbook/progress.log`: multiline ENT stage events, with Pipeline before Stage.
 - `logbook/errors.log`: multiline ENT failures and fixes.
 
 There is no Forge artifact archive. Git preserves edits to method lessons;
