@@ -12,3 +12,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
+| 20260921T152802Z | active | research | forge/ideas/evidence-gated-forge-transaction-checker-r01.md | Test bounded negative fixtures against current transaction checks; do not implement production machinery. | 2026-09-21T15:28:02Z |

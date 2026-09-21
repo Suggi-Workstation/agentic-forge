@@ -42,3 +42,12 @@ Findings: Filing arithmetic passed, but the detailed bridge changed no classific
 Limit: Pre-comparison timing remains unauditable; capital-return and award-dollar attribution remain unsupported.
 Learning: Unchanged; the existing preservation lesson already covers the method issue.
 Next: closed; STATUS row removed.
+
+## [ENT-006] | 2026-09-21 15:28 UTC | Analyst | research | ref: forge/ideas/evidence-gated-forge-transaction-checker-r01.md | see: 20260921T152802Z
+Pipeline: 20260921T152802Z
+Stage: ideate. Result: PASS.
+Artifact: 20260921T152802Z.
+Origin: Path C random sample; subject Path A; target is the current Forge transaction verification step.
+Findings: Existing automation checks ASCII and IDs but not artifact-STATUS-event agreement; no current inconsistent commit was found.
+Limit: A prior broad validator was reverted for scope failure and defects, so research must test a bounded checker against negative fixtures before any proposal.
+Next: research.

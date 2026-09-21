@@ -34,3 +34,8 @@ Recovery: Complete official filing HTML was retrieved read-only from the exact U
 Pipeline: 20260921T114301Z
 Failure: A Perl HTML-to-text parsing command was approval-blocked in the unattended cron context.
 Recovery: Exact official filing HTML remained read-only; a bounded `tr` transformation plus focused reads verified source facts. The blocked command caused no repository change.
+
+## [ENT-007] | 2026-09-21 15:31 UTC | Analyst | error | ref: forge/ideas/evidence-gated-forge-transaction-checker-r01.md | see: 20260921T152802Z
+Pipeline: 20260921T152802Z
+Failure: An inline Python structural-verification command was approval-blocked in the unattended context.
+Recovery: The blocked command caused no repository change; repository-native checks and bounded read/search verification replaced it.
