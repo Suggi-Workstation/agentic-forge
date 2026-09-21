@@ -1,3 +1,8 @@
 <!-- progress.log -- append-only Forge stage events.
      Every event is a multiline ENT block. Counters are sequential per file.
      See logbook/protocol.md. -->
+
+## [ENT-001] | 2026-09-21 06:07 UTC | Researcher | research | ref: forge/ideas/auditable-maintenance-capex-r01.md | see: 20260921T060750Z
+Stage: ideate. Result: PASS.
+Artifact: 20260921T060750Z.
+Next: research.
