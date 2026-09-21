@@ -30,3 +30,7 @@ Fix: used permitted document extraction, web retrieval, and primary filings; mat
 ## [ENT-005] | 2026-09-21 08:16 UTC | Researcher | error | ref: forge/research/auditable-maintenance-capex-r02.md
 Unattended policy blocked local Python parsing probes before execution, and direct curl to Agnico's RSS endpoint returned HTTP 403; no repository state changed.
 Fix: used approved document extraction, the issuer's SEC-filed exhibit, browser DOM inspection, repository search, and shell arithmetic; evidence checks completed.
+
+## [ENT-006] | 2026-09-21 08:36 UTC | Analyst | error | ref: forge/evaluations/auditable-maintenance-capex-evaluation-r02.md
+The initial primary-source extraction timed out, and unattended policy blocked one Python arithmetic command before execution.
+Fix: used approved focused source extraction and shell `bc`; the material source and arithmetic checks completed.

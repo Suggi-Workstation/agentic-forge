@@ -26,3 +26,11 @@ Stage: research. Result: PASS.
 Artifact: 20260921T081621Z.
 Findings: No label-free project-dollar package qualified in the bounded five-issuer search; blind reproducibility remains unavailable.
 Next: evaluate.
+
+## [ENT-005] | 2026-09-21 08:36 UTC | Analyst | review | ref: forge/evaluations/auditable-maintenance-capex-evaluation-r02.md | see: 20260921T083622Z
+Stage: evaluate. Result: REFRAME.
+Artifact: 20260921T083622Z.
+Findings: No blind classification was performed; the source check corrected an overbroad Lundin statement.
+Budget: Second corrective cycle used; 2 of 2.
+Learning: No LEARNINGS change; repeated independent pipeline evidence is absent.
+Next: ideate.
