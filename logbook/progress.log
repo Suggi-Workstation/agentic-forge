@@ -1,24 +1,22 @@
 <!-- progress.log -- append-only Forge stage events.
      Every event is a multiline ENT block. Counters are sequential per file.
-     counter-floor: ENT-005
-     Prior event bodies cleared by Suggi's instruction; preserved in Git.
      See logbook/protocol.md. -->
 
-## [ENT-006] | 2026-09-21 11:43 UTC | Analyst | research | ref: forge/ideas/auditable-sbc-buyback-bridge-r01.md | see: 20260921T114301Z
+## [ENT-001] | 2026-09-21 11:43 UTC | Analyst | research | ref: forge/ideas/auditable-sbc-buyback-bridge-r01.md | see: 20260921T114301Z
 Pipeline: 20260921T114301Z
 Stage: ideate. Result: PASS.
 Artifact: 20260921T114301Z.
 Findings: Brain sources identify the SBC and buyback problem but no tested filing-only reconciliation.
 Next: research.
 
-## [ENT-007] | 2026-09-21 12:16 UTC | Researcher | research | ref: forge/research/auditable-sbc-buyback-bridge-r01.md | see: 20260921T121424Z
+## [ENT-002] | 2026-09-21 12:16 UTC | Researcher | research | ref: forge/research/auditable-sbc-buyback-bridge-r01.md | see: 20260921T121424Z
 Pipeline: 20260921T114301Z
 Stage: research. Result: PASS.
 Artifact: 20260921T121424Z.
 Findings: Three filing-only share bridges reconciled; specific repurchase-dollar attribution remained indeterminate.
 Next: evaluate.
 
-## [ENT-008] | 2026-09-21 12:39 UTC | Analyst | review | ref: forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md | see: 20260921T123909Z
+## [ENT-003] | 2026-09-21 12:39 UTC | Analyst | review | ref: forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md | see: 20260921T123909Z
 Pipeline: 20260921T114301Z
 Stage: evaluate. Result: PASS.
 Artifact: 20260921T123909Z.

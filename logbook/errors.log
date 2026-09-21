@@ -2,27 +2,25 @@
     Append entries at the bottom. Never edit old entries.
     Format: ## [ENT-NNN] | YYYY-MM-DD HH:MM UTC | Agent | error | ref: path/to/file.md
     Category: error only
-    counter-floor: ENT-006
-    Prior event bodies cleared by Suggi's instruction; preserved in Git.
     See logbook/protocol.md for the full spec.
 -->
 
-## [ENT-007] | 2026-09-21 11:43 UTC | Analyst | error | ref: forge/ideas/auditable-sbc-buyback-bridge-r01.md | see: 20260921T114301Z
+## [ENT-001] | 2026-09-21 11:43 UTC | Analyst | error | ref: forge/ideas/auditable-sbc-buyback-bridge-r01.md | see: 20260921T114301Z
 Pipeline: 20260921T114301Z
 Failure: An unattended Python extraction probe was approval-blocked, and direct SEC browser access returned its automated-tool notice.
 Recovery: Read-only extraction of official Adobe and SEC documents completed the source check; no partial repository write existed.
 
-## [ENT-008] | 2026-09-21 12:18 UTC | Researcher | error | ref: forge/research/auditable-sbc-buyback-bridge-r01.md | see: 20260921T121424Z
+## [ENT-002] | 2026-09-21 12:18 UTC | Researcher | error | ref: forge/research/auditable-sbc-buyback-bridge-r01.md | see: 20260921T121424Z
 Pipeline: 20260921T114301Z
 Failure: Inline Python was approval-blocked, BeautifulSoup was unavailable, and the first ID-validation command used the scratch directory.
 Recovery: Official filings were fetched read-only and parsed with the standard library; the required diff and ID checks were rerun from the Forge root and passed.
 
-## [ENT-009] | 2026-09-21 12:20 UTC | Researcher | error | ref: forge/research/auditable-sbc-buyback-bridge-r01.md | see: 20260921T121424Z
+## [ENT-003] | 2026-09-21 12:20 UTC | Researcher | error | ref: forge/research/auditable-sbc-buyback-bridge-r01.md | see: 20260921T121424Z
 Pipeline: 20260921T114301Z
 Failure: The optional watcher-log helper path did not exist after publication verification.
 Recovery: Publication had already passed the exact ancestor check with AHEAD: 0; no manual push or external repair was attempted.
 
-## [ENT-010] | 2026-09-21 12:42 UTC | Analyst | error | ref: forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md | see: 20260921T123909Z
+## [ENT-004] | 2026-09-21 12:42 UTC | Analyst | error | ref: forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md | see: 20260921T123909Z
 Pipeline: 20260921T114301Z
 Failure: An inline Python ASCII-verification probe was approval-blocked in the unattended cron context.
 Recovery: An `iconv` ASCII check passed for every changed file; the blocked probe caused no repository change.

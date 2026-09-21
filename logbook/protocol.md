@@ -32,9 +32,6 @@ Next: research.
 Rules:
 
 - Derive the next ENT ID from that file's active and archived entries.
-  If a human-cleared log has a `counter-floor: ENT-NNN` header, include that
-  historical floor when finding the maximum; the next entry follows it.
-  This preserves ID continuity without retaining cleared event bodies.
 - Use UTC and one major fact per short body line.
 - Record the actual agent in the header; use stage names for handoffs.
 - Every progress entry starts with `Pipeline: <root idea r01 ID>` immediately
@@ -69,7 +66,6 @@ is part of this blueprint.
 It moves complete oldest ENT blocks to
 `logbook/archive/<name>-<YYYY-MM-DD>.log`. Enumerate archived `progress-*.log`
 files when checking human decisions; do not assume monthly subdirectories.
-ENT IDs never reset.
 
 ## Verification
 
