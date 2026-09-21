@@ -2,7 +2,7 @@
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `review`.
 Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
-`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
+`confidence`. Every field is mandatory; tags must be nonempty.
 Destination: `forge/evaluations/`, or `forge/graveyard/` for REJECT/DEFER.
 Link the exact proposal, its research/evaluation, root/current idea, and
 prior review where present. Review the proposal, not only its research.
@@ -27,6 +27,7 @@ READY names this exact proposal for Suggi and grants no approval. REVISE
 specifies research for evidence gaps or propose for design-only fixes.
 State next stage, prior corrective-cycle count and any human extension,
 required changes, or the reason and reopening condition for closure.
+Justify confidence in the verdict with evidence, limitations, and what would change it.
 
 ## Learning Decision
 
@@ -46,6 +47,7 @@ its entry. This is the final artifact section; do not copy the checklist.
 PASS requires every item; any missing item HALTs the verdict write.
 
 - [ ] Metadata order, exact target, links, and revision meet the protocol contract.
+- [ ] Nonempty tags and low/medium/high confidence are present; the body justifies confidence.
 - [ ] Cold baseline and independently checked findings concern this proposal.
 - [ ] All material objections, design additions, and scope changes assessed.
 - [ ] READY has no unresolved blocker and grants no implementation authority.

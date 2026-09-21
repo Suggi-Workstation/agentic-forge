@@ -65,9 +65,9 @@ for human clarification, not another cycle.
 
 ## Artifact Contract
 
-Frontmatter for completed artifacts uses this exact key order. `tags` and
-`confidence` are optional at every tier, including ideas; omit either when
-not useful, without moving the remaining keys. All other shown keys are required.
+Frontmatter for every completed artifact uses this exact key order. All
+fields are mandatory at every tier: idea, research, evaluation, proposal,
+and review. Missing fields HALT the artifact write.
 
 ```yaml
 ---
@@ -76,14 +76,16 @@ id: <YYYYMMDDTHHMMSSZ>
 tier: <idea|research|evaluation|proposal|review>
 pipeline: <idea r01 id>
 author: <actual author>
-tags: []
+tags: [<relevant-tag>]
 links: []
 confidence: <low|medium|high>
 ---
 ```
 
-Use a short list for `tags`. Justify `confidence` in the body; it is not a
-calibrated probability. Use only this field set; do not add other artifact
+Use a nonempty short list of relevant tags. Set `confidence` to `low`,
+`medium`, or `high` and justify it in the body with the evidence, limitations,
+and what would change it; it is not a calibrated probability. Use only this
+field set; do not add other artifact
 metadata. Skills retain their tool-facing
 fields: `name`, `description`, `user-invocable`, `disable-model-invocation`.
 

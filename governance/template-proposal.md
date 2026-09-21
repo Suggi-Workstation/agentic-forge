@@ -2,7 +2,7 @@
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `proposal`.
 Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
-`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
+`confidence`. Every field is mandatory; tags must be nonempty.
 Destination: `forge/proposals/`. Link the root/current idea, current research
 and its ADVANCE evaluation, previous proposal revision, and review/decision
 feedback when present. This file requests a decision; it does not grant one.
@@ -35,6 +35,7 @@ new behavior must not occur. Identify the worst plausible failure and its
 prevention, costs/tradeoffs, rollback or reversal, and residual uncertainty.
 Distinguish checks already performed during research from future tests.
 Implementation and deployment remain separately authorized work.
+Justify confidence in the proposal with evidence, limitations, and what would change it.
 
 ## Sources
 
@@ -48,6 +49,7 @@ its entry. This is the final artifact section; do not copy the checklist.
 PASS requires every item; any missing item HALTs proposal creation.
 
 - [ ] Metadata order and exact evaluated-research/revision links meet the protocol.
+- [ ] Nonempty tags and low/medium/high confidence are present; the body justifies confidence.
 - [ ] Current research has a matching ADVANCE evaluation; blockers resolved.
 - [ ] Feedback, evidence, counterevidence, alternatives, and non-goals included.
 - [ ] Change specification is feasible and detailed enough to implement.

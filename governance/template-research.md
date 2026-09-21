@@ -2,7 +2,7 @@
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `research`.
 Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
-`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
+`confidence`. Every field is mandatory; tags must be nonempty.
 Destination: `forge/research/`. Link the root/current idea, any prior
 research revision, and the feedback that this report addresses.
 
@@ -30,8 +30,8 @@ Use value-investing principles for investing questions.
 
 Answer each material evaluation/review finding with evidence, a correction,
 or a reasoned disagreement. Mark unresolved blockers and decision-relevant next
-questions. On the first report, say no prior evaluation exists. If optional
-confidence is present, explain its evidential basis and limitations.
+questions. On the first report, say no prior evaluation exists. Explain the
+mandatory confidence's evidence, limitations, and what would change it.
 
 ## Sources
 
@@ -45,6 +45,7 @@ its entry. This is the final artifact section; do not copy the checklist.
 PASS requires every item; any missing item HALTs artifact creation.
 
 - [ ] Metadata order and exact input/revision links meet the protocol contract.
+- [ ] Nonempty tags and low/medium/high confidence are present; the body justifies confidence.
 - [ ] Investigated questions and reproducible source checks are documented.
 - [ ] Consequential claims are independently supported or explicitly unknown.
 - [ ] Contradictions, source dependence, alternatives, and limitations appear.

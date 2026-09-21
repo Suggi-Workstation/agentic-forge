@@ -2,7 +2,7 @@
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `evaluation`.
 Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
-`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
+`confidence`. Every field is mandatory; tags must be nonempty.
 Destination: `forge/evaluations/`, or `forge/graveyard/` for REJECT/DEFER.
 Link the exact research target, root/current idea, and any prior evaluation.
 
@@ -25,6 +25,7 @@ State the exact next stage, decisive reasons, and required evidence
 or corrections. Count prior corrective cycles and cite any human extension.
 For closure, explain why work stops and what would justify reopening.
 ADVANCE means a proposal is justified, not that the idea is approved.
+Justify confidence in the verdict with evidence, limitations, and what would change it.
 
 ## Learning Decision
 
@@ -44,6 +45,7 @@ its entry. This is the final artifact section; do not copy the checklist.
 PASS requires every item; any missing item HALTs the verdict write.
 
 - [ ] Metadata order, exact target, input links, and revision meet the protocol.
+- [ ] Nonempty tags and low/medium/high confidence are present; the body justifies confidence.
 - [ ] Baseline preceded target-body reading; important sources were checked.
 - [ ] Findings identify both supporting and contrary evidence and blockers.
 - [ ] Verdict, budget, destination, and next stage agree with the protocol.

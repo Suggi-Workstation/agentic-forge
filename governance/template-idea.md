@@ -2,7 +2,7 @@
 
 Use the Artifact Contract in `forge/protocol.md`. Tier: `idea`.
 Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
-`confidence`. Omit optional `tags`/`confidence` without reordering the rest.
+`confidence`. Every field is mandatory; tags must be nonempty.
 Destination: `forge/ideas/`. The root idea r01 starts the shared pipeline ID;
 a reframe keeps that ID. Render the sections below as the artifact body,
 replacing instructional text with evidence-backed content.
@@ -32,7 +32,7 @@ material findings.
 List the questions that would change the decision, suitable evidence and
 alternatives (including doing nothing), and achievable acceptance criteria.
 Keep the next research unit small; record unknowns rather than conclusions.
-If confidence is supplied, justify it and what would change it.
+Justify the mandatory confidence with evidence, limitations, and what would change it.
 
 ## Sources
 
@@ -46,6 +46,7 @@ its entry. This is the final artifact section; do not copy the checklist.
 PASS requires every item; any missing item HALTs artifact creation.
 
 - [ ] Metadata order, pipeline, revision, and links meet the protocol contract.
+- [ ] Nonempty tags and low/medium/high confidence are present; the body justifies confidence.
 - [ ] LEARNINGS was read before selection; mission fit and value are clear.
 - [ ] Graveyard, ideas, proposals (accepted and pending), and Brain checked.
 - [ ] Relevant matches were read and the non-duplicate gap is explained.
