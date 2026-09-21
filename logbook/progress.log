@@ -17,3 +17,12 @@ Stage: research. Result: PASS.
 Artifact: 20260921T121424Z.
 Findings: Three filing-only share bridges reconciled; specific repurchase-dollar attribution remained indeterminate.
 Next: evaluate.
+
+## [ENT-008] | 2026-09-21 12:39 UTC | Analyst | review | ref: forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md | see: 20260921T123909Z
+Pipeline: 20260921T114301Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260921T123909Z.
+Verdict: REVISE; corrective cycle 1 of 2.
+Findings: Filing arithmetic passed; reader outputs were not preserved and incremental value was not demonstrated.
+Learning: Admitted one two-pipeline evidence-preservation lesson.
+Next: research.

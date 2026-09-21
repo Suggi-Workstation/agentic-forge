@@ -21,3 +21,8 @@ Recovery: Official filings were fetched read-only and parsed with the standard l
 Pipeline: 20260921T114301Z
 Failure: The optional watcher-log helper path did not exist after publication verification.
 Recovery: Publication had already passed the exact ancestor check with AHEAD: 0; no manual push or external repair was attempted.
+
+## [ENT-010] | 2026-09-21 12:42 UTC | Analyst | error | ref: forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md | see: 20260921T123909Z
+Pipeline: 20260921T114301Z
+Failure: An inline Python ASCII-verification probe was approval-blocked in the unattended cron context.
+Recovery: An `iconv` ASCII check passed for every changed file; the blocked probe caused no repository change.

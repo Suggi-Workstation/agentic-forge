@@ -12,4 +12,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
-| 20260921T114301Z | active | evaluate | forge/research/auditable-sbc-buyback-bridge-r01.md | Evaluate whether the auditable baseline warrants a proposal despite indeterminate dollar attribution. | 2026-09-21T12:16:40Z |
+| 20260921T114301Z | active | research | forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md | Preserve blind reader outputs and test incremental value over the simple rule. | 2026-09-21T12:39:33Z |

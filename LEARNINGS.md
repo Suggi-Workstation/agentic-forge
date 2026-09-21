@@ -42,4 +42,16 @@ result and this file unchanged.
 
 ## Learnings
 
-(None yet.)
+### Preserve procedural validation evidence before comparison
+
+- **Lesson:** Preserve dated pre-comparison rules and each reader's separate
+  output before claiming a blind or reproducible test; a completed report's
+  retrospective assertion cannot establish timing or independence.
+- **Evidence:** Pipelines `20260921T060750Z` and `20260921T114301Z`, in
+  `forge/evaluations/auditable-maintenance-capex-evaluation-r02.md` at Git
+  commit `a88424a57f949a66996b6fb03d06c674087ec7c6` and
+  `forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md`.
+- **Confidence:** Medium. Two independent accounting-method pipelines expose
+  the same preservation failure, but both remain within the Forge context.
+- **Consequence:** Require linked pre-comparison rules and unmerged per-reader
+  outputs before treating a procedural validation claim as passed.
