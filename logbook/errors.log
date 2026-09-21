@@ -29,3 +29,8 @@ Recovery: An `iconv` ASCII check passed for every changed file; the blocked prob
 Pipeline: 20260921T114301Z
 Failure: Direct SEC browser access returned its automated-tool notice, and unattended Python arithmetic probes were approval-blocked.
 Recovery: Complete official filing HTML was retrieved read-only from the exact URLs; arithmetic was rerun with `bc` and passed.
+
+## [ENT-006] | 2026-09-21 14:37 UTC | Analyst | error | ref: forge/graveyard/auditable-sbc-buyback-bridge-evaluation-r02.md | see: 20260921T143617Z
+Pipeline: 20260921T114301Z
+Failure: A Perl HTML-to-text parsing command was approval-blocked in the unattended cron context.
+Recovery: Exact official filing HTML remained read-only; a bounded `tr` transformation plus focused reads verified source facts. The blocked command caused no repository change.

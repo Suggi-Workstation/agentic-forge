@@ -32,3 +32,13 @@ Artifact: 20260921T133154Z.
 Findings: Separate reader worksheets reproduced the arithmetic; no classification, proxy, or refusal changed.
 Limit: Repurchase-dollar attribution and incremental decision value remain unsupported.
 Next: evaluate.
+
+## [ENT-005] | 2026-09-21 14:37 UTC | Analyst | review | ref: forge/graveyard/auditable-sbc-buyback-bridge-evaluation-r02.md | see: 20260921T143617Z
+Pipeline: 20260921T114301Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260921T143617Z.
+Verdict: REJECT; pipeline closed.
+Findings: Filing arithmetic passed, but the detailed bridge changed no classification, proxy, or refusal and caught no concrete error.
+Limit: Pre-comparison timing remains unauditable; capital-return and award-dollar attribution remain unsupported.
+Learning: Unchanged; the existing preservation lesson already covers the method issue.
+Next: closed; STATUS row removed.
