@@ -6,3 +6,8 @@
     Prior event bodies cleared by Suggi's instruction; preserved in Git.
     See logbook/protocol.md for the full spec.
 -->
+
+## [ENT-007] | 2026-09-21 11:43 UTC | Analyst | error | ref: forge/ideas/auditable-sbc-buyback-bridge-r01.md | see: 20260921T114301Z
+Pipeline: 20260921T114301Z
+Failure: An unattended Python extraction probe was approval-blocked, and direct SEC browser access returned its automated-tool notice.
+Recovery: Read-only extraction of official Adobe and SEC documents completed the source check; no partial repository write existed.
