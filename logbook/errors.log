@@ -16,3 +16,8 @@ Recovery: Read-only extraction of official Adobe and SEC documents completed the
 Pipeline: 20260921T114301Z
 Failure: Inline Python was approval-blocked, BeautifulSoup was unavailable, and the first ID-validation command used the scratch directory.
 Recovery: Official filings were fetched read-only and parsed with the standard library; the required diff and ID checks were rerun from the Forge root and passed.
+
+## [ENT-009] | 2026-09-21 12:20 UTC | Researcher | error | ref: forge/research/auditable-sbc-buyback-bridge-r01.md | see: 20260921T121424Z
+Pipeline: 20260921T114301Z
+Failure: The optional watcher-log helper path did not exist after publication verification.
+Recovery: Publication had already passed the exact ancestor check with AHEAD: 0; no manual push or external repair was attempted.
