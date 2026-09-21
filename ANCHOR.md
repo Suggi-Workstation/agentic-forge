@@ -64,8 +64,12 @@ reflections, explain which lead is worth pursuing, and cite its origins.
 - Check `forge/graveyard/`, `forge/ideas/`, and `forge/proposals/`, including
   accepted and pending proposals and their recorded human decisions.
 - Search existing Brain knowledge before starting new research.
-- Choose one narrow, unresolved question; reuse prior work rather than
-  renaming it. Reopening needs new evidence or a changed prerequisite.
+- For every path, consider improving, correcting, simplifying, or extending
+  existing files, skills, and frameworks before creating new ones. Existing
+  coverage is not a reason to reject a concrete improvement. Identify the
+  target, the specific gap, and how the proposed change would help.
+- Choose one narrow, unresolved question; do not rename prior work as new.
+  Reopening needs new evidence or a changed prerequisite.
 - If no worthwhile question exists, do nothing and try again next session.
 
 ## Required End State
