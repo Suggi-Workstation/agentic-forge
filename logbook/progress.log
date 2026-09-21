@@ -24,3 +24,11 @@ Verdict: REVISE; corrective cycle 1 of 2.
 Findings: Filing arithmetic passed; reader outputs were not preserved and incremental value was not demonstrated.
 Learning: Admitted one two-pipeline evidence-preservation lesson.
 Next: research.
+
+## [ENT-004] | 2026-09-21 13:31 UTC | Researcher | research | ref: forge/research/auditable-sbc-buyback-bridge-r02.md | see: 20260921T133154Z
+Pipeline: 20260921T114301Z
+Stage: research. Result: PASS.
+Artifact: 20260921T133154Z.
+Findings: Separate reader worksheets reproduced the arithmetic; no classification, proxy, or refusal changed.
+Limit: Repurchase-dollar attribution and incremental decision value remain unsupported.
+Next: evaluate.

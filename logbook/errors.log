@@ -24,3 +24,8 @@ Recovery: Publication had already passed the exact ancestor check with AHEAD: 0;
 Pipeline: 20260921T114301Z
 Failure: An inline Python ASCII-verification probe was approval-blocked in the unattended cron context.
 Recovery: An `iconv` ASCII check passed for every changed file; the blocked probe caused no repository change.
+
+## [ENT-005] | 2026-09-21 13:31 UTC | Researcher | error | ref: forge/research/auditable-sbc-buyback-bridge-r02.md | see: 20260921T133154Z
+Pipeline: 20260921T114301Z
+Failure: Direct SEC browser access returned its automated-tool notice, and unattended Python arithmetic probes were approval-blocked.
+Recovery: Complete official filing HTML was retrieved read-only from the exact URLs; arithmetic was rerun with `bc` and passed.
