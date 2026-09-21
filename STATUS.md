@@ -11,7 +11,7 @@ short. Stage artifacts and logbook entries hold the detail.
 
 state: active
 pipeline: 20260921T060750Z
-stage: evaluate
-active-artifact: forge/research/auditable-maintenance-capex-r01.md
-next-action: Evaluate the maintenance-capex evidence report.
-updated: 2026-09-21T07:10:19Z
+stage: research
+active-artifact: forge/evaluations/auditable-maintenance-capex-evaluation-r01.md
+next-action: Run the bounded blind-reproducibility correction.
+updated: 2026-09-21T07:42:01Z

@@ -21,3 +21,8 @@ Fix: reran the ledger with the global option first and used approved web retriev
 ## [ENT-003] | 2026-09-21 07:12 UTC | Researcher | error | ref: forge/research/auditable-maintenance-capex-r01.md
 A citation probe used a 50% coverage threshold that counted procedural and analytical sentences as source claims and returned nonzero.
 Fix: removed the inapplicable quota and reran strict URL-to-citation verification; citations passed.
+
+## [ENT-004] | 2026-09-21 07:42 UTC | Analyst | error | ref: forge/evaluations/auditable-maintenance-capex-evaluation-r01.md
+Source-check probes hit unattended shell and code approval blocks; no blocked command ran and no repository state changed.
+A local PDF parser lacked optional libraries, and direct curl to Morgan Stanley returned HTTP 403.
+Fix: used permitted document extraction, web retrieval, and primary filings; material checks completed.
