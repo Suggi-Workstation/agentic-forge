@@ -117,25 +117,41 @@ own procedure, and this protocol owns metadata, state, and publication.
 ### Sources Format
 
 Every completed artifact ends with `## Sources`, using the Library's
-numbered bibliography style, not bare `[1] URL` lines. Each entry contains
+numbered bibliography style, not bare `[1] URL` lines. External sources contain
 the author or organization, verified title, publication date/year when
-available, relevant section/page or use, a URL or exact repository path,
-and a source-quality label: `[high]`, `[medium]`, or `[low]`.
+available, relevant section/page or use, and URL. Repository sources instead
+use the Library's See Also style: a backticked path first, then ` -- ` and a
+brief explanation of its relevance or the passage checked. Do not lead a
+repository entry with an organization/title or leave its path on a trailing
+line. Both source types retain a quality label: `[high]`, `[medium]`, or `[low]`.
 
 ```text
 1. <Author or organization>. <Title>, <verified date/year and section>.
    <What was checked; abstract/archive/secondary access if applicable>.
-   <URL or repository path> [high]
+   <URL> [high]
+2. `agentic-brain:library/ethics-philosophy/epistemology.md` -- first-person
+   knowledge, other minds, and the limits of inference from evidence. [medium]
 ```
+
+Cross-repository paths carry the exact GitHub repo prefix, for example
+`agentic-brain:<path>` or `investing-hub:<path>`. Paths within this Forge
+repository have no prefix. Never use absolute filesystem paths or substitute
+GitHub URLs for repository paths. For a historical source, put the exact Git
+commit in the explanation after ` -- ` and verify that revision. If one
+number groups several repository files, give each path its own ` -- `
+explanation; retain the number so body citations still identify that group.
 
 Choose the quality label from the actual source; the example is not a
 default rating or confidence in the artifact's conclusion. Do not invent
-missing dates, authors, page numbers, or sources. Identify internal documents
-by title and exact path; prior artifacts do not replace independent evidence.
+missing dates, authors, page numbers, or sources. Verify each repository path
+in its named repository or explicitly cited historical commit; prior artifacts
+do not replace independent evidence.
 Body citations use `[1]`, `[2]`, etc. matching consecutive entries, with
 pinpoint passages for material claims. No dangling citations or unused
 bibliography padding. Frontmatter links do not replace this bibliography.
 Template checklists are pre-write instructions, not final artifact sections.
+Before writing, PASS requires correctly prefixed, resolving path-first
+repository entries and matching source numbers/citations; otherwise HALT.
 
 ## Pipeline Board and Selection
 

@@ -36,9 +36,11 @@ Tentative single-incident observations remain here, not reusable lessons.
 ## Sources
 
 Use the protocol's Sources Format: a numbered Library-style bibliography
-with author/organization, title, known date, checked passage/use, URL or
-repository path, and source-quality label. Match every body citation to
-its entry. This is the final artifact section; do not copy the checklist.
+with source-quality labels. External sources use author/organization, title,
+known date, checked passage/use, and URL. Repository sources use a backticked
+`repo:path` -- brief relevance, with the exact repo prefix for other repos
+and an unprefixed path for this repo. Match every body citation to its entry.
+This is the final artifact section; do not copy the checklist.
 
 ## Checklist -- Before Writing
 
@@ -51,4 +53,4 @@ PASS requires every item; any missing item HALTs the verdict write.
 - [ ] Verdict, budget, destination, and next stage agree with the protocol.
 - [ ] Closure has a reason and reopening condition; feedback is actionable.
 - [ ] Learning decision is explicit and does not invent repeated evidence.
-- [ ] Sources follow the numbered bibliography format; citations and entries agree.
+- [ ] Sources follow the protocol's format; repo entries are path-first with ` -- ` relevance, correct prefixes, and verified targets; citations and entries agree.

@@ -38,9 +38,11 @@ reviewing one incident twice does not establish repeated independent evidence.
 ## Sources
 
 Use the protocol's Sources Format: a numbered Library-style bibliography
-with author/organization, title, known date, checked passage/use, URL or
-repository path, and source-quality label. Match every body citation to
-its entry. This is the final artifact section; do not copy the checklist.
+with source-quality labels. External sources use author/organization, title,
+known date, checked passage/use, and URL. Repository sources use a backticked
+`repo:path` -- brief relevance, with the exact repo prefix for other repos
+and an unprefixed path for this repo. Match every body citation to its entry.
+This is the final artifact section; do not copy the checklist.
 
 ## Checklist -- Before Writing
 
@@ -53,4 +55,4 @@ PASS requires every item; any missing item HALTs the verdict write.
 - [ ] READY has no unresolved blocker and grants no implementation authority.
 - [ ] Other verdicts name an actionable route within budget or a closure.
 - [ ] Learning decision follows LEARNINGS; previous artifacts stay unchanged.
-- [ ] Sources follow the numbered bibliography format; citations and entries agree.
+- [ ] Sources follow the protocol's format; repo entries are path-first with ` -- ` relevance, correct prefixes, and verified targets; citations and entries agree.

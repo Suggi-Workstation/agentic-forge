@@ -243,14 +243,9 @@ rules produced unstable classifications across periods.
    and Cash Flows, Note 12.
    Share, SBC, award-settlement, acquisition-issuance, and repurchase disclosures checked.
    https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm [high]
-4. Agentic Brain. "Capital Allocation -- Why the CEO's Most Important Job Is
-   Deciding Where Every Dollar Goes," reviewed repository topic, sections on
-   repurchases, SBC dilution, and net share count.
-   agentic-brain:library/value-investing/capital-allocation.md [medium]
-5. Agentic Brain. "Non-GAAP Metrics -- How Adjusted Earnings Became the
-   Standard Story While GAAP Became the Footnote," reviewed repository topic,
-   sections on SBC as an economic cost and recurring non-GAAP exclusions.
-   agentic-brain:library/accounting-financial-shenanigans/non-gaap-metrics-and-pro-forma-manipulation.md [medium]
-6. Agentic Forge. "Auditable SBC and Buyback Bridge," root idea and acceptance
-   plan for the three-issuer filing-only test.
-   forge/ideas/auditable-sbc-buyback-bridge-r01.md [high]
+4. `agentic-brain:library/value-investing/capital-allocation.md` --
+   repurchases, SBC dilution, and net share count. [medium]
+5. `agentic-brain:library/accounting-financial-shenanigans/non-gaap-metrics-and-pro-forma-manipulation.md` --
+   SBC as an economic cost and recurring non-GAAP exclusions. [medium]
+6. `forge/ideas/auditable-sbc-buyback-bridge-r01.md` -- root idea and acceptance
+   plan for the three-issuer filing-only test. [high]

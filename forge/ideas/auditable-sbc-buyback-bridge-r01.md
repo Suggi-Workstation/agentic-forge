@@ -133,22 +133,15 @@ unobservable even when all reported totals reconcile.
 
 ## Sources
 
-1. Agentic Brain. "Capital Allocation -- Why the CEO's Most Important Job Is
-   Deciding Where Every Dollar Goes," reviewed repository topic, sections on
-   share repurchases and the stock-compensation treadmill.
-   agentic-brain:library/value-investing/capital-allocation.md [medium]
-2. Agentic Brain. "Dividend Policy and Share Buybacks -- Why Returning Capital
-   to Shareholders Is a Strategic Choice, Not Arithmetic," reviewed repository
-   topic, section "Evaluating Payout Quality."
-   agentic-brain:library/finance/dividend-policy-and-share-buybacks.md [medium]
-3. Agentic Brain. "Non-GAAP Metrics -- How Adjusted Earnings Became the
-   Standard Story While GAAP Became the Footnote," reviewed repository topic,
-   sections on stock-based compensation and recurring exclusions.
-   agentic-brain:library/accounting-financial-shenanigans/non-gaap-metrics-and-pro-forma-manipulation.md [medium]
-4. Agentic Brain. "Berkshire Hathaway's Apple Investment -- Consumer Loyalty
-   Made a Technology Business Analyzable," reviewed 2026-09-20, sections on
-   repurchases, denominator reduction, and public-filing boundaries.
-   agentic-brain:library/case-studies/berkshire-apple-investment-consumer-loyalty.md [medium]
+1. `agentic-brain:library/value-investing/capital-allocation.md` -- share
+   repurchases and the stock-compensation treadmill. [medium]
+2. `agentic-brain:library/finance/dividend-policy-and-share-buybacks.md` --
+   evaluating payout quality and employee-option dilution. [medium]
+3. `agentic-brain:library/accounting-financial-shenanigans/non-gaap-metrics-and-pro-forma-manipulation.md` --
+   stock-based compensation and recurring exclusions. [medium]
+4. `agentic-brain:library/case-studies/berkshire-apple-investment-consumer-loyalty.md` --
+   repurchases, denominator reduction, and public-filing boundaries; reviewed
+   2026-09-20. [medium]
 5. Kahle, Kathleen M. "When a Buyback Isn't a Buyback: Open Market
    Repurchases and Employee Options," Journal of Financial Economics 63(2),
    2002, pp. 235-261. Abstract and bibliographic record checked for the tested
@@ -163,12 +156,12 @@ unobservable even when all reported totals reconcile.
    reported stock-compensation, repurchase, and equity-award settlement lines;
    the condensed financial statements are identified as unaudited.
    https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/01215202/a54gu6y5tegrrf.pdf [medium]
-8. Agentic Forge. "Auditable Maintenance-Capex Estimation," historical root
-   idea checked as the only prior Forge idea family and as a different
-   accounting question.
-   forge/ideas/auditable-maintenance-capex-r01.md at Git commit
-   a88424a57f949a66996b6fb03d06c674087ec7c6 [high]
-9. Agentic Forge. Control state at base Git commit
-   bcb3652564419f33f41975e36abfbeedeca173be, checked before selection for
-   open work and exact-proposal decisions.
-   STATUS.md; logbook/progress.log; logbook/archive/.gitkeep [high]
+8. `forge/ideas/auditable-maintenance-capex-r01.md` -- historical root idea
+   checked as the only prior Forge idea family and a different accounting
+   question, at Git commit a88424a57f949a66996b6fb03d06c674087ec7c6. [high]
+9. `STATUS.md` -- open work before selection, at base Git commit
+   bcb3652564419f33f41975e36abfbeedeca173be. [high]
+   - `logbook/progress.log` -- exact-proposal decisions in the same base
+     snapshot. [high]
+   - `logbook/archive/.gitkeep` -- archive placeholder in the same base
+     snapshot. [high]
