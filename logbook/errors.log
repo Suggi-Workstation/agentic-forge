@@ -26,3 +26,7 @@ Fix: removed the inapplicable quota and reran strict URL-to-citation verificatio
 Source-check probes hit unattended shell and code approval blocks; no blocked command ran and no repository state changed.
 A local PDF parser lacked optional libraries, and direct curl to Morgan Stanley returned HTTP 403.
 Fix: used permitted document extraction, web retrieval, and primary filings; material checks completed.
+
+## [ENT-005] | 2026-09-21 08:16 UTC | Researcher | error | ref: forge/research/auditable-maintenance-capex-r02.md
+Unattended policy blocked local Python parsing probes before execution, and direct curl to Agnico's RSS endpoint returned HTTP 403; no repository state changed.
+Fix: used approved document extraction, the issuer's SEC-filed exhibit, browser DOM inspection, repository search, and shell arithmetic; evidence checks completed.
