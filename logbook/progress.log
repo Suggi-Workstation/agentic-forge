@@ -6,3 +6,9 @@
 Stage: ideate. Result: PASS.
 Artifact: 20260921T060750Z.
 Next: research.
+
+## [ENT-002] | 2026-09-21 07:10 UTC | Researcher | research | ref: forge/research/auditable-maintenance-capex-r01.md | see: 20260921T070743Z
+Stage: research. Result: PASS.
+Artifact: 20260921T070743Z.
+Findings: Traceable disclosure; blind reproducibility and universal estimation remain unestablished.
+Next: evaluate.

@@ -12,3 +12,12 @@ validate-ids.sh flagged DUPLICATE ID: logbook/protocol.md vs ANCHOR.md
 Fix: unique id per file, generated with date -u. The gate already existed
 (validate-ids.sh runs in CI); the scar is process discipline: never reuse
 one timestamp batch across files that carry id: frontmatter.
+
+## [ENT-002] | 2026-09-21 07:10 UTC | Researcher | error | ref: forge/research/auditable-maintenance-capex-r01.md
+An auxiliary citation command placed --ledger after its subcommand and exited before changing repository state.
+Cron policy also blocked execute_code before execution.
+Fix: reran the ledger with the global option first and used approved web retrieval tools; evidence checks completed.
+
+## [ENT-003] | 2026-09-21 07:12 UTC | Researcher | error | ref: forge/research/auditable-maintenance-capex-r01.md
+A citation probe used a 50% coverage threshold that counted procedural and analytical sentences as source claims and returned nonzero.
+Fix: removed the inapplicable quota and reran strict URL-to-citation verification; citations passed.
