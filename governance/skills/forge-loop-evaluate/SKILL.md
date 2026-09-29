@@ -36,8 +36,9 @@ protocol's independent-agent/context requirement. Use the configured model.
 5. Complete one verdict, including the exact next stage or graveyard
    closure. No missing source, timeout, or unperformed test implies READY.
    Record the intended learning decision before freezing that artifact.
-6. Only after that completed evaluation or final review, apply LEARNINGS'
-   admission gate. Make justified method edits or leave the file unchanged;
+6. Only after that completed evaluation or final review, answer LEARNINGS'
+   capture questions and apply its admission gate. Make justified method
+   edits or leave the file unchanged;
    never rewrite the completed verdict or manufacture a lesson quota. If
    a planned learning edit cannot pass its gate, report that in the progress
    event and leave LEARNINGS unchanged.

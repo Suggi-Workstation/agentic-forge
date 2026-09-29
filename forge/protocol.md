@@ -301,7 +301,7 @@ failed procedural gate. Report publication as pending until remotely verified.
 - No profile, installed/shared-skill, model, cron, service, runtime, lock,
   monitor, or wrapper changes. Use the configured model for each stage;
   separate context and checked evidence do not guarantee independent errors.
-- The future stagger assumes non-overlapping sessions; it is not a lock or
+- The staggered schedule assumes non-overlapping sessions; it is not a lock or
   proof against concurrency. Unexpected overlap or edits require HALT.
 
 ## Verification Scenarios
@@ -319,7 +319,7 @@ adoption. These are blueprint checks, not a claim of live deployment.
 | A proposal adds an unsupported implementation detail | Final review blocks readiness and names research/proposal correction. |
 | Corrective budget would be exceeded | DEFER with a reopening condition; no counter reset. |
 | Evidence establishes the idea is not worth pursuing | Graveyard verdict, preserved chain, remove only that pipeline's row. |
-| One isolated incident suggests a new method rule | Record tentative finding in evaluation; do not add a reusable lesson. |
+| One pipeline suggests a new method lesson | Admit it only at `low` confidence with checked evidence; never as a binding rule. |
 | `ideate`, `research`, or `propose` completes | LEARNINGS remains unchanged, regardless of the executing agent. |
 | A different authorized agent runs the same supported stage | Same routing and write permissions; actual authorship changes, not the workflow. |
 | The target's author attempts its evaluation or final review | HALT before the verdict; stage-neutral naming does not permit self-review. |

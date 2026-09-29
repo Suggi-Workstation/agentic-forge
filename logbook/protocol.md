@@ -55,7 +55,7 @@ Rules:
 3. Append one errors entry only when a real failure occurred.
 4. Commit the entry with the stage transaction.
 
-The future loop stagger assumes non-overlapping sessions, not guaranteed
+The loop stagger assumes non-overlapping sessions, not guaranteed
 mutual exclusion. Unexpected concurrent edits require a halt. No file lock
 is part of this blueprint.
 

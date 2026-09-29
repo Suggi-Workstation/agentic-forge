@@ -6,39 +6,55 @@ author: Link
 ---
 # LEARNINGS.md -- Agent Method Memory
 
-Reusable lessons about how the Forge researches and collaborates. Only
-completed `evaluate` or `final-review` stages may write lessons, regardless
-of which authorized agent executes them. Read this file at the start of
-ideation and before later work. It is read-only during `ideate`, `research`,
-and `propose`. Lessons are agent-written, not human-authored.
+Reusable lessons about how the Forge selects, researches, evaluates, and
+proposes. Read this file at the start of ideation and before later work.
+Only a completed `evaluate` or `final-review` stage may change it, whichever
+authorized agent runs that stage; `ideate`, `research`, and `propose` keep it
+read-only. Lessons are agent-written, not human-authored.
+
+## Learning-Capture Questions
+
+Ask these after every completed evaluation or final review. They are lenses,
+not quotas: one lesson may answer several. If nothing was learned, say so in
+the artifact's Learning Decision.
+
+1. **Selection:** What would have shown earlier whether this idea was worth
+   pursuing? Ask especially after REVISE, REFRAME, REJECT, or DEFER.
+2. **Evidence and test design:** What made the evidence decisive or weak --
+   data availability, source access, baseline comparison, or test design?
+3. **Process:** Did a handoff, template, tool, or recurring `errors.log`
+   failure cost time or cause a mistake?
+4. **Repetition:** Did this pipeline repeat a failure an existing lesson
+   covers? Then that lesson is inadequate or unapplied: strengthen or
+   correct it.
+5. **Coverage:** Is this already a lesson here or a rule in the protocol,
+   templates, or skills? Update the existing entry instead of adding one.
 
 ## Admission Rules
 
-- Add, strengthen, correct, or retire a lesson only after checking the
-  completed evaluation or final review and the underlying evidence.
-- Repeated independent pipeline evidence is needed for a reusable lesson;
-  an isolated observation stays in its evaluation as a tentative finding.
-- Name the evidence pipeline IDs, artifact links, and qualitative
-  confidence with its reason. Repeated accounts are not independent trials.
-- Prefer updating an existing lesson to adding a duplicate. If there is
-  no justified method change, leave this file unchanged and say so briefly
-  in the evaluation or final review. No quota of new lessons exists.
-- Domain findings stay in research and proposals; chronology stays in the
-  logbook. A lesson concerns a transferable method, not an idea's verdict.
+- A lesson is a transferable method, not an idea's verdict. Domain findings
+  stay in research and proposals; chronology stays in the logbook.
+- One completed pipeline may admit a lesson at `low` confidence when its
+  evidence is checked and its consequence is concrete. Use `medium` for two
+  or more independent pipelines and `high` when a later pipeline shows that
+  applying the lesson helped. Repeated accounts of one incident are not
+  independent trials. Lower or retire a lesson that later evidence contradicts.
+- A `low` lesson is a caution to consider, not a binding rule.
+- Name the evidence pipeline IDs and artifact links. Keep entries short:
+  lesson, evidence, confidence, and consequence.
+- Prefer updating an existing lesson to adding a duplicate. Retire stale
+  lessons with a reason; Git preserves prior wording.
 - A lesson may improve future behavior but cannot authorize governance,
-  runtime, profile, or external-repository changes.
-- Keep entries short: lesson, evidence, confidence, and consequence. Mark
-  stale lessons retired with a reason, or correct them with supporting
-  evidence in the same reviewed commit. Git preserves prior wording; no
-  separate archive folder is used.
+  runtime, profile, or external-repository changes. A confirmed lesson that
+  should become a skill, template, or protocol rule is a Path A idea.
 
 ## Learning Admission Gate
 
 Before changing a lesson, PASS requires the current `evaluate` or
-`final-review` stage to be completed, checked repeated evidence, a
-non-duplicate method lesson, and no implied governance or deployment
-permission. Otherwise HALT the learning edit; keep the legitimate stage
-result and this file unchanged.
+`final-review` stage to be completed, checked evidence with confidence
+matching its independent pipeline count, a non-duplicate method lesson, and
+no implied governance or deployment permission. Otherwise HALT the learning
+edit; keep the legitimate stage result and this file unchanged.
 
 ## Learnings
 

@@ -8,7 +8,6 @@ disable-model-invocation: false
 
 This entrypoint advances one `research` or `propose` stage per
 bounded session, regardless of the executing agent's identity.
-It is a canonical blueprint, not an installed or scheduled runtime skill.
 
 ## Scope Gate
 

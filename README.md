@@ -34,9 +34,9 @@ continue eligible work first, then the evaluation loop may originate one
 new idea if no review or reframe is ready. Waiting pipelines stay intact.
 This is interleaved work across invocations, not permission for concurrent writes.
 
-## Future Cadence -- Not Installed
+## Cadence
 
-When Suggi later deploys the profile-local copies:
+When Suggi enables the scheduled profile-local copies:
 
 - The research loop runs on the hour, for example 13:00, 14:00, 15:00.
 - The evaluation loop runs 30 minutes later, for example 13:30, 14:30, 15:30.
@@ -69,8 +69,7 @@ Templates are separate files directly under `governance/`:
 `template-idea.md`, `template-research.md`, `template-evaluation.md`,
 `template-proposal.md`, and `template-review.md`.
 
-These are blueprints only. Copying or scheduling them is a separate future
-task requiring Suggi's instruction.
+Copying or scheduling them requires Suggi's instruction.
 
 ## State and Memory
 

@@ -40,9 +40,10 @@ there is no fixed agent roster or automatic model switch.
    REJECT/DEFER goes directly to `forge/graveyard/`; all other verdicts go
    to `forge/evaluations/`. The verdict itself is the closure record when
    stopping. Do not modify the target artifact.
-7. Only after completing this evaluation or final review, apply the
-   admission gate in LEARNINGS. Update an existing method lesson or add
-   one only if supported; otherwise leave LEARNINGS unchanged. Return the
+7. Only after completing this evaluation or final review, answer the
+   capture questions and apply the admission gate in LEARNINGS. Update an
+   existing method lesson or add one only if supported; otherwise leave
+   LEARNINGS unchanged. Return the
    verdict and permitted learning edit to the loop's transaction.
 
 ## Verification

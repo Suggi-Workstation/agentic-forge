@@ -24,6 +24,8 @@ Record the duplicate search scope and compared graveyard, idea, proposal,
 and Brain paths. Include accepted/pending proposal dispositions and their
 exact decision references, or say that no explicit decision exists.
 Explain the genuinely unresolved difference, or stop rather than duplicate.
+Name the existing target this idea would improve, if any, and the strongest
+alternative candidate considered and why it lost.
 For a reframe, identify the evaluation/review verdict and answer its
 material findings.
 
@@ -51,6 +53,7 @@ PASS requires every item; any missing item HALTs artifact creation.
 - [ ] Nonempty tags and low/medium/high confidence are present; the body justifies confidence.
 - [ ] LEARNINGS was read before selection; mission fit and value are clear.
 - [ ] Graveyard, ideas, proposals (accepted and pending), and Brain checked.
+- [ ] Existing target (if any) and strongest losing alternative candidate named.
 - [ ] Relevant matches were read and the non-duplicate gap is explained.
 - [ ] Reflection origin/overlap/current-state checks are recorded if used.
 - [ ] Hypothesis, alternative, disconfirmation, and bounded plan are explicit.

@@ -31,7 +31,7 @@ Justify confidence in the verdict with evidence, limitations, and what would cha
 
 State either the supported method lesson/change eligible for the LEARNINGS
 admission gate after this evaluation, or why LEARNINGS stays unchanged.
-Tentative single-incident observations remain here, not reusable lessons.
+Answer its capture questions; a single-pipeline lesson enters at `low` only.
 
 ## Sources
 
