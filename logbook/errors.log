@@ -39,3 +39,8 @@ Recovery: Exact official filing HTML remained read-only; a bounded `tr` transfor
 Pipeline: 20260921T152802Z
 Failure: An inline Python structural-verification command was approval-blocked in the unattended context.
 Recovery: The blocked command caused no repository change; repository-native checks and bounded read/search verification replaced it.
+
+## [ENT-008] | 2026-09-29 23:26 UTC | Researcher | error | ref: forge/research/evidence-gated-forge-transaction-checker-r01.md | see: 20260929T232637Z
+Pipeline: 20260921T152802Z
+Failure: Two post-run Python extraction probes and one compound shell pre-write probe were approval-blocked in the unattended context.
+Recovery: The complete JSON was read directly, pre-write checks were split into simple commands, and no fixture or live-repository change resulted.

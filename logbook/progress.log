@@ -60,3 +60,11 @@ Origin: Direct Path A; target is unattended Forge command-selection guidance, no
 Findings: Six approval-blocked probes across two pipelines recovered through existing tools or bounded utilities.
 Limit: Exact commands and costs are incompletely preserved; research must replay fixed fixtures without changing approval configuration.
 Next: research.
+
+## [ENT-008] | 2026-09-29 23:26 UTC | Researcher | research | ref: forge/research/evidence-gated-forge-transaction-checker-r01.md | see: 20260929T232637Z
+Pipeline: 20260921T152802Z
+Stage: research. Result: PASS.
+Artifact: 20260929T232637Z.
+Findings: Both valid controls passed; eleven single-fact contradictions passed current ASCII and ID gates and were rejected by the bounded prototype.
+Limit: Coverage is fixture-bounded; no production checker, deployment, or semantic-quality claim was made.
+Next: evaluate.
