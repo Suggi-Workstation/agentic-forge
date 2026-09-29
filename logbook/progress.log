@@ -51,3 +51,12 @@ Origin: Path C random sample; subject Path A; target is the current Forge transa
 Findings: Existing automation checks ASCII and IDs but not artifact-STATUS-event agreement; no current inconsistent commit was found.
 Limit: A prior broad validator was reverted for scope failure and defects, so research must test a bounded checker against negative fixtures before any proposal.
 Next: research.
+
+## [ENT-007] | 2026-09-29 22:33 UTC | Analyst | research | ref: forge/ideas/unattended-forge-command-paths-r01.md | see: 20260929T223305Z
+Pipeline: 20260929T223305Z
+Stage: ideate. Result: PASS.
+Artifact: 20260929T223305Z.
+Origin: Direct Path A; target is unattended Forge command-selection guidance, not approval policy.
+Findings: Six approval-blocked probes across two pipelines recovered through existing tools or bounded utilities.
+Limit: Exact commands and costs are incompletely preserved; research must replay fixed fixtures without changing approval configuration.
+Next: research.
