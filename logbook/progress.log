@@ -68,3 +68,12 @@ Artifact: 20260929T232637Z.
 Findings: Both valid controls passed; eleven single-fact contradictions passed current ASCII and ID gates and were rejected by the bounded prototype.
 Limit: Coverage is fixture-bounded; no production checker, deployment, or semantic-quality claim was made.
 Next: evaluate.
+
+## [ENT-009] | 2026-09-29 23:35 UTC | Analyst | review | ref: forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r01.md | see: 20260929T233502Z
+Pipeline: 20260921T152802Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260929T233502Z.
+Verdict: REVISE; corrective cycle 1 of 2.
+Findings: The current-gate gap is verified, but prototype, fixture, raw-output, and reader evidence was not preserved for independent checking.
+Learning: Strengthened the existing preservation lesson with a third independent pipeline.
+Next: research.

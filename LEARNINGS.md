@@ -60,14 +60,19 @@ edit; keep the legitimate stage result and this file unchanged.
 
 ### Preserve procedural validation evidence before comparison
 
-- **Lesson:** Preserve dated pre-comparison rules and each reader's separate
-  output before claiming a blind or reproducible test; a completed report's
-  retrospective assertion cannot establish timing or independence.
-- **Evidence:** Pipelines `20260921T060750Z` and `20260921T114301Z`, in
+- **Lesson:** Preserve dated pre-comparison rules, the exact runnable instrument
+  and fixtures, raw per-case outputs, and each reader's separate output before
+  claiming a blind, reproducible, or passed procedural validation; hashes
+  without available bytes do not make the run independently checkable.
+- **Evidence:** Pipelines `20260921T060750Z`, `20260921T114301Z`, and
+  `20260921T152802Z`, in
   `forge/evaluations/auditable-maintenance-capex-evaluation-r02.md` at Git
-  commit `a88424a57f949a66996b6fb03d06c674087ec7c6` and
-  `forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md`.
-- **Confidence:** Medium. Two independent accounting-method pipelines expose
-  the same preservation failure, but both remain within the Forge context.
-- **Consequence:** Require linked pre-comparison rules and unmerged per-reader
-  outputs before treating a procedural validation claim as passed.
+  commit `a88424a57f949a66996b6fb03d06c674087ec7c6`,
+  `forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md`, and
+  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r01.md`.
+- **Confidence:** Medium. Three independent Forge pipelines expose evidence-
+  preservation failures, but no later pipeline yet shows that applying the
+  strengthened package prevents them.
+- **Consequence:** Require linked pre-comparison rules, executable and fixture
+  bytes, raw results, and unmerged reader outputs before treating a procedural
+  validation claim as passed; otherwise limit the claim and return for evidence.

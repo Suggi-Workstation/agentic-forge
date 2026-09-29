@@ -44,3 +44,8 @@ Recovery: The blocked command caused no repository change; repository-native che
 Pipeline: 20260921T152802Z
 Failure: Two post-run Python extraction probes and one compound shell pre-write probe were approval-blocked in the unattended context.
 Recovery: The complete JSON was read directly, pre-write checks were split into simple commands, and no fixture or live-repository change resulted.
+
+## [ENT-009] | 2026-09-29 23:35 UTC | Analyst | error | ref: forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r01.md | see: 20260929T233502Z
+Pipeline: 20260921T152802Z
+Failure: The first Forge index freshness check returned STALE at `878347b8` while HEAD was `f8982b69`.
+Recovery: The existing watcher naturally indexed current HEAD; the next check returned `OK -- 170 chunks`, and no manual rebuild or configuration change occurred.
