@@ -77,3 +77,11 @@ Verdict: REVISE; corrective cycle 1 of 2.
 Findings: The current-gate gap is verified, but prototype, fixture, raw-output, and reader evidence was not preserved for independent checking.
 Learning: Strengthened the existing preservation lesson with a third independent pipeline.
 Next: research.
+
+## [ENT-010] | 2026-09-30 00:09 UTC | Researcher | research | ref: forge/research/unattended-forge-command-paths-r01.md | see: 20260930T000632Z
+Pipeline: 20260929T223305Z
+Stage: research. Result: PASS.
+Artifact: 20260930T000632Z.
+Findings: Current cron deny blocked one class-wide execute_code replay and one Perl route; three safe-path fixtures met their predeclared results.
+Limit: Exact historical commands and costs are absent; the structural read/search route remained manual.
+Next: evaluate.
