@@ -12,5 +12,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
-| 20260921T152802Z | active | evaluate | forge/research/evidence-gated-forge-transaction-checker-r03.md | Evaluate the partial-result boundary, 19-case package, and two-shape economics; correction budget exhausted. | 2026-09-30T03:22:35Z |
 | 20260929T223305Z | active | propose | forge/evaluations/unattended-forge-command-paths-review-r01.md | Revise the denial-context trigger and matched control/treatment acceptance design; corrective cycle 1 of 2. | 2026-09-30T03:52:05Z |

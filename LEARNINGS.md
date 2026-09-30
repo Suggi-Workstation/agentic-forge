@@ -82,20 +82,25 @@ edit; keep the legitimate stage result and this file unchanged.
   bytes, raw results, and unmerged reader outputs before treating a procedural
   validation claim as passed; otherwise limit the claim and return for evidence.
 
-### Derive checker fixtures from the claimed PASS contract
+### Derive checker fixtures and controls from the claimed result contract
 
-- **Lesson:** Derive deterministic checker fixtures from every normative field
-  and relationship that PASS claims to validate, or label the result as a
-  partial check; a perfect declared-mutant score does not cover fields the
-  fixture set never mutates.
+- **Lesson:** Derive negative fixtures from every field and relationship a
+  checker result claims, and derive positive controls from complete valid records
+  plus permitted orthogonal variation; otherwise label the result partial. A
+  perfect declared-mutant score can coexist with false rejection caused by an
+  undocumented parser constraint.
 - **Evidence:** Pipeline `20260921T152802Z`, in
-  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md`.
-  The preserved package reproduced all 13 declared classifications, while three
-  additional one-line current-shape contradictions in event result, category,
-  and authorship each returned PASS.
-- **Confidence:** Low. One pipeline supplies checked evidence; the historical
-  reverted validator is prior work from the same idea's origin, not an
-  independent trial.
-- **Consequence:** Before proposing a deterministic checker, map its claimed PASS
-  boundary to rule-derived positive and negative fixtures, then narrow the
-  output meaning when any required field is intentionally excluded.
+  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md`
+  and `forge/graveyard/evidence-gated-forge-transaction-checker-evaluation-r03.md`.
+  Revision 2 reproduced every declared classification while three required
+  fields still passed when contradicted. Revision 3 reproduced all 19 declared
+  classifications, but the unchanged current open transaction failed because a
+  permitted `forge/protocol.md` source link lacked pipeline metadata; the real
+  closed transaction passed.
+- **Confidence:** Low. One pipeline supplies checked evidence; its revisions are
+  not independent trials.
+- **Consequence:** Before proposing a deterministic checker, map every claimed
+  output predicate to negative fixtures, then run unchanged current records for
+  every supported mode and valid variations for structures the protocol permits.
+  Narrow the output meaning when either required fields or valid structures are
+  intentionally excluded.

@@ -139,3 +139,13 @@ Verdict: REVISE; corrective cycle 1 of 2.
 Findings: The amendment overreaches beyond active unattended deny contexts, and its post-change-only test cannot identify selection benefit.
 Learning: Unchanged; existing fixture-contract and final-review rules cover the method issue.
 Next: propose.
+
+## [ENT-017] | 2026-09-30 04:56 UTC | Analyst | review | ref: forge/graveyard/evidence-gated-forge-transaction-checker-evaluation-r03.md | see: 20260930T045604Z
+Pipeline: 20260921T152802Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260930T045604Z.
+Verdict: DEFER; correction budget exhausted and pipeline closed.
+Findings: All 19 declared classifications reproduced, but the checker falsely rejected the valid current open transaction because a permitted protocol source link lacks pipeline metadata.
+Limit: Two-shape maintenance value and advantage over the manual checklist remain unmeasured.
+Learning: Strengthened the low-confidence checker-fixture lesson with full real-record positive controls and permitted structural variation.
+Next: closed; STATUS row removed.
