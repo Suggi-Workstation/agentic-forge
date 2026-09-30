@@ -13,4 +13,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
 | 20260930T083956Z | awaiting-review | human-review | forge/discoveries/bounded-index-freshness-recheck-r02.md | Decide whether to approve, request changes, defer, or reject the exact discovery. | 2026-09-30 12:02 UTC |
-| 20260930T173859Z | active | evaluate | forge/research/forge-proposal-claim-verification-map-r01.md | Evaluate the retrospective map's detection, false-blocker, grouping, and prospective-value limits. | 2026-09-30 19:15 UTC |
+| 20260930T173859Z | active | research | forge/evaluations/forge-proposal-claim-verification-map-evaluation-r01.md | Preserve exact reader evidence and run a fair semantic checklist comparison. | 2026-09-30 19:35 UTC |

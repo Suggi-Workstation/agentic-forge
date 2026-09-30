@@ -61,21 +61,31 @@ edit; keep the legitimate stage result and this file unchanged.
 ### Preserve procedural validation evidence before comparison
 
 - **Lesson:** Preserve dated pre-comparison rules, the exact runnable instrument
-  and fixtures, raw per-case outputs, and each reader's separate output before
-  claiming a blind, reproducible, or passed procedural validation; hashes
-  without available bytes do not make the run independently checkable.
-- **Evidence:** In three earlier pipelines, reports claimed blind or
-  reproducible tests but kept only summaries or hashes, so evaluators could
-  not check them. A fourth pipeline preserved its complete fixtures, calls,
-  and raw result bytes, and a separate evaluator used them to reproduce every
-  claimed outcome.
-- **Confidence:** High for runnable-package and raw-output preservation. Three
-  independent pipelines exposed the failure, and a later pipeline showed that
-  applying the lesson made its procedural result independently checkable. Blind
-  timing and separate-reader claims still require their own preserved evidence.
+  and fixtures, raw per-case outputs, and each reader's separate output for every
+  compared method before claiming a blind, reproducible, or passed procedural
+  validation; hashes without available bytes do not make the run independently
+  checkable. Apply each baseline to its full stated contract rather than a
+  presence-only surrogate.
+- **Evidence:** In three earlier pipelines, reports claimed blind or reproducible
+  tests but kept only summaries or hashes, so evaluators could not check them. A
+  fourth pipeline preserved its complete fixtures, calls, and raw result bytes,
+  and a separate evaluator used them to reproduce every claimed outcome. In
+  pipeline `20260930T173859Z`, the displayed map could be checked against six
+  disclosed defects, but the hashed instrument bytes, separate reader output,
+  and semantic checklist baseline were not preserved as distinct records; the
+  evaluation could not verify the reproduction or incremental 6/6-versus-0/6
+  comparison. See
+  `forge/evaluations/forge-proposal-claim-verification-map-evaluation-r01.md`.
+- **Confidence:** High for runnable-package, raw-output, and full-contract
+  comparator preservation. Four independent pipelines exposed the failure, and
+  a separate later pipeline showed that applying the lesson made its procedural
+  result independently checkable. Blind timing and separate-reader claims still
+  require their own preserved evidence.
 - **Consequence:** Require linked pre-comparison rules, executable and fixture
-  bytes, raw results, and unmerged reader outputs before treating a procedural
-  validation claim as passed; otherwise limit the claim and return for evidence.
+  bytes, raw results, and unmerged reader outputs for every treatment and
+  baseline before treating a procedural comparison as passed. Apply each
+  comparator to its complete stated contract and preserve per-target outputs;
+  otherwise narrow the result and return for evidence.
 
 ### Derive evaluator and checker controls from the claimed result contract
 

@@ -175,3 +175,13 @@ Artifact: 20260930T191144Z.
 Findings: A frozen 279-word map classified 56 grouped claims, reproduced all six disclosed blockers across two failed revisions, and produced no blocker across 16 READY-control rows; the current checklist detected zero of six.
 Limit: The test is retrospective with disclosed answer keys, one negative pipeline, one READY control, judgment-dependent grouping, and a same-model-family separate reader; future revision reduction and author cost remain unknown.
 Next: evaluate detection value, false-blocker risk, grouping reproducibility, proportional scope, and the need for a prospective control.
+
+## [ENT-020] | 2026-09-30 19:35 UTC | Analyst | review | ref: forge/evaluations/forge-proposal-claim-verification-map-evaluation-r01.md | see: 20260930T193508Z
+Pipeline: 20260930T173859Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260930T193508Z.
+Verdict: REVISE; next stage research; corrective cycle 1 of 2.
+Findings: The displayed map matches all six disclosed blockers and the READY control, but exact instrument bytes and separate-reader outputs are unavailable, while an item-presence checklist baseline cannot establish incremental detection.
+Limit: The comparison remains retrospective with one negative pipeline, one positive pipeline, judgment-dependent grouping, same-model-family reading, and unmeasured prospective author benefit.
+Learning: Strengthened the evidence-preservation lesson to require full-contract baseline outputs for every compared method; confidence remains high.
+Next: research exact instrument and reader preservation, independent grouping evidence, and a predeclared semantic checklist comparison.
