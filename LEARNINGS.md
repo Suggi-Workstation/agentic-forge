@@ -101,3 +101,24 @@ edit; keep the legitimate stage result and this file unchanged.
   map every claimed PASS or benefit clause to an observable predicate, a
   false-positive counterexample or negative fixture, and a valid positive
   control. Narrow the result claim whenever the grader deliberately omits one.
+
+### Separate historical artifact identity from path provenance
+
+- **Lesson:** When prior-work search traverses Git history, freeze the supplied
+  revision or ref set, group logical artifacts by pipeline plus artifact ID, and
+  retain path, containing commit, and blob as provenance. Describe absence only
+  inside that reachable corpus, never as archival completeness.
+- **Evidence:** Pipeline `20260930T124036Z` recovered 39 reachable Forge paths
+  but only 34 logical artifact IDs at one frozen revision; five rename or move
+  copies stayed within their pipelines, while exact historical bodies changed
+  two bounded duplicate or reopening decisions without inventing a missing
+  human disposition. See
+  `forge/research/forge-history-duplicate-receipt-r01.md` and
+  `forge/evaluations/forge-history-duplicate-receipt-evaluation-r01.md`.
+- **Confidence:** Low. One pipeline and an independent evaluation reproduced the
+  bounded corpus and identity result; behavior across later resets, larger
+  histories, and other repositories is untested.
+- **Consequence:** For historical duplicate checks, surface roots and decisive
+  artifacts first, deduplicate path aliases by stable identity, require full
+  body reads before disposition, preserve `unknown` for missing decisions, and
+  halt or narrow the claim when reachability or identity is ambiguous.

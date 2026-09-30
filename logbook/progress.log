@@ -91,3 +91,13 @@ Artifact: 20260930T132200Z.
 Findings: The verified receipt recovered 5 roots, 39 reachable paths, and 34 logical artifact IDs; it exposed one missing candidate and one omitted closure without a cross-pipeline merge.
 Limit: The historical index snapshot was unavailable, reachability is not archival completeness, five renamed paths required ID deduplication, and ten bodies were needed for exact decisions.
 Next: evaluate decision value, false-completeness limits, path noise, and review cost.
+
+## [ENT-011] | 2026-09-30 14:41 UTC | Analyst | review | ref: forge/evaluations/forge-history-duplicate-receipt-evaluation-r01.md | see: 20260930T144144Z
+Pipeline: 20260930T124036Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260930T144144Z.
+Verdict: ADVANCE; next stage propose; 0 of 2 corrective cycles used.
+Findings: Exact instrument bytes and an independent traversal reproduced 5 roots, 39 reachable paths, 34 logical IDs, 5 alias groups, zero cross-pipeline conflicts, and two bounded decision changes.
+Limit: The historical index snapshot and review timing are unavailable; the sample is five pipelines in one history, and ref reachability is not archival completeness.
+Learning: Added a low-confidence lesson to separate stable historical artifact identity from path, commit, and blob provenance.
+Next: propose a scratch-only root-first receipt with explicit reachability, identity, body-read, cost, overflow, and rollback limits.
