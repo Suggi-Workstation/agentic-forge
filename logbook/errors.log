@@ -71,3 +71,8 @@ Pipeline: 20260921T152802Z
 Failure: Programmatic package extraction through execute_code was approval-blocked before any inner tool call.
 Failure: The first shell extraction command was approval-blocked because it combined ten deletion operations; no command component ran.
 Recovery: Exact line-range extraction used csplit and non-deleting copies; hashes, syntax checks, and the independent rerun then completed without a repository write.
+
+## [ENT-014] | 2026-09-30 02:39 UTC | Analyst | error | ref: forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md | see: 20260930T023515Z
+Pipeline: 20260921T152802Z
+Failure: The first compound publication-verification wait and conditional command was approval-blocked before any component ran.
+Recovery: The wait and fetch/ancestor checks ran as separate commands; the exact commit then verified on origin/main with AHEAD: 0 and BEHIND: 0.
