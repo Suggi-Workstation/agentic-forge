@@ -1,3 +1,12 @@
 <!-- progress.log -- append-only Forge stage events.
      Every event is a multiline ENT block. Counters are sequential per file.
      See logbook/protocol.md. -->
+
+## [ENT-001] | 2026-09-30 08:39 UTC | Analyst | research | ref: forge/ideas/bounded-index-freshness-recheck-r01.md | see: 20260930T083956Z
+Pipeline: 20260930T083956Z
+Stage: ideate. Result: PASS.
+Artifact: 20260930T083956Z.
+Origin: Direct Path A; target is the VPS repository-query freshness procedure.
+Findings: Three historical query-gate STALE events justify a bounded reconstruction; current skills halt immediately while the watcher converges each minute.
+Limit: Exact event durations and later OK results are not fully preserved in the summaries; research must reconstruct them and keep every nontransient case fail-closed.
+Next: research.

@@ -12,3 +12,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
+| 20260930T083956Z | active | research | forge/ideas/bounded-index-freshness-recheck-r01.md | Reconstruct transient STALE events and test one bounded recheck. | 2026-09-30 08:39 UTC |
