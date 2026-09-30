@@ -89,3 +89,13 @@ Recovery: The parser was corrected to recognize keys ending in a colon; the reru
 Pipeline: 20260930T124036Z
 Failure: Batch deletion of four task-owned scratch files was safety-blocked before any file was removed.
 Recovery: Each exact path was unlinked separately outside the burst limit; a bounded file search confirmed no task-owned review files remain, and the Forge repository stayed clean.
+
+## [ENT-018] | 2026-09-30 16:25 UTC | Researcher | error | ref: forge/proposals/forge-history-duplicate-receipt-r02.md | see: 20260930T160909Z
+Pipeline: 20260930T124036Z
+Failure: A combined read-only preflight command containing an inline Python heredoc was safety-blocked before execution.
+Recovery: Separate safe Git and filesystem commands supplied the snapshot; no approval, runtime, repository, or external state was changed.
+
+## [ENT-019] | 2026-09-30 16:25 UTC | Researcher | error | ref: forge/proposals/forge-history-duplicate-receipt-r02.md | see: 20260930T160909Z
+Pipeline: 20260930T124036Z
+Failure: Browser retrieval of the official GNU timeout manual returned HTTP 429.
+Recovery: The GNU page was not used in the proposal; focused verified Git and Python documentation supplied the selected design evidence without changing access or runtime configuration.
