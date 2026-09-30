@@ -60,7 +60,7 @@ queries:
 - qid: f012
   question: How does final review check the actual proposal before human approval?
   gold_files:
-  - governance/template-review.md
+  - governance/template-final-review.md
   domain: templates
 - qid: f013
   question: How can reflections produce research ideas without mistaking repeated stories for independent evidence?

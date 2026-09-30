@@ -116,9 +116,7 @@ independently; completed artifacts are immutable.
 The next revision links the previous same-tier artifact, root idea, and
 every directly consumed Forge input. No `parent` or `supersedes` field is
 needed. A final review names the exact proposal path and ID, not just a
-pipeline; a discovery names the exact READY review and proposal. Final
-reviews written before 2026-09-30 carry the legacy `tier: review`; read it
-as `final-review` and do not rewrite those files.
+pipeline; a discovery names the exact READY review and proposal.
 
 Links are repository-relative, cross-repository `agentic-brain:<path>` or
 `investing-hub:<path>`, or source URLs. Internal links must resolve; linked

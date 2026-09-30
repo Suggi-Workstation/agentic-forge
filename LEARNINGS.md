@@ -64,16 +64,11 @@ edit; keep the legitimate stage result and this file unchanged.
   and fixtures, raw per-case outputs, and each reader's separate output before
   claiming a blind, reproducible, or passed procedural validation; hashes
   without available bytes do not make the run independently checkable.
-- **Evidence:** Pipelines `20260921T060750Z`, `20260921T114301Z`,
-  `20260921T152802Z`, and `20260929T223305Z`, in
-  `forge/evaluations/auditable-maintenance-capex-evaluation-r02.md` at Git
-  commit `a88424a57f949a66996b6fb03d06c674087ec7c6`,
-  `forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md`,
-  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r01.md`,
-  and `forge/evaluations/unattended-forge-command-paths-evaluation-r01.md`.
-  The first three pipelines exposed missing evidence; the fourth preserved
-  complete fixture, call, and result bytes that a separate evaluator used to
-  reproduce the three claimed safe-route outcomes.
+- **Evidence:** In three earlier pipelines, reports claimed blind or
+  reproducible tests but kept only summaries or hashes, so evaluators could
+  not check them. A fourth pipeline preserved its complete fixtures, calls,
+  and raw result bytes, and a separate evaluator used them to reproduce every
+  claimed outcome.
 - **Confidence:** High for runnable-package and raw-output preservation. Three
   independent pipelines exposed the failure, and a later pipeline showed that
   applying the lesson made its procedural result independently checkable. Blind
@@ -89,15 +84,12 @@ edit; keep the legitimate stage result and this file unchanged.
   behavior the result claims. A run-level label cannot validate unclassified
   later decisions; label the result partial when any claimed predicate is
   intentionally excluded.
-- **Evidence:** Pipelines `20260921T152802Z` and `20260929T223305Z`, in
-  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md`,
-  `forge/graveyard/evidence-gated-forge-transaction-checker-evaluation-r03.md`,
-  and `forge/final-reviews/unattended-forge-command-paths-review-r02.md`. The first
-  pipeline reproduced its declared classifications while required fields passed
-  when contradicted, then reproduced 19 declared outcomes while rejecting a
-  permitted real transaction shape. The second froze matched control/treatment
-  inputs and outputs, but its single run-level first-route classifier could not
-  reject denied first choices for later purposes covered by the PASS claim.
+- **Evidence:** In one earlier pipeline, a record checker reproduced all its
+  declared results while contradicted required fields still passed; after a
+  fix, it reproduced all declared outcomes but rejected a valid real record
+  shape. In another, an evaluation design froze matched control and treatment
+  runs but graded only each run's first command choice, so a denied attempt
+  later in the run could still pass the claim.
 - **Confidence:** Medium. Two independent pipelines expose the same
   claimed-contract undercoverage in a checker and an evaluation grader.
 - **Consequence:** Before proposing a deterministic checker or evaluation gate,
