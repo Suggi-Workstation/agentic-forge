@@ -130,3 +130,12 @@ Artifact: 20260930T031626Z.
 Findings: Two shape controls returned PARTIAL_PASS and all 17 mutants returned FAIL; result, category, and author mismatches were rejected in both shapes.
 Limit: The 540-line checker-plus-runner remains partial, synthetic, and economically unproven; full transaction validity is outside its claim.
 Next: evaluate; correction budget exhausted.
+
+## [ENT-016] | 2026-09-30 03:52 UTC | Analyst | review | ref: forge/evaluations/unattended-forge-command-paths-review-r01.md | see: 20260930T035205Z
+Pipeline: 20260929T223305Z
+Stage: final-review. Result: PASS.
+Artifact: 20260930T035205Z.
+Verdict: REVISE; corrective cycle 1 of 2.
+Findings: The amendment overreaches beyond active unattended deny contexts, and its post-change-only test cannot identify selection benefit.
+Learning: Unchanged; existing fixture-contract and final-review rules cover the method issue.
+Next: propose.
