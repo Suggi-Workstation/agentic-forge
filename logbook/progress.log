@@ -74,3 +74,12 @@ Decision: Request human review of the exact bounded HEAD-lag freshness-recheck d
 Findings: The discovery preserves the exact trigger, literal-OK and unchanged-state gates, complete shell acceptance scope, direct rollback, and separate-authorization boundary.
 Limit: Shell integration remains unexecuted, both positives share one system, the 90-second ceiling is post-event, net benefit is unmeasured, and atomic exclusion is not claimed.
 Next: human-review; approve, request changes, defer, or reject the discovery without treating READY as implementation authority.
+
+## [ENT-009] | 2026-09-30 12:40 UTC | Analyst | research | ref: forge/ideas/forge-history-duplicate-receipt-r01.md | see: 20260930T124036Z
+Pipeline: 20260930T124036Z
+Stage: ideate. Result: PASS.
+Artifact: 20260930T124036Z.
+Origin: Direct Path A; target is the Forge ideation prior-work check after repository resets.
+Findings: The live tree contains 1 root idea and 8 artifact Markdown paths, while reachable Git history contains 5 roots and 39 unique artifact paths.
+Limit: Reachable refs are not archival completeness, and the receipt's semantic recall, disposition accuracy, review cost, and decision value remain untested.
+Next: research the current-tree baseline against one bounded read-only reachable-history receipt.

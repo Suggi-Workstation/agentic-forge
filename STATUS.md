@@ -13,3 +13,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
 | 20260930T083956Z | awaiting-review | human-review | forge/discoveries/bounded-index-freshness-recheck-r02.md | Decide whether to approve, request changes, defer, or reject the exact discovery. | 2026-09-30 12:02 UTC |
+| 20260930T124036Z | active | research | forge/ideas/forge-history-duplicate-receipt-r01.md | Compare current-tree duplicate search with a bounded reachable-history receipt. | 2026-09-30 12:40 UTC |
