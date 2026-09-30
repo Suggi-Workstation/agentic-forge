@@ -60,3 +60,8 @@ Recovery: Installed source at the exact upstream commit, split safe commands, of
 Pipeline: 20260921T152802Z
 Failure: A compound shell loop for link-existence verification was approval-blocked in the unattended context.
 Recovery: Every linked repository file had already been read directly in full, all three public URLs had been extracted, and no approval or configuration change was attempted.
+
+## [ENT-012] | 2026-09-30 01:35 UTC | Researcher | error | ref: forge/research/evidence-gated-forge-transaction-checker-r02.md | see: 20260930T012523Z
+Pipeline: 20260921T152802Z
+Failure: Recursive deletion of the task-owned scratch package was approval-blocked after publication verification.
+Recovery: No retry, bypass, or approval change was attempted; the package remains in the configured scratch cache for automatic pruning after 24 hours.
