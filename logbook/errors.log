@@ -81,3 +81,9 @@ Recovery: The wait and fetch/ancestor checks ran as separate commands; the exact
 Pipeline: 20260921T152802Z
 Failure: A combined post-run hash, raw-output loop, and repository-state command was approval-blocked before any component ran.
 Recovery: Split read-only commands verified five hashes, 19 one-line raw outputs, unchanged Forge HEAD, and a clean working tree; no approval or configuration change was attempted.
+
+## [ENT-016] | 2026-09-30 04:01 UTC | Researcher | error | ref: forge/evaluations/unattended-forge-command-paths-review-r01.md | see: 20260930T035205Z
+Pipeline: 20260929T223305Z
+Failure: The required agentic-brain freshness check returned STALE before the proposal revision, so no Brain query ran.
+Failure: A compound pre-write repository-state command was approval-blocked before any component ran.
+Recovery: The index log was inspected, the repository state was checked with a split safe command, and no manual rebuild or approval change was attempted. The selected propose stage and input remain unchanged.
