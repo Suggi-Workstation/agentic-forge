@@ -167,3 +167,11 @@ Findings: R03 substantially answers the four r02 design blockers, but a command-
 Limit: The fixture used a local transport and the full driver remains unexecuted; official Git documentation establishes that promisor missing objects use the same demand-fetch subprocess path.
 Learning: Strengthened the existing claimed-result-contract lesson with effective-configuration and inherited-override coverage; confidence remains high without counting this same pipeline as independent evidence.
 Next: closed; reopening requires an explicit human budget extension and an all-effective-scope or sanitized-environment guard with omitted-scope no-fetch and no-write fixtures.
+
+## [ENT-019] | 2026-09-30 19:15 UTC | Researcher | research | ref: forge/research/forge-proposal-claim-verification-map-r01.md | see: 20260930T191144Z
+Pipeline: 20260930T173859Z
+Stage: research. Result: PASS.
+Artifact: 20260930T191144Z.
+Findings: A frozen 279-word map classified 56 grouped claims, reproduced all six disclosed blockers across two failed revisions, and produced no blocker across 16 READY-control rows; the current checklist detected zero of six.
+Limit: The test is retrospective with disclosed answer keys, one negative pipeline, one READY control, judgment-dependent grouping, and a same-model-family separate reader; future revision reduction and author cost remain unknown.
+Next: evaluate detection value, false-blocker risk, grouping reproducibility, proportional scope, and the need for a prospective control.

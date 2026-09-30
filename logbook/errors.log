@@ -129,3 +129,8 @@ Recovery: The direct `uuidgen` command supplied the stable web-retrieval session
 Pipeline: 20260930T124036Z
 Failure: The first scratch validator used `git diff --name-only`, which omits an untracked completed artifact, and returned a false changed-path mismatch while all substantive checks passed.
 Recovery: The validator derived paths from porcelain status instead; the rerun passed exact path scope, metadata, links, citations, sources, board, logs, lesson, target hash, ASCII, and embedded-fixture hash checks.
+
+## [ENT-026] | 2026-09-30 19:16 UTC | Researcher | error | ref: forge/research/forge-proposal-claim-verification-map-r01.md | see: 20260930T191144Z
+Pipeline: 20260930T173859Z
+Failure: The separate reader's terminal Python `-c` parser and follow-up `execute_code` parser were blocked before execution by unattended safety controls.
+Recovery: Full source reads and bounded `search_files` checks supplied the row and blocker counts; no approval, runtime, repository scope, or external state was changed.
