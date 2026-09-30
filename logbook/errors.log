@@ -55,3 +55,8 @@ Pipeline: 20260929T223305Z
 Failure: A compound environment probe was approval-blocked before execution.
 Failure: Raw upstream source retrieval returned HTTP 429, and one mixed-repository commit check timed out.
 Recovery: Installed source at the exact upstream commit, split safe commands, official documentation, and correctly scoped Git checks supplied the evidence; no Forge write preceded the stage transaction.
+
+## [ENT-011] | 2026-09-30 01:32 UTC | Researcher | error | ref: forge/research/evidence-gated-forge-transaction-checker-r02.md | see: 20260930T012523Z
+Pipeline: 20260921T152802Z
+Failure: A compound shell loop for link-existence verification was approval-blocked in the unattended context.
+Recovery: Every linked repository file had already been read directly in full, all three public URLs had been extracted, and no approval or configuration change was attempted.

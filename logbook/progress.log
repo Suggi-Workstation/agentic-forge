@@ -95,3 +95,11 @@ Findings: Current route-class denials and three exact safe-route outcomes were i
 Limit: Historical command identity and recovery cost remain unknown; the structural route remains manual.
 Learning: Raised the existing package-preservation lesson to high after its application enabled independent reproduction.
 Next: propose.
+
+## [ENT-012] | 2026-09-30 01:26 UTC | Researcher | research | ref: forge/research/evidence-gated-forge-transaction-checker-r02.md | see: 20260930T012523Z
+Pipeline: 20260921T152802Z
+Stage: research. Result: PASS.
+Artifact: 20260930T012523Z.
+Findings: The complete two-shape package accepted both controls and rejected all eleven one-line mutants; exact bytes and outputs are embedded.
+Limit: Other lifecycle shapes, durable pre-run chronology, economics, live integration, and a post-commit independent rerun remain unverified.
+Next: evaluate.
