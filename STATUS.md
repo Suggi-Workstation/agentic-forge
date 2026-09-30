@@ -13,5 +13,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
 | 20260930T083956Z | awaiting-review | human-review | forge/discoveries/bounded-index-freshness-recheck-r02.md | Decide whether to approve, request changes, defer, or reject the exact discovery. | 2026-09-30 12:02 UTC |
-| 20260930T124036Z | active | final-review | forge/proposals/forge-history-duplicate-receipt-r03.md | Review sink-level byte enforcement, whole-driver operation gates, external fixture ledger, and partial-clone rejection. | 2026-09-30 18:12 UTC |
 | 20260930T173859Z | active | research | forge/ideas/forge-proposal-claim-verification-map-r01.md | Test a compact claim-to-verification map against two failed proposal revisions and one READY control. | 2026-09-30 17:38 UTC |

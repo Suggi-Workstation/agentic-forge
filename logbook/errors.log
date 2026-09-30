@@ -119,3 +119,13 @@ Recovery: The command made no repository write; subsequent reads and validation 
 Pipeline: 20260930T124036Z
 Failure: Two batch scratch-cleanup attempts were safety-blocked, and one early directory removal found six probe outputs still present.
 Recovery: Every task-owned file was removed by an exact individually paced unlink; bounded searches returned zero matching files, and the Forge repository remained clean with the stage commit already on origin/main.
+
+## [ENT-024] | 2026-09-30 18:40 UTC | Analyst | error | ref: forge/graveyard/forge-history-duplicate-receipt-review-r03.md | see: 20260930T183748Z
+Pipeline: 20260930T124036Z
+Failure: One inline-Python UUID-generation command was safety-blocked before execution in the unattended context.
+Recovery: The direct `uuidgen` command supplied the stable web-retrieval session ID; no repository, approval, runtime, or external state changed.
+
+## [ENT-025] | 2026-09-30 18:43 UTC | Analyst | error | ref: forge/graveyard/forge-history-duplicate-receipt-review-r03.md | see: 20260930T183748Z
+Pipeline: 20260930T124036Z
+Failure: The first scratch validator used `git diff --name-only`, which omits an untracked completed artifact, and returned a false changed-path mismatch while all substantive checks passed.
+Recovery: The validator derived paths from porcelain status instead; the rerun passed exact path scope, metadata, links, citations, sources, board, logs, lesson, target hash, ASCII, and embedded-fixture hash checks.

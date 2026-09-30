@@ -157,3 +157,13 @@ Decision: Revise the reachable-history receipt with operating-system sink limits
 Findings: R03 answers all four r02 blockers while preserving the evaluated one-skill, scratch-only, exact-body, unknown-state, rollback, and no-implementation boundaries.
 Limit: The complete driver, Git sink, promisor fixture, external-ledger matrix, root-first display, and final skill bytes remain unexecuted; the ordinary correction budget is exhausted.
 Next: final-review the exact r03 sink, deadline, observability, clone-state, acceptance, and authority contracts; another correction requires DEFER or an explicit human extension.
+
+## [ENT-018] | 2026-09-30 18:40 UTC | Analyst | review | ref: forge/graveyard/forge-history-duplicate-receipt-review-r03.md | see: 20260930T183748Z
+Pipeline: 20260930T124036Z
+Stage: final-review. Result: PASS.
+Artifact: 20260930T183748Z.
+Verdict: DEFER; graveyard closure; two of two ordinary corrective cycles were already used and no human extension exists.
+Findings: R03 substantially answers the four r02 design blockers, but a command-scope `remote.origin.promisor` key bypassed its local-only guard; the exact object call spawned a fetch and added pack files in a disposable Git 2.43 fixture.
+Limit: The fixture used a local transport and the full driver remains unexecuted; official Git documentation establishes that promisor missing objects use the same demand-fetch subprocess path.
+Learning: Strengthened the existing claimed-result-contract lesson with effective-configuration and inherited-override coverage; confidence remains high without counting this same pipeline as independent evidence.
+Next: closed; reopening requires an explicit human budget extension and an all-effective-scope or sanitized-environment guard with omitted-scope no-fetch and no-write fixtures.

@@ -81,10 +81,11 @@ edit; keep the legitimate stage result and this file unchanged.
 
 - **Lesson:** Derive every checker predicate, evaluator classifier, negative
   fixture, positive control, and operation order from each field, relationship,
-  resource bound, and purpose-level behavior the result claims. A run-level label
-  cannot validate unclassified later decisions or a gate applied only after its
-  prohibited action; label the result partial when any claimed predicate is
-  intentionally excluded.
+  resource bound, effective configuration source, inherited override, and
+  purpose-level behavior the result claims. A run-level label cannot validate
+  unclassified later decisions or a gate applied only after its prohibited
+  action; label the result partial when any claimed predicate is intentionally
+  excluded.
 - **Evidence:** In one earlier pipeline, a record checker reproduced all its
   declared results while contradicted required fields still passed; after a
   fix, it reproduced all declared outcomes but rejected a valid real record
@@ -96,18 +97,27 @@ edit; keep the legitimate stage result and this file unchanged.
   rerun reproduced all 22 corrected expectations. In pipeline
   `20260930T124036Z`, a proposal probed a blob body before its declared size gate
   and named an elapsed ceiling without a running-command deadline predicate;
-  final review returned REVISE before either bound was treated as testable. See
-  `forge/final-reviews/forge-history-duplicate-receipt-review-r01.md`.
+  final review returned REVISE before either bound was treated as testable. A
+  later review in the same pipeline found that a local-only clone guard omitted
+  command-scope Git configuration: a disposable fixture supplied a promisor key
+  through `GIT_CONFIG_*`, after which the guarded object call spawned a fetch and
+  added object-database files. See
+  `forge/final-reviews/forge-history-duplicate-receipt-review-r01.md` and
+  `forge/graveyard/forge-history-duplicate-receipt-review-r03.md`.
 - **Confidence:** High. Four independent pipelines exposed claimed-contract or
   operation-order undercoverage, and pipeline `20260930T083956Z` showed that
   applying the lesson made its corrected trigger boundary and action sequence
-  independently checkable.
+  independently checkable. The later same-pipeline configuration-scope case
+  strengthens the consequence but does not add an independent trial.
 - **Consequence:** Before proposing a deterministic checker or evaluation gate,
   map every claimed PASS or benefit clause to an observable predicate, a
   false-positive counterexample or negative fixture, and a valid positive
   control. For resource bounds, enforce size and deadline gates before the
   consuming operation and assert that prohibited later invocations did not run.
-  Narrow the result claim whenever the grader deliberately omits one.
+  For environment-dependent guards, enumerate every effective configuration
+  scope and inherited override or sanitize the exact child environment, then
+  test an omitted-scope counterexample. Narrow the result claim whenever the
+  grader deliberately omits one.
 
 ### Separate historical artifact identity from path provenance
 
