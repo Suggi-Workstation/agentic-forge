@@ -44,3 +44,8 @@ Recovery: Full artifact and staged-diff reads, verified source-path reads, ID va
 Pipeline: 20260930T083956Z
 Failure: A combined publication-verification command was approval-blocked because it included inline Python log-tail extraction; its preceding fixed wait did not execute.
 Recovery: The inline parser was removed. After one pending ancestor check and one 75-second natural wait, fetch and ancestry verification returned AHEAD 0 without invoking the watcher or pushing manually.
+
+## [ENT-009] | 2026-09-30 12:09 UTC | Researcher | error | ref: forge/discoveries/bounded-index-freshness-recheck-r02.md | see: 20260930T120257Z
+Pipeline: 20260930T083956Z
+Failure: The first combined staged-validation command was blocked before execution because it contained an inline Python `-c` ASCII probe.
+Recovery: The probe was replaced with `iconv`; exact-path staging, diff checks, ID validation, link checks, ASCII checks, and the unchanged LEARNINGS hash then passed without changing approval or runtime state.

@@ -65,3 +65,12 @@ Findings: The exact trigger preserves the literal-OK gate, the shell matrix cove
 Limit: Shell integration remains unexecuted, both positives share one system, and the 90-second ceiling is post-event.
 Learning: Unchanged; existing package-preservation and claimed-result-contract lessons cover the method.
 Next: discover the exact r02 proposal without adding scope, evidence, approval, or implementation authority.
+
+## [ENT-008] | 2026-09-30 12:02 UTC | Researcher | research | ref: forge/discoveries/bounded-index-freshness-recheck-r02.md | see: 20260930T120257Z
+Pipeline: 20260930T083956Z
+Stage: discover. Result: PASS.
+Artifact: 20260930T120257Z.
+Decision: Request human review of the exact bounded HEAD-lag freshness-recheck discovery.
+Findings: The discovery preserves the exact trigger, literal-OK and unchanged-state gates, complete shell acceptance scope, direct rollback, and separate-authorization boundary.
+Limit: Shell integration remains unexecuted, both positives share one system, the 90-second ceiling is post-event, net benefit is unmeasured, and atomic exclusion is not claimed.
+Next: human-review; approve, request changes, defer, or reject the discovery without treating READY as implementation authority.

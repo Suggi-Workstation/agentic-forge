@@ -12,4 +12,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
-| 20260930T083956Z | active | discover | forge/final-reviews/bounded-index-freshness-recheck-review-r02.md | Condense the exact READY proposal; preserve tests, limits, rollback, and the no-implementation boundary. | 2026-09-30 11:38 UTC |
+| 20260930T083956Z | awaiting-review | human-review | forge/discoveries/bounded-index-freshness-recheck-r02.md | Decide whether to approve, request changes, defer, or reject the exact discovery. | 2026-09-30 12:02 UTC |
