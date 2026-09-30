@@ -9,3 +9,8 @@
 Pipeline: 20260930T083956Z
 Failure: Two read-only inline Python counting and uniqueness probes were approval-blocked before execution in the unattended context.
 Recovery: Full historical reads supplied the named records; repository search plus native Git pickaxe verified current and historical uniqueness. No repository write preceded the stable pre-write recheck.
+
+## [ENT-002] | 2026-09-30 09:28 UTC | Researcher | error | ref: forge/research/bounded-index-freshness-recheck-r01.md | see: 20260930T091629Z
+Pipeline: 20260930T083956Z
+Failure: Batch deletion of five task-owned scratch evidence files was approval-blocked after stage publication verification.
+Recovery: No bypass or approval change was attempted; the configured scratch cache will prune the files after 24 hours. The Forge repository remained clean and the exact stage commit was already verified on origin/main.
