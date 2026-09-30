@@ -185,3 +185,11 @@ Findings: The displayed map matches all six disclosed blockers and the READY con
 Limit: The comparison remains retrospective with one negative pipeline, one positive pipeline, judgment-dependent grouping, same-model-family reading, and unmeasured prospective author benefit.
 Learning: Strengthened the evidence-preservation lesson to require full-contract baseline outputs for every compared method; confidence remains high.
 Next: research exact instrument and reader preservation, independent grouping evidence, and a predeclared semantic checklist comparison.
+
+## [ENT-021] | 2026-09-30 20:22 UTC | Researcher | research | ref: forge/research/forge-proposal-claim-verification-map-r02.md | see: 20260930T201801Z
+Pipeline: 20260930T173859Z
+Stage: research. Result: PASS.
+Artifact: 20260930T201801Z.
+Findings: Two order-balanced readers gave the map no incremental blocker detection over the semantic checklist; each method found 4/6 and 5/6, their union found 6/6, and neither falsely blocked the READY control.
+Limit: The readers used one model family, extracted 60 versus 79 map rows, produced unsupported blocker rows, and did not measure prospective author or reviewer benefit.
+Next: evaluate whether the negative comparison supports stopping the idea or reframing it around narrower claim categories or reviewability; corrective cycle 1 of 2 remains used.
