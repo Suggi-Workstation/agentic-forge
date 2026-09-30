@@ -154,3 +154,8 @@ Recovery: Fixed Git and filesystem commands plus `jq` supplied the same evidence
 Pipeline: 20260930T223526Z
 Failure: One unattended `execute_code` arithmetic call was safety-blocked before execution.
 Recovery: Fixed-source `bc` calculations and direct source rereads supplied the arithmetic; no repository write preceded the stable pre-write recheck, and no approval or runtime setting changed.
+
+## [ENT-031] | 2026-09-30 23:30 UTC | Researcher | error | ref: forge/research/valuation-consistent-retained-earnings-test-r01.md | see: 20260930T232329Z
+Pipeline: 20260930T223526Z
+Failure: Three exact-path scratch-cleanup batches were blocked by unattended mass-deletion controls after publication verification; no file was removed.
+Recovery: A bounded search confirmed all 11 task-owned files remain in the configured scratch cache for automatic pruning after 24 hours; the Forge repository stayed clean and the exact stage commit was already on origin/main.
