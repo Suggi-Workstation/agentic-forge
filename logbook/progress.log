@@ -193,3 +193,13 @@ Artifact: 20260930T201801Z.
 Findings: Two order-balanced readers gave the map no incremental blocker detection over the semantic checklist; each method found 4/6 and 5/6, their union found 6/6, and neither falsely blocked the READY control.
 Limit: The readers used one model family, extracted 60 versus 79 map rows, produced unsupported blocker rows, and did not measure prospective author or reviewer benefit.
 Next: evaluate whether the negative comparison supports stopping the idea or reframing it around narrower claim categories or reviewability; corrective cycle 1 of 2 remains used.
+
+## [ENT-022] | 2026-09-30 21:35 UTC | Analyst | review | ref: forge/graveyard/forge-proposal-claim-verification-map-evaluation-r02.md | see: 20260930T213528Z
+Pipeline: 20260930T173859Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260930T213528Z.
+Verdict: REJECT; graveyard closure; corrective cycle 1 of 2 had been used and no further cycle was consumed.
+Findings: The full-contract checklist matched each reader's map at 4/6 and 5/6 disclosed blockers; map inventories diverged at 60 versus 79 rows, added no disclosed detection, and retained unsupported blockers at larger record size.
+Limit: The comparison used two same-family readers, two negative revisions from one pipeline, one READY control, disclosed answer keys, order carryover, and no prospective author or reviewer outcome.
+Learning: Unchanged; the existing full-contract-comparator lesson already covers the method, and this same pipeline does not justify a duplicate or confidence change.
+Next: closed; reopening requires new independent evidence that a proportionate narrow map adds unique decision-relevant detection or lowers total review cost without new false blockers.
