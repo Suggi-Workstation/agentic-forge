@@ -10,3 +10,11 @@ Origin: Direct Path A; target is the VPS repository-query freshness procedure.
 Findings: Three historical query-gate STALE events justify a bounded reconstruction; current skills halt immediately while the watcher converges each minute.
 Limit: Exact event durations and later OK results are not fully preserved in the summaries; research must reconstruct them and keep every nontransient case fail-closed.
 Next: research.
+
+## [ENT-002] | 2026-09-30 09:16 UTC | Researcher | research | ref: forge/research/bounded-index-freshness-recheck-r01.md | see: 20260930T091629Z
+Pipeline: 20260930T083956Z
+Stage: research. Result: PASS.
+Artifact: 20260930T091629Z.
+Findings: Two exact Forge HEAD-lag sequences reached literal OK after one natural watcher cycle in 60.7 and 74.1 seconds; a 14-case policy replay kept every declared negative fail-closed.
+Limit: The two recoveries share one system and operating period, the 90-second ceiling was selected after event reconstruction, and the Brain live-corpus event lacks a preserved second check.
+Next: evaluate the exact HEAD-lag trigger, bounded ceiling, and incremental value over immediate HALT.
