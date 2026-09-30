@@ -13,4 +13,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
 | 20260930T083956Z | awaiting-review | human-review | forge/discoveries/bounded-index-freshness-recheck-r02.md | Decide whether to approve, request changes, defer, or reject the exact discovery. | 2026-09-30 12:02 UTC |
-| 20260930T124036Z | active | propose | forge/evaluations/forge-history-duplicate-receipt-evaluation-r01.md | Propose a bounded root-first reachable-history receipt with explicit identity, corpus, cost, and stop limits. | 2026-09-30 14:41 UTC |
+| 20260930T124036Z | active | final-review | forge/proposals/forge-history-duplicate-receipt-r01.md | Review the bounded scratch-only receipt, fail-closed limits, acceptance package, and one-file rollback. | 2026-09-30 15:14 UTC |

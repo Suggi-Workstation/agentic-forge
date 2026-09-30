@@ -101,3 +101,12 @@ Findings: Exact instrument bytes and an independent traversal reproduced 5 roots
 Limit: The historical index snapshot and review timing are unavailable; the sample is five pipelines in one history, and ref reachability is not archival completeness.
 Learning: Added a low-confidence lesson to separate stable historical artifact identity from path, commit, and blob provenance.
 Next: propose a scratch-only root-first receipt with explicit reachability, identity, body-read, cost, overflow, and rollback limits.
+
+## [ENT-012] | 2026-09-30 15:14 UTC | Researcher | research | ref: forge/proposals/forge-history-duplicate-receipt-r01.md | see: 20260930T150618Z
+Pipeline: 20260930T124036Z
+Stage: propose. Result: PASS.
+Artifact: 20260930T150618Z.
+Decision: Propose one bounded reachable-history receipt in the Forge ideation skill; implementation remains separately authorized.
+Findings: The blueprint freezes one HEAD, preserves path/commit/blob provenance, groups pipeline plus artifact ID, keeps complete receipts in scratch, and blocks judgments on ambiguity or finite-budget overflow.
+Limit: The sample is five pipelines in one history, review time is unmeasured, the root-first display is untested, and the proposed ceilings are design assumptions.
+Next: final-review the exact one-file scope, fail-closed receipt, executable acceptance package, costs, and direct rollback.

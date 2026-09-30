@@ -69,3 +69,8 @@ Recovery: No bypass, approval, profile, or runtime change was attempted; a file 
 Pipeline: 20260930T124036Z
 Failure: A combined command to delete five task-owned evaluator scratch files was blocked by unattended mass-deletion controls before any file was removed.
 Recovery: Each exact task-owned path was unlinked separately; a bounded file search found no matching file, and the clean published Forge repository was unchanged.
+
+## [ENT-014] | 2026-09-30 15:17 UTC | Researcher | error | ref: forge/proposals/forge-history-duplicate-receipt-r01.md | see: 20260930T150618Z
+Pipeline: 20260930T124036Z
+Failure: One unattended execute_code validation call was blocked before any child tool call or repository action.
+Recovery: Full file reads and normal repository validation commands were used instead; no approval, runtime, or scope change was attempted.
