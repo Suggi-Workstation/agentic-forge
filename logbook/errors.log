@@ -19,3 +19,8 @@ Recovery: No bypass or approval change was attempted; the configured scratch cac
 Pipeline: 20260930T083956Z
 Failure: One inline-Python frontmatter read and two local-Python spillover parsing probes were approval-blocked before execution in the unattended context.
 Recovery: Bounded file reads, session search, jq, direct source inspection, and safe execution of the inspected replay supplied the evidence; no approval, runtime, or external state was changed.
+
+## [ENT-004] | 2026-09-30 10:26 UTC | Researcher | error | ref: forge/research/bounded-index-freshness-recheck-r02.md | see: 20260930T101043Z
+Pipeline: 20260930T083956Z
+Failure: One unattended execute_code composition call and two shell-based embedded-block extraction checks were approval or security blocked before execution.
+Recovery: Normal write and patch tools created the artifact; a complete read and placeholder search verified the report, while the source package itself had already run twice with identical output. No approval, runtime, or repository-scope change was attempted.

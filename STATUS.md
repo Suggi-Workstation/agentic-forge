@@ -12,4 +12,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
-| 20260930T083956Z | active | research | forge/evaluations/bounded-index-freshness-recheck-evaluation-r01.md | Preserve and replay an exact HEAD-lag-only classifier; corrective cycle 1 of 2. | 2026-09-30 09:45 UTC |
+| 20260930T083956Z | active | evaluate | forge/research/bounded-index-freshness-recheck-r02.md | Independently rerun the exact HEAD-lag-only package; corrective cycle 1 of 2 remains used. | 2026-09-30 10:26 UTC |
