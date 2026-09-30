@@ -5,23 +5,26 @@ tier: protocol
 author: Morpheus
 approved_by: Suggi
 ---
-# Forge Protocol -- Idea to Reviewed Proposal
+# Forge Protocol -- Idea to Discovery
 
 ## Purpose
 
-Turn one narrow question into a reviewed, implementable proposal.
-Research supplies evidence; evaluation checks it; proposals receive final
-review before Suggi decides.
+Turn one narrow question into a reviewed proposal and one discovery for
+Suggi to decide on. Research supplies evidence; evaluation checks it;
+proposals receive final review; a READY proposal is condensed into a
+discovery.
 This is a repository-only blueprint, not runtime packaging or deployment.
 The worst failure is an unsupported proposal appearing approved: separate
-research evaluation, final proposal review, and human authorization.
+research evaluation, final proposal review, a discovery that adds nothing,
+and human authorization.
 
 ## Handoffs
 
 Stages define permissions and routing, not agent identities. Any authorized
 agent may run a supported stage; deployment assignments are outside this
-blueprint. The loop skills are `forge-loop-research` for `research` and
-`propose`, and `forge-loop-evaluate` for `ideate`, `evaluate`, and `final-review`.
+blueprint. The loop skills are `forge-loop-research` for `research`,
+`propose`, and `discover`, and `forge-loop-evaluate` for `ideate`,
+`evaluate`, and `final-review`.
 Record the actual agent in artifact authorship and log events, never as a
 substitute for stage eligibility. Evaluation and final review require an
 agent other than the target artifact's author, in a separate context that
@@ -39,9 +42,11 @@ and contexts do not eliminate confirmation bias or correlated model errors.
 | `research` | `research` | Honest evidence report, including uncertainty -> `evaluate`. |
 | `evaluate` | `evaluation` | `ADVANCE` -> `propose`; otherwise use the disposition rules. |
 | `propose` | `proposal` | Concrete proposal answering evaluation -> `final-review`. |
-| `final-review` | `review` | `READY` -> `human-review`; otherwise use the disposition rules. |
+| `final-review` | `final-review` | `READY` -> `discover`; otherwise use the disposition rules. |
+| `discover` | `discovery` | Faithful condensation of the READY proposal -> `human-review`. |
 
-Evaluation/review dispositions: `REVISE` names specific missing work and
+`evaluate` judges research only; `final-review` judges the proposal only.
+Evaluation/final-review dispositions: `REVISE` names specific missing work and
 returns to `research` for evidence gaps or `propose` for proposal-only
 defects (the latter is allowed only from final review). `REFRAME` returns to `ideate`
 within the same pipeline and problem. `REJECT` closes an unsupported,
@@ -63,17 +68,23 @@ proposal artifact. Evaluation decides the bounded correction or closure;
 loops. Repeating an already answered request without new evidence is a HALT
 for human clarification, not another cycle.
 
+A discovery condenses the exact proposal that passed final review. It adds
+no change, claim, scope, or evidence and keeps every stated limitation. A
+needed change is a `REVISE` at final review, never an edit in the discovery.
+If the proposal cannot be condensed faithfully, `discover` HALTs and records
+why; it does not rewrite the proposal.
+
 ## Artifact Contract
 
 Frontmatter for every completed artifact uses this exact key order. All
 fields are mandatory at every tier: idea, research, evaluation, proposal,
-and review. Missing fields HALT the artifact write.
+final-review, and discovery. Missing fields HALT the artifact write.
 
 ```yaml
 ---
 name: <short-slug>
 id: <YYYYMMDDTHHMMSSZ>
-tier: <idea|research|evaluation|proposal|review>
+tier: <idea|research|evaluation|proposal|final-review|discovery>
 pipeline: <idea r01 id>
 author: <actual author>
 tags: [<relevant-tag>]
@@ -94,14 +105,20 @@ check uniqueness across the repository. On a same-second collision, wait
 and generate again; never increment or invent a timestamp. An idea's r01
 `pipeline` equals its own `id`; all descendants and reframings retain it.
 
-Files use `<pipeline-slug>-rNN.md` within the tier's folder. Evaluations and
-reviews share `forge/evaluations/`, so use `<pipeline-slug>-evaluation-rNN.md`
-and `<pipeline-slug>-review-rNN.md`. Choose an unused slug for a new pipeline;
+Files use `<pipeline-slug>-rNN.md` within the tier's folder: `forge/ideas/`,
+`forge/research/`, `forge/evaluations/`, `forge/proposals/`,
+`forge/final-reviews/`, and `forge/discoveries/`. Evaluations use
+`<pipeline-slug>-evaluation-rNN.md` and final reviews
+`<pipeline-slug>-review-rNN.md`, so that both stay distinct in
+`forge/graveyard/`. Choose an unused slug for a new pipeline;
 retain it when reframing. Each tier starts at r01 and its revisions advance
 independently; completed artifacts are immutable.
 The next revision links the previous same-tier artifact, root idea, and
 every directly consumed Forge input. No `parent` or `supersedes` field is
-needed. A review names the exact proposal path and ID, not just a pipeline.
+needed. A final review names the exact proposal path and ID, not just a
+pipeline; a discovery names the exact READY review and proposal. Final
+reviews written before 2026-09-30 carry the legacy `tier: review`; read it
+as `final-review` and do not rewrite those files.
 
 Links are repository-relative, cross-repository `agentic-brain:<path>` or
 `investing-hub:<path>`, or source URLs. Internal links must resolve; linked
@@ -111,7 +128,8 @@ link their discovery sources and prior-work comparisons, not themselves.
 
 Templates live directly in `governance/`: `template-idea.md`,
 `template-research.md`, `template-evaluation.md`, `template-proposal.md`,
-and `template-review.md`. Their checklists own the body format; stage skills
+`template-final-review.md`, and `template-discovery.md`. Their checklists
+own the body format; stage skills
 own procedure, and this protocol owns metadata, state, and publication.
 
 ### Sources Format
@@ -168,17 +186,19 @@ Validate every row before selecting work:
 - `state: active` has a stage from the handoff table and an existing exact
   input artifact from that pipeline. `ideate` here is a requested reframe,
   not permission to replace a waiting pipeline with a new idea.
-- `state: awaiting-review` has `stage: human-review` and its READY review
-  as input. This row waits for Suggi; other pipelines may continue.
+- `state: awaiting-review` has `stage: human-review` and its discovery as
+  input. This row waits for Suggi; other pipelines may continue.
 - `next-action` is concise; `updated` is a tool-derived UTC timestamp.
   Validate the input chain and disposition, not just the stage spelling:
   `evaluate` consumes a completed research report, `final-review` a proposal,
-  and `propose` requires a matching ADVANCE evaluation of the current research.
+  `propose` requires a matching ADVANCE evaluation of the current research,
+  and `discover` requires the READY final review of the current proposal.
   Revisions/reframes must have the applicable verdict or human decision.
 
 After validation, select exactly one assignment:
 
-1. The research loop selects active rows at `research` or `propose`.
+1. The research loop selects active rows at `research`, `propose`, or
+   `discover`.
 2. The evaluation loop first selects active rows at `evaluate` or
    `final-review`. If none exist, select an active `ideate` reframe row.
 3. Within each eligible group, select the oldest `updated` timestamp;
@@ -193,10 +213,13 @@ After validation, select exactly one assignment:
    correction HALTs for human clarification rather than creating a different
    pipeline or repeatedly logging empty progress.
 
-No pipeline may skip evaluation or human review because another is ready.
+No pipeline may skip evaluation, final review, or human review because
+another is ready.
 Each invocation does one stage, not one stage per row and not an endless
-ideation loop. Multiple open pipelines permit interleaving; they do not
-authorize overlapping writers or add runtime concurrency protection.
+ideation loop. Several pipelines may be open at once, including waiting
+ones, so that loops and future agents always have eligible work. Open rows
+permit interleaving; they do not authorize overlapping writers or add
+runtime concurrency protection.
 
 Selection gate: before any stage, PASS requires a valid board, eligible
 oldest assignment (or authorized new-idea fallback), checked inputs and
@@ -205,28 +228,32 @@ do not hide corruption by selecting another pipeline.
 
 ## Graveyard and Human Decisions
 
-Write a `REJECT` or `DEFER` evaluation/review directly to `forge/graveyard/`
+Write a `REJECT` or `DEFER` evaluation/final review directly to `forge/graveyard/`
 with the same tier and naming convention. That verdict is the closure
 record: reason, evidence, and reopening condition. Do not create a second
 postmortem or move the evidence chain. Count revisions across both verdict
 folders. Remove only the closed pipeline's STATUS row after recording its
 closure. Never reset or discard another pipeline's row.
 
-After `READY`, that pipeline waits until Suggi decides; both loops may
-continue their eligible work in other pipelines. A human-directed task
-records the exact proposal path/ID, decision (`approved`, `changes`,
+After `READY`, the research loop writes the discovery; that pipeline then
+waits until Suggi decides. Both loops continue their eligible work in other
+pipelines. A human-directed task
+records the exact discovery path/ID, decision (`approved`, `changes`,
 `deferred`, or `rejected`), reasons, and Suggi's instruction in the append-only
-progress log as the actual recording agent. Do not edit the proposal to
+progress log as the actual recording agent. Do not edit the discovery or
+proposal to
 rewrite history. `approved`, `deferred`, or `rejected` removes only that
 pipeline's row; `changes` returns that same row to `state: active` and the requested
-`ideate`, `research`, or `propose` stage, with another final review required.
+`ideate`, `research`, or `propose` stage, with another final review and
+discovery required.
 If the correction budget is exhausted, obtain an explicit bounded extension
 from Suggi and record it in that decision event; never reset the historical count.
 
-Approval permits no implementation by a Forge loop. Proposal disposition
+Approval permits no implementation by a Forge loop. Discovery disposition
 is derived from exact-artifact decision events in active and archived logs;
-absent an explicit decision, a proposal remains pending, never accepted.
-All proposals remain discoverable for duplicate checks. Reopening a closed
+absent an explicit decision, a discovery remains pending, never accepted.
+All proposals and discoveries remain discoverable for duplicate checks.
+Reopening a closed
 pipeline requires a human-directed handoff, changed evidence or prerequisites,
 and a recorded budget; do not evade closure by creating a renamed duplicate.
 
@@ -244,11 +271,13 @@ and a recorded budget; do not evade closure by creating a renamed duplicate.
 3. Execute one small stage in a 10-15 minute session, never chaining stages.
    Use the template gate before writing one completed artifact. `ideate`,
    `research`, and `propose` use the Feynman loop; `evaluate` and `final-review`
-   record criteria before reading the target body. Source discovery may
+   record criteria before reading the target body; `discover` condenses
+   without new research. Source discovery may
    reveal new questions; it is not confined to gaps imagined before reading.
    Unsupported claims remain unknown.
 4. Only a completed `evaluate` or `final-review` stage may update lessons,
-   under `LEARNINGS.md`'s admission gate. `ideate`, `research`, and `propose`
+   under `LEARNINGS.md`'s admission gate. `ideate`, `research`, `propose`,
+   and `discover`
    keep learnings read-only, regardless of the executing agent's identity.
    No justified change means no learning edit.
 5. Before writing, recheck HEAD, the board, logs, and working tree against
@@ -257,7 +286,8 @@ and a recorded budget; do not evade closure by creating a renamed duplicate.
    Update only the selected STATUS row, or add the completed new idea's row.
    Nonterminal handoffs explicitly use `state: active`; `pipeline` is the
    root idea ID, `active-artifact` is the output, and `stage` is the next action.
-   `READY` sets `state: awaiting-review`, `stage: human-review` for that row.
+   `READY` sets `stage: discover`; a completed discovery sets
+   `state: awaiting-review`, `stage: human-review` for that row.
    REJECT/DEFER removes only that row. An evidence-gap handoff names the
    current research input, not a nonexistent new artifact. Set a concise
    next-action and tool-derived UTC updated time. Preserve all other rows.
@@ -320,13 +350,15 @@ adoption. These are blueprint checks, not a claim of live deployment.
 | Corrective budget would be exceeded | DEFER with a reopening condition; no counter reset. |
 | Evidence establishes the idea is not worth pursuing | Graveyard verdict, preserved chain, remove only that pipeline's row. |
 | One pipeline suggests a new method lesson | Admit it only at `low` confidence with checked evidence; never as a binding rule. |
-| `ideate`, `research`, or `propose` completes | LEARNINGS remains unchanged, regardless of the executing agent. |
+| `ideate`, `research`, `propose`, or `discover` completes | LEARNINGS remains unchanged, regardless of the executing agent. |
+| Final review returns READY | Row moves to `discover`; the research loop condenses that exact proposal; no implementation. |
+| A discovery would change, add to, or soften the READY proposal | HALT the discovery; the change needs a final-review REVISE, not a discovery edit. |
 | A different authorized agent runs the same supported stage | Same routing and write permissions; actual authorship changes, not the workflow. |
 | The target's author attempts its evaluation or final review | HALT before the verdict; stage-neutral naming does not permit self-review. |
-| Researcher has no research/propose row | Write-free NO-OP; never ideate or self-review. |
+| Researcher has no research/propose/discover row | Write-free NO-OP; never ideate or self-review. |
 | Analyst has a pending report or final proposal | Oldest eligible review first; no new idea in that run. |
 | Analyst has no review but has a reframe | Ideate within that same pipeline; preserve its ID and budget. |
-| Analyst has no review/reframe; other pipelines await research or Suggi | Attempt one distinct new idea from ANCHOR; preserve waiting rows. |
+| Analyst has no review/reframe; other pipelines await research, discovery, or Suggi | Attempt one distinct new idea from ANCHOR; preserve waiting rows. |
 | Empty board | Analyst attempts one idea; Researcher is NO-OP. |
 | Two eligible rows or equal updated timestamps | Oldest updated first, then ascending pipeline ID. |
 | READY for pipeline A while B is runnable | A waits untouched; B may proceed, without implementation. |

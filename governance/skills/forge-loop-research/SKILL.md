@@ -4,9 +4,9 @@ description: "Run one research or proposal stage in the Forge."
 user-invocable: false
 disable-model-invocation: false
 ---
-# Forge Loop -- Research
+# Forge Loop -- Research, Propose, Discover
 
-This entrypoint advances one `research` or `propose` stage per
+This entrypoint advances one `research`, `propose`, or `discover` stage per
 bounded session, regardless of the executing agent's identity.
 
 ## Scope Gate
@@ -22,18 +22,20 @@ conflicting, missing, or out-of-scope state. Use the configured model.
    Method memory is available before evidence gathering and proposal work.
 2. Validate the entire STATUS board and apply the protocol's Pipeline Board
    and Selection rule. Select the oldest eligible `research` or `propose`
-   row. If none exists, return NO-OP without writes. Never ideate while
+   or `discover` row. If none exists, return NO-OP without writes. Never ideate while
    waiting; that belongs to `forge-loop-evaluate`. Invalid rows or inputs
    HALT the invocation rather than being skipped.
 3. Read and execute exactly one canonical skill under `governance/skills/`:
    - `research` -> `forge-research/SKILL.md`
    - `propose` -> `forge-propose/SKILL.md`
+   - `discover` -> `forge-discover/SKILL.md`
    The selected skill owns its template and
    Feynman procedure; reading a blueprint is not permission to install it.
 4. On a valid stage result, complete the protocol's artifact/STATUS/log
    transaction for that pipeline only; preserve all unselected rows and
    include its Pipeline line in the ENT event. Commit only intended files as the actual
-   author. A new evidence gap follows the protocol's `evaluate` handoff;
+   author. A completed discovery sets that row to `awaiting-review` /
+   `human-review`. A new evidence gap follows the protocol's `evaluate` handoff;
    timeout follows its resume handling. NO-OP produces no writes.
 5. LEARNINGS is read-only throughout this loop. Never add, edit, or retire
    a lesson here, even if the executing agent also runs evaluation in other
@@ -50,4 +52,5 @@ declare unfinished work complete, or repair external systems.
 
 PASS requires the selected skill and protocol gates, consistent handoff,
 unchanged LEARNINGS, and no chained stage. Otherwise HALT faulty work;
-no eligible research/proposal is a write-free NO-OP, not fabricated progress.
+no eligible research/proposal/discovery is a write-free NO-OP, not
+fabricated progress.

@@ -9,7 +9,7 @@ deployment state.
 ## Simple Pipeline
 
 ```text
-IDEA -> RESEARCH -> EVALUATE -> PROPOSE -> FINAL REVIEW -> SUGGI
+IDEA -> RESEARCH -> EVALUATE -> PROPOSE -> FINAL REVIEW -> DISCOVERY -> SUGGI
                        |                     |
                        +-> research / reframe / graveyard
 ```
@@ -20,18 +20,21 @@ IDEA -> RESEARCH -> EVALUATE -> PROPOSE -> FINAL REVIEW -> SUGGI
 | Evidence and alternatives | `forge/research/` |
 | Research evaluation | `forge/evaluations/` |
 | Concrete proposal and response to evaluation | `forge/proposals/` |
-| Review of the actual final proposal | `forge/evaluations/` |
+| Review of the actual final proposal | `forge/final-reviews/` |
+| Discovery: the one-page condensation Suggi decides on | `forge/discoveries/` |
 | Rejected or deferred work | `forge/graveyard/` (closure verdict; evidence stays in place) |
 
 Each session attempts one small stage in 10-15 minutes. An unfinished
 stage does not advance. Suggi approves, requests changes, defers, or rejects
-the exact proposal; implementation needs separate authorization.
+the exact discovery; implementation needs separate authorization.
 
 The evaluation loop originates ideas and performs evaluations/final reviews;
-the research loop researches those ideas and writes proposals. Each pipeline
+the research loop researches those ideas, writes proposals, and condenses a
+READY proposal into its discovery. Each pipeline
 alternates between the two roles. Multiple pipelines can remain open:
 continue eligible work first, then the evaluation loop may originate one
-new idea if no review or reframe is ready. Waiting pipelines stay intact.
+new idea if no review or reframe is ready, so several pipelines run at once.
+Waiting pipelines stay intact.
 This is interleaved work across invocations, not permission for concurrent writes.
 
 ## Cadence
@@ -48,12 +51,13 @@ in this blueprint. Unexpected concurrent edits require a halt.
 
 ## Canonical Skill Bundles
 
-Research workflow (`research`, `propose`):
+Research workflow (`research`, `propose`, `discover`):
 
 - `forge-loop-research`
 - `forge-loop-feynman`
 - `forge-propose`
 - `forge-research`
+- `forge-discover`
 
 Idea and evaluation workflow (`ideate`, `evaluate`, `final-review`):
 
@@ -67,7 +71,7 @@ evaluation; actual authorship remains in artifacts and log events.
 `forge-evaluate` handles both research evaluation and final proposal review.
 Templates are separate files directly under `governance/`:
 `template-idea.md`, `template-research.md`, `template-evaluation.md`,
-`template-proposal.md`, and `template-review.md`.
+`template-proposal.md`, `template-final-review.md`, and `template-discovery.md`.
 
 Copying or scheduling them requires Suggi's instruction.
 

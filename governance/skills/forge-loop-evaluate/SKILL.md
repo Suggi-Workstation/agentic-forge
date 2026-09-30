@@ -22,7 +22,8 @@ protocol's independent-agent/context requirement. Use the configured model.
 2. Validate the entire STATUS board and apply the protocol's Pipeline Board
    and Selection rule: oldest eligible evaluation/final review first, then
    oldest requested reframe. With neither, attempt one new idea from ANCHOR,
-   even if other pipelines await research or Suggi. Invalid rows or missing
+   even if other pipelines await research, discovery, or Suggi; several
+   pipelines may be open at once. Invalid rows or missing
    inputs HALT the invocation; they are not permission to start new work.
 3. At `ideate`, read and execute `governance/skills/forge-ideate/SKILL.md`.
    A new idea adds its own row without changing waiting pipelines; a reframe
@@ -34,7 +35,8 @@ protocol's independent-agent/context requirement. Use the configured model.
    The skill records a cold baseline before
    reading the target body and selects the appropriate template.
 5. Complete one verdict, including the exact next stage or graveyard
-   closure. No missing source, timeout, or unperformed test implies READY.
+   closure. READY hands the row to `discover`; it is not approval. No
+   missing source, timeout, or unperformed test implies READY.
    Record the intended learning decision before freezing that artifact.
 6. Only after that completed evaluation or final review, answer LEARNINGS'
    capture questions and apply its admission gate. Make justified method
@@ -46,8 +48,8 @@ protocol's independent-agent/context requirement. Use the configured model.
    edits, the selected STATUS row, and one review ENT event identifying its
    Pipeline. Preserve all other rows; commit as the actual author.
    This loop owns the transaction, not a second stage or a second verdict.
-8. Exit. READY makes only that pipeline wait for Suggi; other pipelines
-   remain eligible in later invocations. It grants no implementation authority.
+8. Exit. Other pipelines remain eligible in later invocations. No verdict
+   grants implementation authority.
 
 ## Failure
 

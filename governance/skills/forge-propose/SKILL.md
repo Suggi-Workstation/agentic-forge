@@ -35,6 +35,8 @@ Use `forge/protocol.md` and `governance/template-proposal.md`.
    Link the exact research, evaluation, and any reviewed prior proposal.
    Leave all previous artifacts unchanged. Return it to the loop for the
    final-review handoff; never claim approval or start implementation.
+   A READY final review is condensed into a discovery by `forge-discover`,
+   not rewritten here.
 
 ## Verification
 

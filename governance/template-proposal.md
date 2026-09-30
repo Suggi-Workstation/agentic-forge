@@ -5,7 +5,8 @@ Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
 `confidence`. Every field is mandatory; tags must be nonempty.
 Destination: `forge/proposals/`. Link the root/current idea, current research
 and its ADVANCE evaluation, previous proposal revision, and review/decision
-feedback when present. This file requests a decision; it does not grant one.
+feedback when present. This file is the full case; a READY proposal is
+condensed into a discovery for Suggi's decision. It grants nothing.
 
 ## Proposed Decision
 

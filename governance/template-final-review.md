@@ -1,9 +1,9 @@
 # Final Review Template
 
-Use the Artifact Contract in `forge/protocol.md`. Tier: `review`.
+Use the Artifact Contract in `forge/protocol.md`. Tier: `final-review`.
 Field order: `name`, `id`, `tier`, `pipeline`, `author`, `tags`, `links`,
 `confidence`. Every field is mandatory; tags must be nonempty.
-Destination: `forge/evaluations/`, or `forge/graveyard/` for REJECT/DEFER.
+Destination: `forge/final-reviews/`, or `forge/graveyard/` for REJECT/DEFER.
 Link the exact proposal, its research/evaluation, root/current idea, and
 prior review where present. Review the proposal, not only its research.
 
@@ -23,7 +23,8 @@ do not invent test execution. Distinguish blocking issues from suggestions.
 ## Verdict and Handoff
 
 Choose READY, REVISE, REFRAME, REJECT, or DEFER under the protocol.
-READY names this exact proposal for Suggi and grants no approval. REVISE
+READY names this exact proposal for the discovery stage and grants no
+approval. REVISE
 specifies research for evidence gaps or propose for design-only fixes.
 State next stage, prior corrective-cycle count and any human extension,
 required changes, or the reason and reopening condition for closure.
@@ -52,7 +53,7 @@ PASS requires every item; any missing item HALTs the verdict write.
 - [ ] Nonempty tags and low/medium/high confidence are present; the body justifies confidence.
 - [ ] Cold baseline and independently checked findings concern this proposal.
 - [ ] All material objections, design additions, and scope changes assessed.
-- [ ] READY has no unresolved blocker and grants no implementation authority.
+- [ ] READY has no unresolved blocker; it hands off to `discover`, not to approval.
 - [ ] Other verdicts name an actionable route within budget or a closure.
 - [ ] Learning decision follows LEARNINGS; previous artifacts stay unchanged.
 - [ ] Sources follow the protocol's format; repo entries are path-first with ` -- ` relevance, correct prefixes, and verified targets; citations and entries agree.

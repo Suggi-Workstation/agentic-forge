@@ -92,7 +92,7 @@ edit; keep the legitimate stage result and this file unchanged.
 - **Evidence:** Pipelines `20260921T152802Z` and `20260929T223305Z`, in
   `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md`,
   `forge/graveyard/evidence-gated-forge-transaction-checker-evaluation-r03.md`,
-  and `forge/evaluations/unattended-forge-command-paths-review-r02.md`. The first
+  and `forge/final-reviews/unattended-forge-command-paths-review-r02.md`. The first
   pipeline reproduced its declared classifications while required fields passed
   when contradicted, then reproduced 19 declared outcomes while rejecting a
   permitted real transaction shape. The second froze matched control/treatment
