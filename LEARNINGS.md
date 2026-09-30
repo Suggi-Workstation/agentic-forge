@@ -82,25 +82,25 @@ edit; keep the legitimate stage result and this file unchanged.
   bytes, raw results, and unmerged reader outputs before treating a procedural
   validation claim as passed; otherwise limit the claim and return for evidence.
 
-### Derive checker fixtures and controls from the claimed result contract
+### Derive evaluator and checker controls from the claimed result contract
 
-- **Lesson:** Derive negative fixtures from every field and relationship a
-  checker result claims, and derive positive controls from complete valid records
-  plus permitted orthogonal variation; otherwise label the result partial. A
-  perfect declared-mutant score can coexist with false rejection caused by an
-  undocumented parser constraint.
-- **Evidence:** Pipeline `20260921T152802Z`, in
-  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md`
-  and `forge/graveyard/evidence-gated-forge-transaction-checker-evaluation-r03.md`.
-  Revision 2 reproduced every declared classification while three required
-  fields still passed when contradicted. Revision 3 reproduced all 19 declared
-  classifications, but the unchanged current open transaction failed because a
-  permitted `forge/protocol.md` source link lacked pipeline metadata; the real
-  closed transaction passed.
-- **Confidence:** Low. One pipeline supplies checked evidence; its revisions are
-  not independent trials.
-- **Consequence:** Before proposing a deterministic checker, map every claimed
-  output predicate to negative fixtures, then run unchanged current records for
-  every supported mode and valid variations for structures the protocol permits.
-  Narrow the output meaning when either required fields or valid structures are
+- **Lesson:** Derive every checker predicate, evaluator classifier, negative
+  fixture, and positive control from each field, relationship, and purpose-level
+  behavior the result claims. A run-level label cannot validate unclassified
+  later decisions; label the result partial when any claimed predicate is
   intentionally excluded.
+- **Evidence:** Pipelines `20260921T152802Z` and `20260929T223305Z`, in
+  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md`,
+  `forge/graveyard/evidence-gated-forge-transaction-checker-evaluation-r03.md`,
+  and `forge/evaluations/unattended-forge-command-paths-review-r02.md`. The first
+  pipeline reproduced its declared classifications while required fields passed
+  when contradicted, then reproduced 19 declared outcomes while rejecting a
+  permitted real transaction shape. The second froze matched control/treatment
+  inputs and outputs, but its single run-level first-route classifier could not
+  reject denied first choices for later purposes covered by the PASS claim.
+- **Confidence:** Medium. Two independent pipelines expose the same
+  claimed-contract undercoverage in a checker and an evaluation grader.
+- **Consequence:** Before proposing a deterministic checker or evaluation gate,
+  map every claimed PASS or benefit clause to an observable predicate, a
+  false-positive counterexample or negative fixture, and a valid positive
+  control. Narrow the result claim whenever the grader deliberately omits one.
