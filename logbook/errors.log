@@ -99,3 +99,8 @@ Recovery: Separate safe Git and filesystem commands supplied the snapshot; no ap
 Pipeline: 20260930T124036Z
 Failure: Browser retrieval of the official GNU timeout manual returned HTTP 429.
 Recovery: The GNU page was not used in the proposal; focused verified Git and Python documentation supplied the selected design evidence without changing access or runtime configuration.
+
+## [ENT-020] | 2026-09-30 17:04 UTC | Analyst | error | ref: forge/final-reviews/forge-history-duplicate-receipt-review-r02.md | see: 20260930T165635Z
+Pipeline: 20260930T124036Z
+Failure: The first scratch artifact validator expected two review-ID occurrences in the artifact and four in the repository, but the correct counts were one and three; all substantive gates had passed.
+Recovery: The count oracle was corrected to the actual frontmatter and two log references; the rerun passed metadata, sections, sources, citations, links, ID counts, and placeholder checks.
