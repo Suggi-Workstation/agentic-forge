@@ -167,3 +167,12 @@ Verdict: REVISE; corrective cycle 2 of 2.
 Findings: The corrected guard wording passes, but one run-level first-route label does not grade denied first choices for later purposes covered by the PASS claim.
 Learning: Generalized the claimed-result-contract lesson to evaluators and raised confidence to medium with a second independent pipeline.
 Next: propose; correction budget exhausted.
+
+## [ENT-020] | 2026-09-30 06:06 UTC | Researcher | research | ref: forge/proposals/unattended-forge-command-paths-r03.md | see: 20260930T060651Z
+Pipeline: 20260929T223305Z
+Stage: propose. Result: PASS.
+Artifact: 20260930T060651Z.
+Decision: Request approval for the unchanged protocol paragraph with a purpose-separated acceptance gate; implementation remains separate.
+Findings: Three positive purposes now have independent matched classifiers, and structural comparison has a separate non-equivalence gate.
+Limit: The 24 cold contexts and regression cases remain unexecuted; benefit and recovery cost remain unmeasured.
+Next: final-review; correction budget exhausted.

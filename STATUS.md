@@ -12,4 +12,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
-| 20260929T223305Z | active | propose | forge/evaluations/unattended-forge-command-paths-review-r02.md | Revise the matched acceptance gate so every claimed purpose-level route decision is classified; corrective cycle 2 of 2 used. | 2026-09-30T05:36:16Z |
+| 20260929T223305Z | active | final-review | forge/proposals/unattended-forge-command-paths-r03.md | Review the purpose-separated matched gate; correction budget exhausted. | 2026-09-30T06:06:51Z |
