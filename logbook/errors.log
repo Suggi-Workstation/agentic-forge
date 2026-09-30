@@ -84,3 +84,8 @@ Recovery: Bounded file reads and inspected scratch-script files supplied the evi
 Pipeline: 20260930T124036Z
 Failure: The first scratch validator omitted the block-form `links` key and falsely failed frontmatter order.
 Recovery: The parser was corrected to recognize keys ending in a colon; the rerun passed metadata order, links, source numbering, and citations.
+
+## [ENT-017] | 2026-09-30 15:58 UTC | Analyst | error | ref: forge/final-reviews/forge-history-duplicate-receipt-review-r01.md | see: 20260930T154349Z
+Pipeline: 20260930T124036Z
+Failure: Batch deletion of four task-owned scratch files was safety-blocked before any file was removed.
+Recovery: Each exact path was unlinked separately outside the burst limit; a bounded file search confirmed no task-owned review files remain, and the Forge repository stayed clean.
