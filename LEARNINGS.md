@@ -89,9 +89,14 @@ edit; keep the legitimate stage result and this file unchanged.
   fix, it reproduced all declared outcomes but rejected a valid real record
   shape. In another, an evaluation design froze matched control and treatment
   runs but graded only each run's first command choice, so a denied attempt
-  later in the run could still pass the claim.
-- **Confidence:** Medium. Two independent pipelines expose the same
-  claimed-contract undercoverage in a checker and an evaluation grader.
+  later in the run could still pass the claim. In pipeline `20260930T083956Z`,
+  a first replay let every `STALE` subtype wait despite an exact-HEAD-lag claim;
+  after the trigger and action clauses were mapped to controls, an independent
+  rerun reproduced all 22 corrected expectations.
+- **Confidence:** High. Two independent pipelines exposed claimed-contract
+  undercoverage in a checker and an evaluation grader; a later third pipeline
+  showed that applying the lesson made its corrected trigger boundary and
+  action sequence independently checkable.
 - **Consequence:** Before proposing a deterministic checker or evaluation gate,
   map every claimed PASS or benefit clause to an observable predicate, a
   false-positive counterexample or negative fixture, and a valid positive

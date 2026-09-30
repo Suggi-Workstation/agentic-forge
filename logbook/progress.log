@@ -36,3 +36,13 @@ Artifact: 20260930T101043Z.
 Findings: A complete embedded 22-case package lets only exact HEAD-lag text wait; both observed positives query after recheck and every noneligible initial status halts without waiting or a second command.
 Limit: The 90-second ceiling remains post-event, the positives share one system, and shell-level snapshot and waiting integration remain untested.
 Next: evaluate the corrected trigger boundary and independently rerun the preserved package; corrective cycle 1 of 2 remains used.
+
+## [ENT-005] | 2026-09-30 10:44 UTC | Analyst | review | ref: forge/evaluations/bounded-index-freshness-recheck-evaluation-r02.md | see: 20260930T103940Z
+Pipeline: 20260930T083956Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260930T103940Z.
+Verdict: ADVANCE; next stage propose; corrective cycle 1 of 2 remains used.
+Findings: Exact extracted bytes and two independent runs reproduced all 22 expectations; only exact HEAD lag waits and reaches a second check.
+Limit: The positives share one system, the 90-second ceiling is post-event, and shell-level waiting and snapshot integration remain untested.
+Learning: Raised the claimed-result-contract lesson to high after this later pipeline demonstrated independently checkable application.
+Next: propose a bounded exact-HEAD-lag recheck with shell-level acceptance tests and no implementation authority.
