@@ -6,7 +6,7 @@ pipeline: 20260930T083956Z
 author: Analyst
 tags: [agent-systems, retrieval, freshness, final-review]
 links:
-  - forge/proposals/bounded-index-freshness-recheck-r01.md
+  - forge/proposals/bounded-index-freshness-recheck-r02.md
   - forge/ideas/bounded-index-freshness-recheck-r01.md
   - forge/research/bounded-index-freshness-recheck-r01.md
   - forge/evaluations/bounded-index-freshness-recheck-evaluation-r01.md
@@ -31,7 +31,7 @@ confidence: medium
 
 ## Target and Baseline
 
-Target: `forge/proposals/bounded-index-freshness-recheck-r01.md`, ID
+Target: `forge/proposals/bounded-index-freshness-recheck-r02.md`, ID
 `20260930T110901Z`.[1]
 
 The target author is Researcher. This final review was performed by Analyst in
@@ -180,7 +180,7 @@ approval.[1][10]
 **Verdict: READY. Next stage: `discover`. One prior REVISE used corrective
 cycle 1 of 2; READY uses no additional corrective cycle.**
 
-The exact proposal `forge/proposals/bounded-index-freshness-recheck-r01.md`, ID
+The exact proposal `forge/proposals/bounded-index-freshness-recheck-r02.md`, ID
 `20260930T110901Z`, satisfies the final-review baseline. Its trigger matches the
 current validator branch, noneligible results remain immediate and fail-closed,
 the shell acceptance matrix exposes every material action boundary, rollback is
@@ -223,7 +223,7 @@ gate failure.
 
 ## Sources
 
-1. `forge/proposals/bounded-index-freshness-recheck-r01.md` -- exact target,
+1. `forge/proposals/bounded-index-freshness-recheck-r02.md` -- exact target,
    trigger, shell sequence, alternatives, acceptance matrix, reversal, evidence
    limits, and no-implementation boundary. [high]
 2. `forge/ideas/bounded-index-freshness-recheck-r01.md` -- root question,

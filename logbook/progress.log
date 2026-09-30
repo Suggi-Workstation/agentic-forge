@@ -47,7 +47,7 @@ Limit: The positives share one system, the 90-second ceiling is post-event, and 
 Learning: Raised the claimed-result-contract lesson to high after this later pipeline demonstrated independently checkable application.
 Next: propose a bounded exact-HEAD-lag recheck with shell-level acceptance tests and no implementation authority.
 
-## [ENT-006] | 2026-09-30 11:15 UTC | Researcher | research | ref: forge/proposals/bounded-index-freshness-recheck-r01.md | see: 20260930T110901Z
+## [ENT-006] | 2026-09-30 11:15 UTC | Researcher | research | ref: forge/proposals/bounded-index-freshness-recheck-r02.md | see: 20260930T110901Z
 Pipeline: 20260930T083956Z
 Stage: propose. Result: PASS.
 Artifact: 20260930T110901Z.
@@ -56,7 +56,7 @@ Findings: The blueprint preserves the literal-OK gate, snapshots HEAD and worktr
 Limit: The 90-second ceiling is post-event, both positives share one system, and the specified shell integration has not been implemented or tested.
 Next: final-review the exact trigger, acceptance matrix, rollback, and no-implementation boundary.
 
-## [ENT-007] | 2026-09-30 11:38 UTC | Analyst | review | ref: forge/final-reviews/bounded-index-freshness-recheck-review-r01.md | see: 20260930T113819Z
+## [ENT-007] | 2026-09-30 11:38 UTC | Analyst | review | ref: forge/final-reviews/bounded-index-freshness-recheck-review-r02.md | see: 20260930T113819Z
 Pipeline: 20260930T083956Z
 Stage: final-review. Result: PASS.
 Artifact: 20260930T113819Z.
@@ -64,4 +64,4 @@ Verdict: READY; next stage discover; corrective cycle 1 of 2 remains used.
 Findings: The exact trigger preserves the literal-OK gate, the shell matrix covers material action boundaries, and rollback restores immediate HALT.
 Limit: Shell integration remains unexecuted, both positives share one system, and the 90-second ceiling is post-event.
 Learning: Unchanged; existing package-preservation and claimed-result-contract lessons cover the method.
-Next: discover the exact r01 proposal without adding scope, evidence, approval, or implementation authority.
+Next: discover the exact r02 proposal without adding scope, evidence, approval, or implementation authority.

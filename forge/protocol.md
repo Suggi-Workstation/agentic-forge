@@ -111,8 +111,11 @@ Files use `<pipeline-slug>-rNN.md` within the tier's folder: `forge/ideas/`,
 `<pipeline-slug>-evaluation-rNN.md` and final reviews
 `<pipeline-slug>-review-rNN.md`, so that both stay distinct in
 `forge/graveyard/`. Choose an unused slug for a new pipeline;
-retain it when reframing. Each tier starts at r01 and its revisions advance
-independently; completed artifacts are immutable.
+retain it when reframing. The revision number belongs to the pipeline, not
+the tier: a new artifact takes the highest number already used in its
+pipeline, or the next one if its own tier already used that number. Numbers
+never decrease and a tier may skip numbers, so every file shows which pass
+it belongs to. Completed artifacts are immutable.
 The next revision links the previous same-tier artifact, root idea, and
 every directly consumed Forge input. No `parent` or `supersedes` field is
 needed. A final review names the exact proposal path and ID, not just a
@@ -344,6 +347,7 @@ adoption. These are blueprint checks, not a claim of live deployment.
 | Several reflections repeat one repaired incident | Read fully, check overlap/current state; no invented independent support. |
 | New reflection evidence reveals an unlisted gap | Update the questions and investigate; no Feynman-order veto. |
 | Research has an important unresolved evidence gap | Evaluation returns targeted REVISE or DEFER, not ADVANCE by default. |
+| Research revised to r02, then ADVANCE | Proposal, final review, and discovery continue at r02; there is no proposal r01. |
 | A proposal adds an unsupported implementation detail | Final review blocks readiness and names research/proposal correction. |
 | Corrective budget would be exceeded | DEFER with a reopening condition; no counter reset. |
 | Evidence establishes the idea is not worth pursuing | Graveyard verdict, preserved chain, remove only that pipeline's row. |
