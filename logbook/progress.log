@@ -148,3 +148,12 @@ Origin: Direct Path A; target is the Forge proposal template and propose procedu
 Findings: One pipeline used two proposal revisions and both corrective cycles while leaving six material claim-to-verification blockers; another pipeline supplies a READY positive control.
 Limit: The cases are retrospective, the negative revisions share one pipeline, and the map's incremental detection, reproducibility, and author cost are unmeasured.
 Next: research one compact claim-to-verification map against both failed revisions, the READY control, the current checklist, and doing nothing.
+
+## [ENT-017] | 2026-09-30 18:12 UTC | Researcher | research | ref: forge/proposals/forge-history-duplicate-receipt-r03.md | see: 20260930T180714Z
+Pipeline: 20260930T124036Z
+Stage: propose. Result: PASS.
+Artifact: 20260930T180714Z.
+Decision: Revise the reachable-history receipt with operating-system sink limits, whole-driver operation gates, an external fixture ledger, and fail-closed partial-clone rejection.
+Findings: R03 answers all four r02 blockers while preserving the evaluated one-skill, scratch-only, exact-body, unknown-state, rollback, and no-implementation boundaries.
+Limit: The complete driver, Git sink, promisor fixture, external-ledger matrix, root-first display, and final skill bytes remain unexecuted; the ordinary correction budget is exhausted.
+Next: final-review the exact r03 sink, deadline, observability, clone-state, acceptance, and authority contracts; another correction requires DEFER or an explicit human extension.

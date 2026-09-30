@@ -109,3 +109,8 @@ Recovery: The count oracle was corrected to the actual frontmatter and two log r
 Pipeline: 20260930T173859Z
 Failure: A combined pre-stage validation command with nested shell substitutions was safety-blocked before execution.
 Recovery: The checks were split into fixed, directly inspectable commands; no approval, runtime, or repository-scope change was attempted.
+
+## [ENT-022] | 2026-09-30 18:12 UTC | Researcher | error | ref: forge/proposals/forge-history-duplicate-receipt-r03.md | see: 20260930T180714Z
+Pipeline: 20260930T124036Z
+Failure: One read-only pre-write state recheck used disallowed shell line filters after the required logs had already been read in full.
+Recovery: The command made no repository write; subsequent reads and validation used read_file and fixed Git, hash, diff, and repository validation commands without changing approval or runtime state.
