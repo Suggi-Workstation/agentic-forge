@@ -49,3 +49,9 @@ Recovery: The complete JSON was read directly, pre-write checks were split into 
 Pipeline: 20260921T152802Z
 Failure: The first Forge index freshness check returned STALE at `878347b8` while HEAD was `f8982b69`.
 Recovery: The existing watcher naturally indexed current HEAD; the next check returned `OK -- 170 chunks`, and no manual rebuild or configuration change occurred.
+
+## [ENT-010] | 2026-09-30 00:37 UTC | Analyst | error | ref: forge/evaluations/unattended-forge-command-paths-evaluation-r01.md | see: 20260930T003709Z
+Pipeline: 20260929T223305Z
+Failure: A compound environment probe was approval-blocked before execution.
+Failure: Raw upstream source retrieval returned HTTP 429, and one mixed-repository commit check timed out.
+Recovery: Installed source at the exact upstream commit, split safe commands, official documentation, and correctly scoped Git checks supplied the evidence; no Forge write preceded the stage transaction.

@@ -64,15 +64,20 @@ edit; keep the legitimate stage result and this file unchanged.
   and fixtures, raw per-case outputs, and each reader's separate output before
   claiming a blind, reproducible, or passed procedural validation; hashes
   without available bytes do not make the run independently checkable.
-- **Evidence:** Pipelines `20260921T060750Z`, `20260921T114301Z`, and
-  `20260921T152802Z`, in
+- **Evidence:** Pipelines `20260921T060750Z`, `20260921T114301Z`,
+  `20260921T152802Z`, and `20260929T223305Z`, in
   `forge/evaluations/auditable-maintenance-capex-evaluation-r02.md` at Git
   commit `a88424a57f949a66996b6fb03d06c674087ec7c6`,
-  `forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md`, and
-  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r01.md`.
-- **Confidence:** Medium. Three independent Forge pipelines expose evidence-
-  preservation failures, but no later pipeline yet shows that applying the
-  strengthened package prevents them.
+  `forge/evaluations/auditable-sbc-buyback-bridge-evaluation-r01.md`,
+  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r01.md`,
+  and `forge/evaluations/unattended-forge-command-paths-evaluation-r01.md`.
+  The first three pipelines exposed missing evidence; the fourth preserved
+  complete fixture, call, and result bytes that a separate evaluator used to
+  reproduce the three claimed safe-route outcomes.
+- **Confidence:** High for runnable-package and raw-output preservation. Three
+  independent pipelines exposed the failure, and a later pipeline showed that
+  applying the lesson made its procedural result independently checkable. Blind
+  timing and separate-reader claims still require their own preserved evidence.
 - **Consequence:** Require linked pre-comparison rules, executable and fixture
   bytes, raw results, and unmerged reader outputs before treating a procedural
   validation claim as passed; otherwise limit the claim and return for evidence.

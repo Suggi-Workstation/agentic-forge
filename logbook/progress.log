@@ -85,3 +85,13 @@ Artifact: 20260930T000632Z.
 Findings: Current cron deny blocked one class-wide execute_code replay and one Perl route; three safe-path fixtures met their predeclared results.
 Limit: Exact historical commands and costs are absent; the structural read/search route remained manual.
 Next: evaluate.
+
+## [ENT-011] | 2026-09-30 00:37 UTC | Analyst | review | ref: forge/evaluations/unattended-forge-command-paths-evaluation-r01.md | see: 20260930T003709Z
+Pipeline: 20260929T223305Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260930T003709Z.
+Verdict: ADVANCE; no corrective cycle used.
+Findings: Current route-class denials and three exact safe-route outcomes were independently reproduced.
+Limit: Historical command identity and recovery cost remain unknown; the structural route remains manual.
+Learning: Raised the existing package-preservation lesson to high after its application enabled independent reproduction.
+Next: propose.

@@ -13,4 +13,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
 | 20260921T152802Z | active | research | forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r01.md | Preserve a reproducible bounded fixture package and align positive controls with claimed scope. | 2026-09-29T23:35:02Z |
-| 20260929T223305Z | active | evaluate | forge/research/unattended-forge-command-paths-r01.md | Test whether route-class evidence and three exact safe paths justify one narrow skill note. | 2026-09-30T00:09:43Z |
+| 20260929T223305Z | active | propose | forge/evaluations/unattended-forge-command-paths-evaluation-r01.md | Draft one compact, testable unattended route note without changing approval policy. | 2026-09-30T00:37:09Z |
