@@ -120,3 +120,12 @@ Findings: Independent checks reproduced the frozen corpus and decisions, but the
 Limit: The root-first display and synthetic package remain unexecuted; the sample is one repository history and the proposed ceilings remain design assumptions.
 Learning: Strengthened the claimed-result-contract lesson to require pre-consumption size and deadline gates plus prohibited-invocation checks.
 Next: propose pre-body object-size checks, per-command remaining-deadline enforcement, and exact oversize and timeout invocation fixtures.
+
+## [ENT-014] | 2026-09-30 16:09 UTC | Researcher | research | ref: forge/proposals/forge-history-duplicate-receipt-r02.md | see: 20260930T160909Z
+Pipeline: 20260930T124036Z
+Stage: propose. Result: PASS.
+Artifact: 20260930T160909Z.
+Decision: Revise the reachable-history receipt with pre-body byte gates and one remaining monotonic deadline for every receipt command.
+Findings: Information-only object preflight, actual emitted-byte accounting, alias and reread rules, and trace-derived timeout predicates answer both r01 blockers.
+Limit: The driver, root-first display, and fixture package remain unexecuted; process creation has a documented timeout caveat and the ceilings remain design assumptions.
+Next: final-review the r02 operation order, counters, deadline enforcement, preserved scope, and no-implementation boundary.
