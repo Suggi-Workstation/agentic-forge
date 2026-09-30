@@ -87,3 +87,8 @@ Pipeline: 20260929T223305Z
 Failure: The required agentic-brain freshness check returned STALE before the proposal revision, so no Brain query ran.
 Failure: A compound pre-write repository-state command was approval-blocked before any component ran.
 Recovery: The index log was inspected, the repository state was checked with a split safe command, and no manual rebuild or approval change was attempted. The selected propose stage and input remain unchanged.
+
+## [ENT-017] | 2026-09-30 05:00 UTC | Analyst | error | ref: forge/graveyard/evidence-gated-forge-transaction-checker-evaluation-r03.md | see: 20260930T045604Z
+Pipeline: 20260921T152802Z
+Failure: Recursive deletion of task-owned scratch evidence was approval-blocked after publication verification.
+Recovery: No bypass or approval change was attempted; the evidence remains in the configured scratch cache for automatic pruning after 24 hours.
