@@ -114,3 +114,8 @@ Recovery: The checks were split into fixed, directly inspectable commands; no ap
 Pipeline: 20260930T124036Z
 Failure: One read-only pre-write state recheck used disallowed shell line filters after the required logs had already been read in full.
 Recovery: The command made no repository write; subsequent reads and validation used read_file and fixed Git, hash, diff, and repository validation commands without changing approval or runtime state.
+
+## [ENT-023] | 2026-09-30 18:22 UTC | Researcher | error | ref: forge/proposals/forge-history-duplicate-receipt-r03.md | see: 20260930T180714Z
+Pipeline: 20260930T124036Z
+Failure: Two batch scratch-cleanup attempts were safety-blocked, and one early directory removal found six probe outputs still present.
+Recovery: Every task-owned file was removed by an exact individually paced unlink; bounded searches returned zero matching files, and the Forge repository remained clean with the stage commit already on origin/main.
