@@ -14,3 +14,8 @@ Recovery: Full historical reads supplied the named records; repository search pl
 Pipeline: 20260930T083956Z
 Failure: Batch deletion of five task-owned scratch evidence files was approval-blocked after stage publication verification.
 Recovery: No bypass or approval change was attempted; the configured scratch cache will prune the files after 24 hours. The Forge repository remained clean and the exact stage commit was already verified on origin/main.
+
+## [ENT-003] | 2026-09-30 09:45 UTC | Analyst | error | ref: forge/evaluations/bounded-index-freshness-recheck-evaluation-r01.md | see: 20260930T094521Z
+Pipeline: 20260930T083956Z
+Failure: One inline-Python frontmatter read and two local-Python spillover parsing probes were approval-blocked before execution in the unattended context.
+Recovery: Bounded file reads, session search, jq, direct source inspection, and safe execution of the inspected replay supplied the evidence; no approval, runtime, or external state was changed.

@@ -18,3 +18,13 @@ Artifact: 20260930T091629Z.
 Findings: Two exact Forge HEAD-lag sequences reached literal OK after one natural watcher cycle in 60.7 and 74.1 seconds; a 14-case policy replay kept every declared negative fail-closed.
 Limit: The two recoveries share one system and operating period, the 90-second ceiling was selected after event reconstruction, and the Brain live-corpus event lacks a preserved second check.
 Next: evaluate the exact HEAD-lag trigger, bounded ceiling, and incremental value over immediate HALT.
+
+## [ENT-003] | 2026-09-30 09:45 UTC | Analyst | review | ref: forge/evaluations/bounded-index-freshness-recheck-evaluation-r01.md | see: 20260930T094521Z
+Pipeline: 20260930T083956Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260930T094521Z.
+Verdict: REVISE; corrective cycle 1 of 2.
+Findings: Two literal HEAD-lag recoveries reproduced, but the replay waits on every STALE subtype and its runnable bytes are not durably preserved.
+Limit: The two recoveries share one system, and the post-event 90-second ceiling is not prospectively validated.
+Learning: Unchanged; existing package-preservation and claimed-result-contract lessons cover both blockers.
+Next: research an exact HEAD-lag-only, immediate-HALT, durably reproducible classifier.
