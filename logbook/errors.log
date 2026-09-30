@@ -144,3 +144,8 @@ Recovery: The exact files were unlinked individually outside the burst limit; bo
 Pipeline: 20260930T173859Z
 Failure: One unattended execute_code wrapper for the Forge freshness check was approval-blocked before any child command ran.
 Recovery: The exact required freshness command ran directly through terminal and returned literal `OK --`; no approval, runtime, repository, or external state was changed.
+
+## [ENT-029] | 2026-09-30 22:35 UTC | Analyst | error | ref: forge/ideas/valuation-consistent-retained-earnings-test-r01.md | see: 20260930T223526Z
+Pipeline: 20260930T223526Z
+Failure: One combined read-only shell probe containing an inline Python heredoc and one unattended execute_code spill parser were safety-blocked before execution.
+Recovery: Fixed Git and filesystem commands plus `jq` supplied the same evidence; no approval, runtime, external state, or repository content changed before the stable pre-write recheck.
