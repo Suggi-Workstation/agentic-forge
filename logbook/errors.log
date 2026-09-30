@@ -74,3 +74,13 @@ Recovery: Each exact task-owned path was unlinked separately; a bounded file sea
 Pipeline: 20260930T124036Z
 Failure: One unattended execute_code validation call was blocked before any child tool call or repository action.
 Recovery: Full file reads and normal repository validation commands were used instead; no approval, runtime, or scope change was attempted.
+
+## [ENT-015] | 2026-09-30 15:48 UTC | Analyst | error | ref: forge/final-reviews/forge-history-duplicate-receipt-review-r01.md | see: 20260930T154349Z
+Pipeline: 20260930T124036Z
+Failure: Two unattended inline Python metadata and log probes were safety-blocked before execution.
+Recovery: Bounded file reads and inspected scratch-script files supplied the evidence; no approval, runtime, repository scope, or external state was changed.
+
+## [ENT-016] | 2026-09-30 15:52 UTC | Analyst | error | ref: forge/final-reviews/forge-history-duplicate-receipt-review-r01.md | see: 20260930T154349Z
+Pipeline: 20260930T124036Z
+Failure: The first scratch validator omitted the block-form `links` key and falsely failed frontmatter order.
+Recovery: The parser was corrected to recognize keys ending in a colon; the rerun passed metadata order, links, source numbering, and citations.

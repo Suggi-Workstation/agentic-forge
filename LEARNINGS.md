@@ -80,9 +80,10 @@ edit; keep the legitimate stage result and this file unchanged.
 ### Derive evaluator and checker controls from the claimed result contract
 
 - **Lesson:** Derive every checker predicate, evaluator classifier, negative
-  fixture, and positive control from each field, relationship, and purpose-level
-  behavior the result claims. A run-level label cannot validate unclassified
-  later decisions; label the result partial when any claimed predicate is
+  fixture, positive control, and operation order from each field, relationship,
+  resource bound, and purpose-level behavior the result claims. A run-level label
+  cannot validate unclassified later decisions or a gate applied only after its
+  prohibited action; label the result partial when any claimed predicate is
   intentionally excluded.
 - **Evidence:** In one earlier pipeline, a record checker reproduced all its
   declared results while contradicted required fields still passed; after a
@@ -92,15 +93,21 @@ edit; keep the legitimate stage result and this file unchanged.
   later in the run could still pass the claim. In pipeline `20260930T083956Z`,
   a first replay let every `STALE` subtype wait despite an exact-HEAD-lag claim;
   after the trigger and action clauses were mapped to controls, an independent
-  rerun reproduced all 22 corrected expectations.
-- **Confidence:** High. Two independent pipelines exposed claimed-contract
-  undercoverage in a checker and an evaluation grader; a later third pipeline
-  showed that applying the lesson made its corrected trigger boundary and
-  action sequence independently checkable.
+  rerun reproduced all 22 corrected expectations. In pipeline
+  `20260930T124036Z`, a proposal probed a blob body before its declared size gate
+  and named an elapsed ceiling without a running-command deadline predicate;
+  final review returned REVISE before either bound was treated as testable. See
+  `forge/final-reviews/forge-history-duplicate-receipt-review-r01.md`.
+- **Confidence:** High. Four independent pipelines exposed claimed-contract or
+  operation-order undercoverage, and pipeline `20260930T083956Z` showed that
+  applying the lesson made its corrected trigger boundary and action sequence
+  independently checkable.
 - **Consequence:** Before proposing a deterministic checker or evaluation gate,
   map every claimed PASS or benefit clause to an observable predicate, a
   false-positive counterexample or negative fixture, and a valid positive
-  control. Narrow the result claim whenever the grader deliberately omits one.
+  control. For resource bounds, enforce size and deadline gates before the
+  consuming operation and assert that prohibited later invocations did not run.
+  Narrow the result claim whenever the grader deliberately omits one.
 
 ### Separate historical artifact identity from path provenance
 

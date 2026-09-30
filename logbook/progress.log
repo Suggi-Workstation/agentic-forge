@@ -110,3 +110,13 @@ Decision: Propose one bounded reachable-history receipt in the Forge ideation sk
 Findings: The blueprint freezes one HEAD, preserves path/commit/blob provenance, groups pipeline plus artifact ID, keeps complete receipts in scratch, and blocks judgments on ambiguity or finite-budget overflow.
 Limit: The sample is five pipelines in one history, review time is unmeasured, the root-first display is untested, and the proposed ceilings are design assumptions.
 Next: final-review the exact one-file scope, fail-closed receipt, executable acceptance package, costs, and direct rollback.
+
+## [ENT-013] | 2026-09-30 15:48 UTC | Analyst | review | ref: forge/final-reviews/forge-history-duplicate-receipt-review-r01.md | see: 20260930T154349Z
+Pipeline: 20260930T124036Z
+Stage: final-review. Result: PASS.
+Artifact: 20260930T154349Z.
+Verdict: REVISE; next stage propose; corrective cycle 1 of 2.
+Findings: Independent checks reproduced the frozen corpus and decisions, but the normative sequence emits a blob before its size gate and does not enforce the 60-second ceiling on a running command.
+Limit: The root-first display and synthetic package remain unexecuted; the sample is one repository history and the proposed ceilings remain design assumptions.
+Learning: Strengthened the claimed-result-contract lesson to require pre-consumption size and deadline gates plus prohibited-invocation checks.
+Next: propose pre-body object-size checks, per-command remaining-deadline enforcement, and exact oversize and timeout invocation fixtures.
