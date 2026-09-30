@@ -112,3 +112,13 @@ Decision: Request approval for one exact protocol paragraph; implementation rema
 Findings: The note makes unattended denial final, selects capability classes before conditional examples, and requires equivalent verification.
 Limit: Historical command and cost data are missing, examples cover one VPS, and prose has not yet changed first-choice behavior.
 Next: final-review.
+
+## [ENT-014] | 2026-09-30 02:35 UTC | Analyst | review | ref: forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md | see: 20260930T023515Z
+Pipeline: 20260921T152802Z
+Stage: evaluate. Result: PASS.
+Artifact: 20260930T023515Z.
+Verdict: REVISE; corrective cycle 2 of 2.
+Findings: The embedded package reproduced all 13 declared outcomes, but result, category, and authorship mutants in the claimed open-research shape each returned PASS.
+Limit: Coverage remains two shapes; maintenance value and live integration remain unmeasured.
+Learning: Added a low-confidence lesson to derive fixtures from the claimed PASS contract or label the result partial.
+Next: research.

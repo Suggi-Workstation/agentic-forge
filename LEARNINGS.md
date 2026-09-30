@@ -81,3 +81,21 @@ edit; keep the legitimate stage result and this file unchanged.
 - **Consequence:** Require linked pre-comparison rules, executable and fixture
   bytes, raw results, and unmerged reader outputs before treating a procedural
   validation claim as passed; otherwise limit the claim and return for evidence.
+
+### Derive checker fixtures from the claimed PASS contract
+
+- **Lesson:** Derive deterministic checker fixtures from every normative field
+  and relationship that PASS claims to validate, or label the result as a
+  partial check; a perfect declared-mutant score does not cover fields the
+  fixture set never mutates.
+- **Evidence:** Pipeline `20260921T152802Z`, in
+  `forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md`.
+  The preserved package reproduced all 13 declared classifications, while three
+  additional one-line current-shape contradictions in event result, category,
+  and authorship each returned PASS.
+- **Confidence:** Low. One pipeline supplies checked evidence; the historical
+  reverted validator is prior work from the same idea's origin, not an
+  independent trial.
+- **Consequence:** Before proposing a deterministic checker, map its claimed PASS
+  boundary to rule-derived positive and negative fixtures, then narrow the
+  output meaning when any required field is intentionally excluded.

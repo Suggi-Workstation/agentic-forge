@@ -65,3 +65,9 @@ Recovery: Every linked repository file had already been read directly in full, a
 Pipeline: 20260921T152802Z
 Failure: Recursive deletion of the task-owned scratch package was approval-blocked after publication verification.
 Recovery: No retry, bypass, or approval change was attempted; the package remains in the configured scratch cache for automatic pruning after 24 hours.
+
+## [ENT-013] | 2026-09-30 02:35 UTC | Analyst | error | ref: forge/evaluations/evidence-gated-forge-transaction-checker-evaluation-r02.md | see: 20260930T023515Z
+Pipeline: 20260921T152802Z
+Failure: Programmatic package extraction through execute_code was approval-blocked before any inner tool call.
+Failure: The first shell extraction command was approval-blocked because it combined ten deletion operations; no command component ran.
+Recovery: Exact line-range extraction used csplit and non-deleting copies; hashes, syntax checks, and the independent rerun then completed without a repository write.
