@@ -176,3 +176,13 @@ Decision: Request approval for the unchanged protocol paragraph with a purpose-s
 Findings: Three positive purposes now have independent matched classifiers, and structural comparison has a separate non-equivalence gate.
 Limit: The 24 cold contexts and regression cases remain unexecuted; benefit and recovery cost remain unmeasured.
 Next: final-review; correction budget exhausted.
+
+## [ENT-021] | 2026-09-30 06:37 UTC | Analyst | review | ref: forge/evaluations/unattended-forge-command-paths-review-r03.md | see: 20260930T063736Z
+Pipeline: 20260929T223305Z
+Stage: final-review. Result: PASS.
+Artifact: 20260930T063736Z.
+Verdict: READY; exact r03 proposal awaits Suggi.
+Findings: Purpose-separated classifiers and fail-on-any-treatment-denial close the remaining grader false-positive path.
+Limit: The matched and regression package remains unexecuted; benefit and recovery cost remain unmeasured.
+Learning: Unchanged; the existing claimed-result-contract lesson covers the method and this same-pipeline correction is unexecuted.
+Next: human-review; READY grants no approval or implementation authority.
