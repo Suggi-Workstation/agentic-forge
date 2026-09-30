@@ -12,4 +12,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
-| 20260930T083956Z | active | propose | forge/evaluations/bounded-index-freshness-recheck-evaluation-r02.md | Draft a bounded exact-HEAD-lag recheck proposal with shell-level acceptance tests; corrective cycle 1 of 2 remains used. | 2026-09-30 10:44 UTC |
+| 20260930T083956Z | active | final-review | forge/proposals/bounded-index-freshness-recheck-r01.md | Independently review the exact trigger, shell acceptance matrix, rollback, and no-implementation boundary. | 2026-09-30 11:15 UTC |

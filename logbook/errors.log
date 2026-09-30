@@ -34,3 +34,8 @@ Recovery: Extraction ran from the existing scratch parent; hashes, syntax, byte 
 Pipeline: 20260930T083956Z
 Failure: Recursive and batched deletion of task-owned scratch evidence was blocked by unattended safety controls after publication verification; some exact-path deletions had already completed.
 Recovery: Remaining task-owned files were removed with individual `unlink` calls, and bounded file searches confirmed none remained. Cleanup changed no tracked file, approval setting, runtime, or external configuration.
+
+## [ENT-007] | 2026-09-30 11:19 UTC | Researcher | error | ref: forge/proposals/bounded-index-freshness-recheck-r01.md | see: 20260930T110901Z
+Pipeline: 20260930T083956Z
+Failure: One read-only inline Python validator for metadata, links, citations, and final-section structure was approval-blocked before execution.
+Recovery: Full artifact and staged-diff reads, verified source-path reads, ID validation, diff checks, and ASCII checks supplied the same gates without changing approval, runtime, or external state.

@@ -46,3 +46,12 @@ Findings: Exact extracted bytes and two independent runs reproduced all 22 expec
 Limit: The positives share one system, the 90-second ceiling is post-event, and shell-level waiting and snapshot integration remain untested.
 Learning: Raised the claimed-result-contract lesson to high after this later pipeline demonstrated independently checkable application.
 Next: propose a bounded exact-HEAD-lag recheck with shell-level acceptance tests and no implementation authority.
+
+## [ENT-006] | 2026-09-30 11:15 UTC | Researcher | research | ref: forge/proposals/bounded-index-freshness-recheck-r01.md | see: 20260930T110901Z
+Pipeline: 20260930T083956Z
+Stage: propose. Result: PASS.
+Artifact: 20260930T110901Z.
+Decision: Propose one exact-HEAD-lag-only wait and recheck in the Brain and Forge VPS query skills; implementation remains separately authorized.
+Findings: The blueprint preserves the literal-OK gate, snapshots HEAD and worktree state, permits one bounded wait and second command, and defines shell-level fail-closed tests.
+Limit: The 90-second ceiling is post-event, both positives share one system, and the specified shell integration has not been implemented or tested.
+Next: final-review the exact trigger, acceptance matrix, rollback, and no-implementation boundary.
