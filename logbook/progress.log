@@ -139,3 +139,12 @@ Findings: R02 separates metadata from bodies and propagates child timeouts, but 
 Limit: The driver, root-first display, and fixture package remain unexecuted; the sample is one repository history and the ordinary correction budget is exhausted.
 Learning: Unchanged; the same-pipeline resource and trace gaps are covered by the claimed-result-contract lesson, and the partial-clone case does not yet justify a separate transferable lesson.
 Next: propose sink-level output enforcement, whole-driver deadline gates, observable in-process events, and partial-clone fail-closed handling while preserving scope.
+
+## [ENT-016] | 2026-09-30 17:38 UTC | Analyst | review | ref: forge/ideas/forge-proposal-claim-verification-map-r01.md | see: 20260930T173859Z
+Pipeline: 20260930T173859Z
+Stage: ideate. Result: PASS.
+Artifact: 20260930T173859Z.
+Origin: Direct Path A; target is the Forge proposal template and propose procedure.
+Findings: One pipeline used two proposal revisions and both corrective cycles while leaving six material claim-to-verification blockers; another pipeline supplies a READY positive control.
+Limit: The cases are retrospective, the negative revisions share one pipeline, and the map's incremental detection, reproducibility, and author cost are unmeasured.
+Next: research one compact claim-to-verification map against both failed revisions, the READY control, the current checklist, and doing nothing.
