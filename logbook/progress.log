@@ -122,3 +122,11 @@ Findings: The embedded package reproduced all 13 declared outcomes, but result, 
 Limit: Coverage remains two shapes; maintenance value and live integration remain unmeasured.
 Learning: Added a low-confidence lesson to derive fixtures from the claimed PASS contract or label the result partial.
 Next: research.
+
+## [ENT-015] | 2026-09-30 03:22 UTC | Researcher | research | ref: forge/research/evidence-gated-forge-transaction-checker-r03.md | see: 20260930T031626Z
+Pipeline: 20260921T152802Z
+Stage: research. Result: PASS.
+Artifact: 20260930T031626Z.
+Findings: Two shape controls returned PARTIAL_PASS and all 17 mutants returned FAIL; result, category, and author mismatches were rejected in both shapes.
+Limit: The 540-line checker-plus-runner remains partial, synthetic, and economically unproven; full transaction validity is outside its claim.
+Next: evaluate; correction budget exhausted.

@@ -76,3 +76,8 @@ Recovery: Exact line-range extraction used csplit and non-deleting copies; hashe
 Pipeline: 20260921T152802Z
 Failure: The first compound publication-verification wait and conditional command was approval-blocked before any component ran.
 Recovery: The wait and fetch/ancestor checks ran as separate commands; the exact commit then verified on origin/main with AHEAD: 0 and BEHIND: 0.
+
+## [ENT-015] | 2026-09-30 03:22 UTC | Researcher | error | ref: forge/research/evidence-gated-forge-transaction-checker-r03.md | see: 20260930T031626Z
+Pipeline: 20260921T152802Z
+Failure: A combined post-run hash, raw-output loop, and repository-state command was approval-blocked before any component ran.
+Recovery: Split read-only commands verified five hashes, 19 one-line raw outputs, unchanged Forge HEAD, and a clean working tree; no approval or configuration change was attempted.
