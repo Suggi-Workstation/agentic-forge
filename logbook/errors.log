@@ -59,3 +59,8 @@ Recovery: The faulty outputs were discarded, directory pathspecs and direct obje
 Pipeline: 20260930T124036Z
 Failure: The first scratch citation validator counted Python index token `[0]` inside a fenced code block as a source citation and returned a false mismatch.
 Recovery: Fenced code was excluded from citation parsing; the rerun found ordered sources 1-15, matching body citations, resolved links, exact metadata order, and zero errors.
+
+## [ENT-012] | 2026-09-30 13:46 UTC | Researcher | error | ref: forge/research/forge-history-duplicate-receipt-r01.md | see: 20260930T132200Z
+Pipeline: 20260930T124036Z
+Failure: After publication, programmatic and bounded nonrecursive deletion of 53 task-owned scratch files was blocked by unattended approval and security controls before deletion.
+Recovery: No bypass, approval, profile, or runtime change was attempted; a file search confirmed all 53 files remain in the configured scratch cache for automatic pruning after 24 hours.
