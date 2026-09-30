@@ -212,3 +212,11 @@ Origin: Direct Path B; target is the retained-earnings test in the Investing Hub
 Findings: The Nintendo report labels a roughly 2.2-yen market-value gain per yen retained a pass while concluding that the same market price is 116% above Base intrinsic value.
 Limit: Only two current company reports exist, only Nintendo states the test explicitly, and historical intrinsic-value reconstruction may be unavailable.
 Next: research whether a valuation-consistent rule changes a score, confidence, wording, or refusal result beyond the current semantic rule.
+
+## [ENT-024] | 2026-09-30 23:23 UTC | Researcher | research | ref: forge/research/valuation-consistent-retained-earnings-test-r01.md | see: 20260930T232329Z
+Pipeline: 20260930T223526Z
+Stage: research. Result: PASS.
+Artifact: 20260930T232329Z.
+Findings: The current and candidate rules both yield no overall retained-earnings pass and no score, confidence, override, or refusal change; Nintendo's 2.2 market result is conditional on a net-of-buybacks denominator and mismatched endpoints.
+Limit: The sample has two reports, two same-model readers, no historical intrinsic-value series, no clean Nintendo incremental-capital denominator, and no Crocs market bridge.
+Next: evaluate whether report-only correction is sufficient and whether the wording-only candidate adds decision value beyond enforcing the current rule.
