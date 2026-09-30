@@ -83,3 +83,11 @@ Origin: Direct Path A; target is the Forge ideation prior-work check after repos
 Findings: The live tree contains 1 root idea and 8 artifact Markdown paths, while reachable Git history contains 5 roots and 39 unique artifact paths.
 Limit: Reachable refs are not archival completeness, and the receipt's semantic recall, disposition accuracy, review cost, and decision value remain untested.
 Next: research the current-tree baseline against one bounded read-only reachable-history receipt.
+
+## [ENT-010] | 2026-09-30 13:36 UTC | Researcher | research | ref: forge/research/forge-history-duplicate-receipt-r01.md | see: 20260930T132200Z
+Pipeline: 20260930T124036Z
+Stage: research. Result: PASS.
+Artifact: 20260930T132200Z.
+Findings: The verified receipt recovered 5 roots, 39 reachable paths, and 34 logical artifact IDs; it exposed one missing candidate and one omitted closure without a cross-pipeline merge.
+Limit: The historical index snapshot was unavailable, reachability is not archival completeness, five renamed paths required ID deduplication, and ten bodies were needed for exact decisions.
+Next: evaluate decision value, false-completeness limits, path noise, and review cost.

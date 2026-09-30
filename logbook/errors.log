@@ -49,3 +49,13 @@ Recovery: The inline parser was removed. After one pending ancestor check and on
 Pipeline: 20260930T083956Z
 Failure: The first combined staged-validation command was blocked before execution because it contained an inline Python `-c` ASCII probe.
 Recovery: The probe was replaced with `iconv`; exact-path staging, diff checks, ID validation, link checks, ASCII checks, and the unchanged LEARNINGS hash then passed without changing approval or runtime state.
+
+## [ENT-010] | 2026-09-30 13:36 UTC | Researcher | error | ref: forge/research/forge-history-duplicate-receipt-r01.md | see: 20260930T132200Z
+Pipeline: 20260930T124036Z
+Failure: The first scratch receipt used wildcard `git ls-tree` pathspecs and returned an invalid zero-path baseline; two later diagnostics also used disallowed shell text filters.
+Recovery: The faulty outputs were discarded, directory pathspecs and direct object reads regenerated the evidence, and an independent verifier checked all 39 objects before any repository write used the result.
+
+## [ENT-011] | 2026-09-30 13:39 UTC | Researcher | error | ref: forge/research/forge-history-duplicate-receipt-r01.md | see: 20260930T132200Z
+Pipeline: 20260930T124036Z
+Failure: The first scratch citation validator counted Python index token `[0]` inside a fenced code block as a source citation and returned a false mismatch.
+Recovery: Fenced code was excluded from citation parsing; the rerun found ordered sources 1-15, matching body citations, resolved links, exact metadata order, and zero errors.
