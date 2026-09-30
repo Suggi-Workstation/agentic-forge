@@ -92,3 +92,9 @@ Recovery: The index log was inspected, the repository state was checked with a s
 Pipeline: 20260921T152802Z
 Failure: Recursive deletion of task-owned scratch evidence was approval-blocked after publication verification.
 Recovery: No bypass or approval change was attempted; the evidence remains in the configured scratch cache for automatic pruning after 24 hours.
+
+## [ENT-018] | 2026-09-30 05:03 UTC | Researcher | error | ref: forge/evaluations/unattended-forge-command-paths-review-r01.md | see: 20260930T050338Z
+Pipeline: 20260929T223305Z
+Failure: The first Forge index freshness check returned STALE at `ee82fca6` while HEAD was `ccc3bcad`.
+Failure: A compound read-only log inspection command containing a heredoc was approval-blocked before execution.
+Recovery: The existing watcher naturally indexed HEAD with 348 chunks, direct file reads completed the log inspection, and no manual rebuild, approval change, or repository write preceded the stable pre-write recheck.
