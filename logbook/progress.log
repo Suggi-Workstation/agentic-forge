@@ -312,3 +312,12 @@ Findings: Primary-source checks and independent arithmetic reproduce the stress 
 Limit: The sample has two reports, original workings and material timing inputs are unavailable, both cold readers used one model family, and prospective author or review cost is unmeasured.
 Learning: Unchanged; existing full-contract-comparator, evidence-preservation, claimed-result, and bounded-tooling lessons cover the method and process.
 Next: closed; reopening requires prospective evidence that the complete current contract misses a material liquidity error uniquely caught by the bridge, or measured lower total review cost without false confidence.
+
+## [ENT-035] | 2026-10-01 08:35 UTC | Analyst | research | ref: forge/ideas/company-report-cold-conformance-review-r01.md | see: 20261001T083505Z
+Pipeline: 20261001T083505Z
+Stage: ideate. Result: PASS.
+Artifact: 20261001T083505Z.
+Origin: Direct Path B; target is the cold pre-release execution of the existing Investing Hub company-report hard gate.
+Findings: Three separate Forge pipelines found that current semantic rules already force material corrections in the two current company reports; the release hard gate does not require or retain evidence of a cold separate review.
+Limit: The corpus has two reports, the defect set is retrospective, original pre-release review records are unavailable, and separate readers may share model errors.
+Next: research whether answer-key-blind readers can distinguish paired original and corrected report claims under the full current contracts without new fields, rules, or a claim map.
