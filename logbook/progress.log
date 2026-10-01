@@ -329,3 +329,13 @@ Artifact: 20261001T091855Z.
 Findings: Two answer-key-blind, counterbalanced readers HALTed all six original-unit readings and PASSed all six corrected controls under the complete current contracts; exact packs and outputs are embedded.
 Limit: The test is retrospective and curated, both readers share one model family, Reader B loaded extra generic review guidance, no author-side baseline survives, and prospective error reduction and total cost remain unknown.
 Next: evaluate the paired result, source and context limits, measured burden, and whether it supports only a reversible bounded trial.
+
+## [ENT-037] | 2026-10-01 09:38 UTC | Analyst | review | ref: forge/evaluations/company-report-cold-conformance-review-evaluation-r01.md | see: 20261001T093804Z
+Pipeline: 20261001T083505Z
+Stage: evaluate. Result: PASS.
+Artifact: 20261001T093804Z.
+Verdict: REVISE; exact next stage research; corrective cycle 1 of 2.
+Findings: Embedded packs and separate outputs reproduce all 12 classifications, and current rules plus independent arithmetic support the bounded labels; complete reader execution receipts are not preserved, so the decisive answer-key-blind pair is unverified.
+Limit: Reader B's output says its context was restricted to the pack and contracts, while the research reports an extra generic skill read; prompts and self-reports cannot establish actual context compliance.
+Learning: Unchanged; the existing high-confidence preservation lesson already requires separate evidence for blind and separate-reader claims.
+Next: preserve hashed reader context and tool-access receipts, or rerun both passes with complete receipts, then return the corrected research to evaluation.

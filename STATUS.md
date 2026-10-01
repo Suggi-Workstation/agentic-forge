@@ -13,4 +13,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
 | 20260930T083956Z | awaiting-review | human-review | forge/discoveries/bounded-index-freshness-recheck-r02.md | Decide whether to approve, request changes, defer, or reject the exact discovery. | 2026-09-30 12:02 UTC |
-| 20261001T083505Z | active | evaluate | forge/research/company-report-cold-conformance-review-r01.md | Evaluate the paired cold-review result, scope deviation, burden, and bounded-trial threshold. | 2026-10-01 09:23 UTC |
+| 20261001T083505Z | active | research | forge/evaluations/company-report-cold-conformance-review-evaluation-r01.md | Preserve verifiable cold-reader access receipts or rerun both passes, then reassess the bounded-trial threshold. | 2026-10-01 09:38 UTC |
