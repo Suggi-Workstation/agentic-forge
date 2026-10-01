@@ -209,3 +209,8 @@ Recovery: The command was read-only and changed no state. Full `read_file` inspe
 Pipeline: 20261001T043634Z
 Failure: Parent preflight opened the target title and first body sentence before its own baseline; an independent evaluator metadata probe and a later exact-copy `execute_code` call were blocked before execution.
 Recovery: A separate Analyst evaluator context recorded its cold baseline before any target-body read and completed the review; bounded reads supplied metadata, and a fixed-path copy transferred the reviewed artifact bytes. The blocked calls changed no repository state.
+
+## [ENT-042] | 2026-10-01 09:23 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r01.md | see: 20261001T091855Z
+Pipeline: 20261001T083505Z
+Failure: Four grouped or inline elapsed-time probes across preliminary and official cold-reader runs were safety-blocked before calculating a result.
+Recovery: Direct UTC timestamp commands plus fixed `expr` arithmetic supplied the official 94-second and 82-second records; exact reader outputs were written and verified without approval, runtime, or repository-scope changes.

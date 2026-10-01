@@ -321,3 +321,11 @@ Origin: Direct Path B; target is the cold pre-release execution of the existing 
 Findings: Three separate Forge pipelines found that current semantic rules already force material corrections in the two current company reports; the release hard gate does not require or retain evidence of a cold separate review.
 Limit: The corpus has two reports, the defect set is retrospective, original pre-release review records are unavailable, and separate readers may share model errors.
 Next: research whether answer-key-blind readers can distinguish paired original and corrected report claims under the full current contracts without new fields, rules, or a claim map.
+
+## [ENT-036] | 2026-10-01 09:23 UTC | Researcher | research | ref: forge/research/company-report-cold-conformance-review-r01.md | see: 20261001T091855Z
+Pipeline: 20261001T083505Z
+Stage: research. Result: PASS.
+Artifact: 20261001T091855Z.
+Findings: Two answer-key-blind, counterbalanced readers HALTed all six original-unit readings and PASSed all six corrected controls under the complete current contracts; exact packs and outputs are embedded.
+Limit: The test is retrospective and curated, both readers share one model family, Reader B loaded extra generic review guidance, no author-side baseline survives, and prospective error reduction and total cost remain unknown.
+Next: evaluate the paired result, source and context limits, measured burden, and whether it supports only a reversible bounded trial.
