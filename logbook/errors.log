@@ -229,3 +229,38 @@ Recovery: The source was not used. Fully read Brain topics and an inspected OSF/
 Pipeline: 20261001T103830Z
 Failure: One exact-path batch cleanup of nine task-owned scratch files was safety-blocked after stage publication verification; bounded searches confirmed all files remain.
 Recovery: No bypass or approval change was attempted. The configured scratch cache will prune the files after 24 hours; the Forge repository stayed clean and the exact stage commit was already verified on origin/main.
+
+## [ENT-046] | 2026-10-01 11:17 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: The first packet extractor omitted the terminal line feed from each embedded r01 pack and failed the declared SHA-256 gate before creating reader inputs.
+Recovery: The extractor restored the exact terminal line feed, reproduced both r01 pack hashes, appended separately hashed current-contract snapshots, and no reader used the failed output.
+
+## [ENT-047] | 2026-10-01 11:17 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: Both corrective readers attempted an inline Python elapsed-time calculation that unattended policy blocked after their sole pack read and before output write.
+Recovery: Fixed `expr` commands returned 69 and 65 seconds; the exact blocked calls remain in both receipts, read no file, returned no data, and changed no classification.
+
+## [ENT-048] | 2026-10-01 11:17 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: The first final-artifact composition halted before repository write because the observable transcript files contain non-ASCII renderer characters.
+Recovery: The exact transcript bytes were Base64-encoded, original and encoded hashes were checked, decode equality passed, and the ASCII-only artifact preserves the recoverable bytes without altering the transcripts.
+
+## [ENT-049] | 2026-10-01 11:17 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: An initial complete artifact write occurred before the protocol's final stable HEAD, board, log, and worktree recheck.
+Recovery: The task-owned partial artifact was removed, HEAD and all recorded control/input hashes were rechecked against the clean snapshot, and the identical artifact bytes were then recreated before STATUS or log publication.
+
+## [ENT-050] | 2026-10-01 11:19 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: Full artifact rereading found that the assembled Reader B dispatch receipt carried Reader A's expected pack hash because a context-copy substitution omitted the digest.
+Recovery: The task-owned artifact was removed, the exact Reader B digest was restored from the original delegated call and observed hash result, the receipt was rehashed, and composition was held for another stable pre-write recheck.
+
+## [ENT-051] | 2026-10-01 11:23 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: The first scratch validator correctly found five repository-source entries whose ` -- ` explanation began on the next line; it also returned false secret and STATUS-count failures from `task-` path text and duplicated date-field matching.
+Recovery: Every affected source now keeps its path and ` -- ` on one line, the two predicates were narrowed to actual token and board-row shapes, the task-owned artifact was removed, and final composition was held for another stable recheck.
+
+## [ENT-052] | 2026-10-01 11:24 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: The corrected scratch validator used an obsolete artifact-ID occurrence oracle and returned a false count failure after the artifact and six current error references were present.
+Recovery: The oracle was updated to the exact post-event corpus count while retaining repository-wide ID validation, and no artifact, board, handoff, or evidence content changed.
