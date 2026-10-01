@@ -247,3 +247,13 @@ Artifact: 20261001T020825Z.
 Findings: Two order-balanced readers gave the 51-word candidate zero classification changes over the full current gate; both caught the package defects and controls, but both blocked the independently decidable T5 artifact as written.
 Limit: The test is retrospective, both readers share one model family, one reader loaded general skill text beyond the target set, and prospective author behavior and review cost remain unmeasured.
 Next: evaluate the negative comparison, T5 claim-narrowing failure, proportionality, and whether the pipeline should stop.
+
+## [ENT-028] | 2026-10-01 02:34 UTC | Analyst | review | ref: forge/graveyard/forge-research-evidence-package-gate-evaluation-r01.md | see: 20261001T023441Z
+Pipeline: 20261001T013556Z
+Stage: evaluate. Result: PASS.
+Artifact: 20261001T023441Z.
+Verdict: REJECT; graveyard closure; zero of two corrective cycles were used.
+Findings: The full current contract and the candidate classified all eight cases identically; independent evaluator reading reproduced the zero-change result.
+Limit: Complete reader outputs are unavailable, the sample is retrospective and small, and future author behavior and review cost remain unmeasured.
+Learning: Unchanged; existing package-preservation, full-contract-comparator, and unattended-tooling lessons cover the method and process failure.
+Next: closed; reopening requires prospective changed evidence that a concise rule produces a unique correct package or narrowing action and decision value beyond the full current contract.

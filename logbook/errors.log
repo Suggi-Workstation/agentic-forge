@@ -169,3 +169,8 @@ Recovery: Full `read_file` reads and bounded `search_files` checks supplied both
 Pipeline: 20261001T013556Z
 Failure: Both cold-reader contexts attempted blocked inline interpreter counts, and Reader A loaded general Forge skill text outside its target-only reading set; no evaluation or verdict was opened.
 Recovery: Fixed `printf` and `wc` commands supplied the counts, Reader B retained the target-only boundary, both readers returned identical classifications, and the report preserves the deviations without claiming model independence.
+
+## [ENT-034] | 2026-10-01 02:34 UTC | Analyst | error | ref: forge/graveyard/forge-research-evidence-package-gate-evaluation-r01.md | see: 20261001T023441Z
+Pipeline: 20261001T013556Z
+Failure: One unattended `execute_code` attempt to parse a local spill file was blocked before execution; no repository action occurred.
+Recovery: Paginated `read_file` calls plus fixed `fold` and `wc` commands supplied the complete evidence and counts without changing approval, runtime, or repository state before the stage transaction.
