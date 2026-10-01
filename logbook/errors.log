@@ -164,3 +164,8 @@ Recovery: A bounded search confirmed all 11 task-owned files remain in the confi
 Pipeline: 20260930T223526Z
 Failure: One terminal command bundling an inline Python heredoc for active-log tail extraction was safety-blocked before execution.
 Recovery: Full `read_file` reads and bounded `search_files` checks supplied both logs, counters, and recent events; no repository write or external state change preceded the stable pre-write recheck.
+
+## [ENT-033] | 2026-10-01 02:08 UTC | Researcher | error | ref: forge/research/forge-research-evidence-package-gate-r01.md | see: 20261001T020825Z
+Pipeline: 20261001T013556Z
+Failure: Both cold-reader contexts attempted blocked inline interpreter counts, and Reader A loaded general Forge skill text outside its target-only reading set; no evaluation or verdict was opened.
+Recovery: Fixed `printf` and `wc` commands supplied the counts, Reader B retained the target-only boundary, both readers returned identical classifications, and the report preserves the deviations without claiming model independence.

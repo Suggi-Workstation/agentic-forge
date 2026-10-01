@@ -13,4 +13,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 | pipeline | state | stage | active-artifact | next-action | updated |
 |:--|:--|:--|:--|:--|:--|
 | 20260930T083956Z | awaiting-review | human-review | forge/discoveries/bounded-index-freshness-recheck-r02.md | Decide whether to approve, request changes, defer, or reject the exact discovery. | 2026-09-30 12:02 UTC |
-| 20261001T013556Z | active | research | forge/ideas/forge-research-evidence-package-gate-r01.md | Research whether a conditional evidence-package gate adds decision value over the current full template. | 2026-10-01 01:35 UTC |
+| 20261001T013556Z | active | evaluate | forge/research/forge-research-evidence-package-gate-r01.md | Evaluate the negative comparison, T5 narrowing failure, and zero incremental classification value. | 2026-10-01 02:08 UTC |

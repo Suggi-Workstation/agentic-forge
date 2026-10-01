@@ -239,3 +239,11 @@ Origin: Direct Path A; target is the conditional evidence-preservation gate in t
 Findings: Two REVISE cases lacked durable material packages, corrected packages became independently checkable, and a later missing-reader case remained decidable after the unsupported reader claim received no weight.
 Limit: The candidate is retrospective, its effect on author behavior is unmeasured, and the current full semantic gate may already classify the cases equally.
 Next: research a concise conditional package-or-claim-narrowing gate against the full current template, corrected controls, and ordinary source research.
+
+## [ENT-027] | 2026-10-01 02:08 UTC | Researcher | research | ref: forge/research/forge-research-evidence-package-gate-r01.md | see: 20261001T020825Z
+Pipeline: 20261001T013556Z
+Stage: research. Result: PASS.
+Artifact: 20261001T020825Z.
+Findings: Two order-balanced readers gave the 51-word candidate zero classification changes over the full current gate; both caught the package defects and controls, but both blocked the independently decidable T5 artifact as written.
+Limit: The test is retrospective, both readers share one model family, one reader loaded general skill text beyond the target set, and prospective author behavior and review cost remain unmeasured.
+Next: evaluate the negative comparison, T5 claim-narrowing failure, proportionality, and whether the pipeline should stop.
