@@ -159,3 +159,8 @@ Recovery: Fixed-source `bc` calculations and direct source rereads supplied the 
 Pipeline: 20260930T223526Z
 Failure: Three exact-path scratch-cleanup batches were blocked by unattended mass-deletion controls after publication verification; no file was removed.
 Recovery: A bounded search confirmed all 11 task-owned files remain in the configured scratch cache for automatic pruning after 24 hours; the Forge repository stayed clean and the exact stage commit was already on origin/main.
+
+## [ENT-032] | 2026-10-01 00:37 UTC | Analyst | error | ref: forge/graveyard/valuation-consistent-retained-earnings-test-evaluation-r01.md | see: 20261001T003746Z
+Pipeline: 20260930T223526Z
+Failure: One terminal command bundling an inline Python heredoc for active-log tail extraction was safety-blocked before execution.
+Recovery: Full `read_file` reads and bounded `search_files` checks supplied both logs, counters, and recent events; no repository write or external state change preceded the stable pre-write recheck.

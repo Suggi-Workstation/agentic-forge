@@ -149,3 +149,25 @@ edit; keep the legitimate stage result and this file unchanged.
   artifacts first, deduplicate path aliases by stable identity, require full
   body reads before disposition, preserve `unknown` for missing decisions, and
   halt or narrow the claim when reachability or identity is ambiguous.
+
+### Prefer bounded native tools in unattended Forge sessions
+
+- **Lesson:** In scheduled Forge work, prefer `read_file`, `search_files`, and
+  fixed direct commands for log tails, metadata inspection, arithmetic, and
+  state checks. Avoid inline interpreters, heredocs, and mixed commands when a
+  bounded native tool can supply the same evidence; when code is necessary,
+  write and inspect one task-owned scratch script before execution.
+- **Evidence:** Unattended inline-interpreter or heredoc probes were blocked
+  before execution in pipelines `20260930T083956Z`, `20260930T124036Z`,
+  `20260930T173859Z`, and `20260930T223526Z`; bounded file tools and fixed
+  commands recovered the required evidence in each case. See
+  `logbook/errors.log` and
+  `forge/graveyard/valuation-consistent-retained-earnings-test-evaluation-r01.md`.
+- **Confidence:** Medium. Four independent pipelines, across Analyst and
+  Researcher contexts and multiple stages, reproduce the failure and recovery
+  pattern. No prospective stage has yet shown that applying this lesson removes
+  every unattended approval block.
+- **Consequence:** Select bounded native tools before optional interpreter
+  wrappers, and never bundle a wait or state-changing command with dispensable
+  parsing. A blocked call remains a failure to record; this lesson grants no
+  approval, runtime, or governance permission.

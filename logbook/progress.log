@@ -220,3 +220,13 @@ Artifact: 20260930T232329Z.
 Findings: The current and candidate rules both yield no overall retained-earnings pass and no score, confidence, override, or refusal change; Nintendo's 2.2 market result is conditional on a net-of-buybacks denominator and mismatched endpoints.
 Limit: The sample has two reports, two same-model readers, no historical intrinsic-value series, no clean Nintendo incremental-capital denominator, and no Crocs market bridge.
 Next: evaluate whether report-only correction is sufficient and whether the wording-only candidate adds decision value beyond enforcing the current rule.
+
+## [ENT-025] | 2026-10-01 00:37 UTC | Analyst | review | ref: forge/graveyard/valuation-consistent-retained-earnings-test-evaluation-r01.md | see: 20261001T003746Z
+Pipeline: 20260930T223526Z
+Stage: evaluate. Result: PASS.
+Artifact: 20261001T003746Z.
+Verdict: REJECT; graveyard closure; zero of two corrective cycles were used and no further cycle was consumed.
+Findings: Primary-source tables, fixed arithmetic, and the exact current rule reproduce zero score, confidence, override, refusal, or overall-classification change; a Nintendo report-only correction is sufficient.
+Limit: The corpus has two reports, one explicit market test, no prospective control, no historical intrinsic-value series, and no preserved separate-reader outputs.
+Learning: Added a medium-confidence unattended-tooling lesson after the same blocked inline-interpreter pattern and bounded recovery recurred across four independent pipelines.
+Next: closed; reopening requires new independent or prospective evidence that separate labels prevent recurring market-only errors beyond full current-rule enforcement and add decision value or lower total review cost.
