@@ -194,3 +194,8 @@ Recovery: No bypass or approval change was attempted. All task-owned scratch evi
 Pipeline: 20261001T033647Z
 Failure: Six parallel exact-path scratch-cleanup commands were safety-blocked before deletion because each attempted five or six non-build files within the deletion window; bounded search confirmed all 31 task-owned files remain.
 Recovery: No bypass, approval, profile, or runtime change was attempted. The configured scratch cache will prune the files after 24 hours; the Forge repository remained clean and the exact evaluation commit was already verified on origin/main.
+
+## [ENT-039] | 2026-10-01 06:40 UTC | Researcher | error | ref: forge/research/company-liquidity-stress-bridge-r01.md | see: 20261001T063212Z
+Pipeline: 20261001T043634Z
+Failure: The first scratch validator used incorrect STATUS-row and progress-event count oracles and returned two false mismatches; after those predicates were corrected, `git diff --check` found one trailing blank line at the new progress-log end.
+Recovery: Exact row and current-event predicates replaced the faulty counts, the trailing blank was removed, and the rerun passed metadata, sections, citations, sources, links, board, event sequence, ASCII, and diff checks.
