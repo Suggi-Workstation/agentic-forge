@@ -199,3 +199,8 @@ Recovery: No bypass, approval, profile, or runtime change was attempted. The con
 Pipeline: 20261001T043634Z
 Failure: The first scratch validator used incorrect STATUS-row and progress-event count oracles and returned two false mismatches; after those predicates were corrected, `git diff --check` found one trailing blank line at the new progress-log end.
 Recovery: Exact row and current-event predicates replaced the faulty counts, the trailing blank was removed, and the rerun passed metadata, sections, citations, sources, links, board, event sequence, ASCII, and diff checks.
+
+## [ENT-040] | 2026-10-01 06:42 UTC | Researcher | error | ref: forge/research/company-liquidity-stress-bridge-r01.md | see: 20261001T063212Z
+Pipeline: 20261001T043634Z
+Failure: The first post-commit publication check invoked prohibited shell `tail` to read the watcher log; it also observed the stage commit still one ahead of origin.
+Recovery: The command was read-only and changed no state. Full `read_file` inspection replaced the prohibited reader, and this log-only recovery commit preserves the fault before watcher verification.
