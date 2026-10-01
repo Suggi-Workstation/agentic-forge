@@ -179,3 +179,8 @@ Recovery: Paginated `read_file` calls plus fixed `fold` and `wc` commands suppli
 Pipeline: 20261001T033647Z
 Failure: Live-browser retrieval of the McKinsey cyclical-valuation article returned an HTTP/2 protocol error, and the approved archive-recovery command timed out after 120 seconds.
 Recovery: The inaccessible page was not used as direct evidence; verified Damodaran HTML and fully read Brain valuation topics supplied the required method evidence without repository, access, runtime, or external-state changes.
+
+## [ENT-036] | 2026-10-01 04:02 UTC | Researcher | error | ref: forge/ideas/nintendo-cycle-path-dcf-applicability-r01.md | see: 20261001T033647Z
+Pipeline: 20261001T033647Z
+Failure: The required Brain freshness check returned `STALE -- live corpus differs from manifest (new=0, changed=1, deleted=0)`, so the query hard gate failed before relevant Brain retrieval.
+Recovery: No query, watcher invocation, index rebuild, retry, or external write was attempted. The research stage and exact idea input remain unchanged; no research artifact or false handoff was created.
