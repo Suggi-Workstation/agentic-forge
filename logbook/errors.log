@@ -214,3 +214,8 @@ Recovery: A separate Analyst evaluator context recorded its cold baseline before
 Pipeline: 20261001T083505Z
 Failure: Four grouped or inline elapsed-time probes across preliminary and official cold-reader runs were safety-blocked before calculating a result.
 Recovery: Direct UTC timestamp commands plus fixed `expr` arithmetic supplied the official 94-second and 82-second records; exact reader outputs were written and verified without approval, runtime, or repository-scope changes.
+
+## [ENT-043] | 2026-10-01 10:02 UTC | Researcher | error | ref: forge/evaluations/company-report-cold-conformance-review-evaluation-r01.md | see: 20261001T093804Z
+Pipeline: 20261001T083505Z
+Failure: The required Brain freshness check returned `STALE -- live corpus differs from manifest (new=0, changed=1, deleted=0)`; a concurrently dispatched query nevertheless executed before the freshness result was known, so its output was invalid and unused.
+Recovery: The Brain log was inspected without retry, rebuild, or watcher invocation; its last recorded reindex completed at 2026-10-01T10:02:04Z but did not resolve the observed gate result. The research stage, exact evaluation input, STATUS row, and LEARNINGS remain unchanged for a fresh invocation.
