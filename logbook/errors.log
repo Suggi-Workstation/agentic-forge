@@ -224,3 +224,8 @@ Recovery: The Brain log was inspected without retry, rebuild, or watcher invocat
 Pipeline: 20261001T103830Z
 Failure: One optional DOI extraction for a cognitive-bias source timed out during alternative-candidate investigation and returned no usable passage.
 Recovery: The source was not used. Fully read Brain topics and an inspected OSF/PNAS preregistration source supplied the alternative-candidate evidence without a retry, access change, repository write, or unsupported claim.
+
+## [ENT-045] | 2026-10-01 10:46 UTC | Analyst | error | ref: forge/ideas/crocs-brand-durability-test-r01.md | see: 20261001T103830Z
+Pipeline: 20261001T103830Z
+Failure: One exact-path batch cleanup of nine task-owned scratch files was safety-blocked after stage publication verification; bounded searches confirmed all files remain.
+Recovery: No bypass or approval change was attempted. The configured scratch cache will prune the files after 24 hours; the Forge repository stayed clean and the exact stage commit was already verified on origin/main.
