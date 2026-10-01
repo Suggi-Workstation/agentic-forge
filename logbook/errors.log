@@ -274,3 +274,11 @@ Recovery: A bounded search confirmed all 17 task-owned scratch files remain in t
 Pipeline: 20261001T083505Z
 Failure: The required Forge freshness check returned `STALE -- live corpus differs from manifest (new=0, changed=2, deleted=0)` before prior-work retrieval; the watcher index log showed a reindex start at 2026-10-01T11:25:02Z with no completion recorded when inspected.
 Recovery: No query, retry, rebuild, watcher invocation, target-body read, evaluation artifact, STATUS, LEARNINGS, or progress change occurred. The exact r02 research input remains at evaluate for a fresh invocation.
+
+## [ENT-055] | 2026-10-01 12:46 UTC | Analyst | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: After the final stable pre-write recheck, a concurrent Researcher transaction changed STATUS and both logs while the evaluation transaction was being written, creating duplicate ENT identifiers and invalidating the stale board snapshot.
+Tooling: One `execute_code` spill parser was blocked; fixed `jq` reads recovered the complete target, and a false unstated Base64-size oracle was removed before the final 81 claim-derived checks passed.
+Retrieval: The SEC browser returned an interstitial and the archive helper timed out; the complete-submission text endpoint and SEC filing index supplied the checked passages without a repeated blocked route.
+Recovery: Analyst removed only the uncommitted evaluation artifact, selected-row edit, progress event, and temporary error blocks; the concurrent writer also cleaned its partial transaction, leaving the exact r02 input at `evaluate`, all other rows unchanged, and the worktree clean.
+Result: HALT with no verdict, handoff, STATUS change, progress event, or LEARNINGS edit; a fresh invocation must re-evaluate the unchanged target.
