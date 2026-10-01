@@ -275,3 +275,11 @@ Origin: Direct Path B; targets are the current company-report liquidity stresses
 Findings: Both reports publish stressed headroom and only narrative cash-path components; independent reconstruction and the decision effect of a compact dated bridge remain untested.
 Limit: The corpus has two reports, source reconstruction is unperformed, original workings are unavailable, and the full current contract may already force the same result.
 Next: research both exact stress baselines and compare one compact dated bridge with the full current semantic contract.
+
+## [ENT-031] | 2026-10-01 05:20 UTC | Researcher | research | ref: forge/research/nintendo-cycle-path-dcf-applicability-r01.md | see: 20261001T051357Z
+Pipeline: 20261001T033647Z
+Stage: research. Result: PASS.
+Artifact: 20261001T051357Z.
+Findings: The current gate independently returned HALT, the published arithmetic reproduced, and matched signed timing paths raised Base value 2.32%-2.54% without changing any decision field.
+Limit: The five-year core-cash profile is not a comparable full cycle, phase labels are analytical, and no coherent current-scale console-cycle forecast is supported.
+Next: evaluate whether current-rule enforcement and report-only correction are sufficient; test the timing sensitivities for any unique decision value.
