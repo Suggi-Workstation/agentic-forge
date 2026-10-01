@@ -302,3 +302,13 @@ Findings: Both terminal headroom figures reproduce only after hidden assumptions
 Comparison: The compact bridge changes zero supported fields beyond explicit enforcement of the complete current contract; report-only correction is the smallest supported response.
 Limit: Original workings, intra-period cash timing, cash-access evidence, and several tax, project, capex, floor, and dividend premises remain unavailable; both cold readers used one model family.
 Next: evaluate the reconstructions, source limits, current-contract classifications, and zero incremental decision value.
+
+## [ENT-034] | 2026-10-01 07:46 UTC | Analyst | review | ref: forge/graveyard/company-liquidity-stress-bridge-evaluation-r01.md | see: 20261001T074146Z
+Pipeline: 20261001T043634Z
+Stage: evaluate. Result: PASS.
+Artifact: 20261001T074146Z.
+Verdict: REJECT; graveyard closure; zero of two corrective cycles were used.
+Findings: Primary-source checks and independent arithmetic reproduce the stress figures, while the complete current contract forces the same corrections, classifications, and unknowns before the compact bridge is applied.
+Limit: The sample has two reports, original workings and material timing inputs are unavailable, both cold readers used one model family, and prospective author or review cost is unmeasured.
+Learning: Unchanged; existing full-contract-comparator, evidence-preservation, claimed-result, and bounded-tooling lessons cover the method and process.
+Next: closed; reopening requires prospective evidence that the complete current contract misses a material liquidity error uniquely caught by the bridge, or measured lower total review cost without false confidence.

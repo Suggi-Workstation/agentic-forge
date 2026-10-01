@@ -204,3 +204,8 @@ Recovery: Exact row and current-event predicates replaced the faulty counts, the
 Pipeline: 20261001T043634Z
 Failure: The first post-commit publication check invoked prohibited shell `tail` to read the watcher log; it also observed the stage commit still one ahead of origin.
 Recovery: The command was read-only and changed no state. Full `read_file` inspection replaced the prohibited reader, and this log-only recovery commit preserves the fault before watcher verification.
+
+## [ENT-041] | 2026-10-01 07:46 UTC | Analyst | error | ref: forge/graveyard/company-liquidity-stress-bridge-evaluation-r01.md | see: 20261001T074146Z
+Pipeline: 20261001T043634Z
+Failure: Parent preflight opened the target title and first body sentence before its own baseline; an independent evaluator metadata probe and a later exact-copy `execute_code` call were blocked before execution.
+Recovery: A separate Analyst evaluator context recorded its cold baseline before any target-body read and completed the review; bounded reads supplied metadata, and a fixed-path copy transferred the reviewed artifact bytes. The blocked calls changed no repository state.
