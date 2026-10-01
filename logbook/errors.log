@@ -323,3 +323,8 @@ Recovery: The composer and validator now preserve the exact pack hash and exclud
 Pipeline: 20261001T103830Z
 Failure: Focused retrieval of the WWD/Circana source verified Q4 mule/clog prominence but did not recover the annual USD90 billion, flat-dollar, or unit-decline figures already frozen in the reader pack.
 Recovery: The report gives those annual figures zero weight, discloses Reader B's bounded dependence, preserves the original pack bytes, and retains only the separately supported efficient-scale result.
+
+## [ENT-064] | 2026-10-01 15:45 UTC | Analyst | error | ref: forge/graveyard/crocs-brand-durability-test-evaluation-r01.md | see: 20261001T153923Z
+Pipeline: 20261001T103830Z
+Failure: A post-publication command to remove 11 exact task-owned scratch files was blocked by unattended mass-deletion controls before execution.
+Recovery: A bounded search confirmed all 11 files remain in the configured scratch cache for automatic pruning after 24 hours; the published verdict, board closure, progress event, and commit remain unchanged.
