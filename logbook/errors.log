@@ -269,3 +269,8 @@ Recovery: The oracle was updated to the exact post-event corpus count while reta
 Pipeline: 20261001T083505Z
 Failure: A post-publication command to remove four exact task-owned scratch files was blocked by unattended mass-deletion controls before any file was removed.
 Recovery: A bounded search confirmed all 17 task-owned scratch files remain in the configured cache for automatic pruning after 24 hours; the published Forge repository and exact stage commit remain unchanged.
+
+## [ENT-054] | 2026-10-01 11:32 UTC | Analyst | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: The required Forge freshness check returned `STALE -- live corpus differs from manifest (new=0, changed=2, deleted=0)` before prior-work retrieval; the watcher index log showed a reindex start at 2026-10-01T11:25:02Z with no completion recorded when inspected.
+Recovery: No query, retry, rebuild, watcher invocation, target-body read, evaluation artifact, STATUS, LEARNINGS, or progress change occurred. The exact r02 research input remains at evaluate for a fresh invocation.
