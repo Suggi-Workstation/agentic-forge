@@ -298,3 +298,28 @@ Recovery: Separate fixed `git status`, `git diff --check`, `git diff --stat`, `f
 Pipeline: 20261001T083505Z
 Failure: Parent board validation opened the selected research body before the parent's cold baseline, so that context could not author the verdict.
 Recovery: A separate Analyst evaluator context inspected only target metadata, durably recorded its cold baseline before line 28, read the complete target, independently checked the evidence, and supplied the exact reviewed artifact bytes; the parent applied only the verified transaction.
+
+## [ENT-059] | 2026-10-01 14:30 UTC | Researcher | error | ref: forge/research/crocs-brand-durability-test-r01.md | see: 20261001T143009Z
+Pipeline: 20261001T103830Z
+Failure: Direct Piper PDF retrieval returned HTTP 403, and the browser-cache batch later failed when the SEC PDF was not the active frame resource.
+Recovery: The browser resource cache preserved all seven official Piper packets; an identified SEC request retrieved the official 2025 filing, and each used PDF was hash-checked before reader packaging.
+
+## [ENT-060] | 2026-10-01 14:30 UTC | Researcher | error | ref: forge/research/crocs-brand-durability-test-r01.md | see: 20261001T143009Z
+Pipeline: 20261001T103830Z
+Failure: The first PDF page-map script used a whitespace-exact Fall 2023 table string and stopped with `ValueError` after its other mappings succeeded.
+Recovery: A bounded text search supplied a stable table token; the corrected script mapped and rendered the intended official page, which was visually checked before use.
+
+## [ENT-061] | 2026-10-01 14:30 UTC | Researcher | error | ref: forge/research/crocs-brand-durability-test-r01.md | see: 20261001T143009Z
+Pipeline: 20261001T103830Z
+Failure: Both isolated readers attempted blocked inline or sandboxed arithmetic calls after reading only their permitted inputs.
+Recovery: Fixed `bc` commands completed the arithmetic; both exact outputs disclose the blocked calls, source scope remained unchanged, and the decisive classification agrees.
+
+## [ENT-062] | 2026-10-01 14:30 UTC | Researcher | error | ref: forge/research/crocs-brand-durability-test-r01.md | see: 20261001T143009Z
+Pipeline: 20261001T103830Z
+Failure: The first artifact composer required a terminal line feed on every embedded record, but the frozen evidence pack intentionally ended at its final byte without one.
+Recovery: The composer and validator now preserve the exact pack hash and exclude one documented structural display line feed; dry-run and final extraction checks pass all four record sizes and hashes.
+
+## [ENT-063] | 2026-10-01 14:30 UTC | Researcher | error | ref: forge/research/crocs-brand-durability-test-r01.md | see: 20261001T143009Z
+Pipeline: 20261001T103830Z
+Failure: Focused retrieval of the WWD/Circana source verified Q4 mule/clog prominence but did not recover the annual USD90 billion, flat-dollar, or unit-decline figures already frozen in the reader pack.
+Recovery: The report gives those annual figures zero weight, discloses Reader B's bounded dependence, preserves the original pack bytes, and retains only the separately supported efficient-scale result.
