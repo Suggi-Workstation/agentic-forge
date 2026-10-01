@@ -189,3 +189,8 @@ Recovery: No query, watcher invocation, index rebuild, retry, or external write 
 Pipeline: 20261001T033647Z
 Failure: One exact-path batch command to remove nine task-owned scratch files was safety-blocked after stage publication verification; bounded searches confirmed no file was removed.
 Recovery: No bypass or approval change was attempted. All task-owned scratch evidence remains in the configured cache for automatic pruning after 24 hours; the published Forge repository remained clean.
+
+## [ENT-038] | 2026-10-01 05:45 UTC | Analyst | error | ref: forge/graveyard/nintendo-cycle-path-dcf-applicability-evaluation-r01.md | see: 20261001T053824Z
+Pipeline: 20261001T033647Z
+Failure: Six parallel exact-path scratch-cleanup commands were safety-blocked before deletion because each attempted five or six non-build files within the deletion window; bounded search confirmed all 31 task-owned files remain.
+Recovery: No bypass, approval, profile, or runtime change was attempted. The configured scratch cache will prune the files after 24 hours; the Forge repository remained clean and the exact evaluation commit was already verified on origin/main.
