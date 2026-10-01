@@ -14,3 +14,4 @@ do not replace waiting rows. No data rows means no open pipelines.
 |:--|:--|:--|:--|:--|:--|
 | 20260930T083956Z | awaiting-review | human-review | forge/discoveries/bounded-index-freshness-recheck-r02.md | Decide whether to approve, request changes, defer, or reject the exact discovery. | 2026-09-30 12:02 UTC |
 | 20261001T033647Z | active | research | forge/ideas/nintendo-cycle-path-dcf-applicability-r01.md | Research the current DCF gate against a reproducible Nintendo baseline and predeclared matched cycle paths. | 2026-10-01 03:36 UTC |
+| 20261001T043634Z | active | research | forge/ideas/company-liquidity-stress-bridge-r01.md | Reconstruct both published liquidity stresses and test a compact dated cash bridge against the full current contract. | 2026-10-01 04:36 UTC |

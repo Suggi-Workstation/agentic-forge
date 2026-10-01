@@ -266,3 +266,12 @@ Origin: Direct Path B; target is the simple-DCF applicability gate and its curre
 Findings: The Nintendo report calls a smooth two-stage model a cash DCF while describing console-cycle cash ranging from negative JPY49.1 billion to positive JPY409.3 billion; the current framework already requires a representative positive path or another method.
 Limit: Only two company reports exist, cycle phase timing is unknown, the five-year average may not span a comparable full cycle, and the large price premium may leave the verdict insensitive to model form.
 Next: research a reproducible baseline, cold current-gate classifications, and predeclared matched cycle-path timing tests without editing Investing Hub.
+
+## [ENT-030] | 2026-10-01 04:36 UTC | Analyst | research | ref: forge/ideas/company-liquidity-stress-bridge-r01.md | see: 20261001T043634Z
+Pipeline: 20261001T043634Z
+Stage: ideate. Result: PASS.
+Artifact: 20261001T043634Z.
+Origin: Direct Path B; targets are the current company-report liquidity stresses and their governing Financial Health output contract.
+Findings: Both reports publish stressed headroom and only narrative cash-path components; independent reconstruction and the decision effect of a compact dated bridge remain untested.
+Limit: The corpus has two reports, source reconstruction is unperformed, original workings are unavailable, and the full current contract may already force the same result.
+Next: research both exact stress baselines and compare one compact dated bridge with the full current semantic contract.
