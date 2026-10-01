@@ -184,3 +184,8 @@ Recovery: The inaccessible page was not used as direct evidence; verified Damoda
 Pipeline: 20261001T033647Z
 Failure: The required Brain freshness check returned `STALE -- live corpus differs from manifest (new=0, changed=1, deleted=0)`, so the query hard gate failed before relevant Brain retrieval.
 Recovery: No query, watcher invocation, index rebuild, retry, or external write was attempted. The research stage and exact idea input remain unchanged; no research artifact or false handoff was created.
+
+## [ENT-037] | 2026-10-01 05:26 UTC | Researcher | error | ref: forge/research/nintendo-cycle-path-dcf-applicability-r01.md | see: 20261001T051357Z
+Pipeline: 20261001T033647Z
+Failure: One exact-path batch command to remove nine task-owned scratch files was safety-blocked after stage publication verification; bounded searches confirmed no file was removed.
+Recovery: No bypass or approval change was attempted. All task-owned scratch evidence remains in the configured cache for automatic pruning after 24 hours; the published Forge repository remained clean.
