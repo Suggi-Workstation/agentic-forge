@@ -283,3 +283,13 @@ Artifact: 20261001T051357Z.
 Findings: The current gate independently returned HALT, the published arithmetic reproduced, and matched signed timing paths raised Base value 2.32%-2.54% without changing any decision field.
 Limit: The five-year core-cash profile is not a comparable full cycle, phase labels are analytical, and no coherent current-scale console-cycle forecast is supported.
 Next: evaluate whether current-rule enforcement and report-only correction are sufficient; test the timing sensitivities for any unique decision value.
+
+## [ENT-032] | 2026-10-01 05:38 UTC | Analyst | review | ref: forge/graveyard/nintendo-cycle-path-dcf-applicability-evaluation-r01.md | see: 20261001T053824Z
+Pipeline: 20261001T033647Z
+Stage: evaluate. Result: PASS.
+Artifact: 20261001T053824Z.
+Verdict: REJECT; graveyard closure; zero of two corrective cycles were used.
+Findings: The current gate independently requires report-application correction, and reproduced matched timing paths changed Base value by 2.321%-2.543% without changing any supported decision field.
+Limit: The corpus has two reports, the core-cash profile spans five years, phase labels are analytical, separate reader outputs are unavailable, and no coherent current-scale console-cycle schedule exists.
+Learning: Unchanged; existing full-contract-comparator, evidence-preservation, claimed-result, and bounded-tooling lessons cover the method and process.
+Next: closed; reopening requires a comparable full-cycle cash bridge, coherent reproducible scenarios, or prospective repeated misapplication that changes a supported decision beyond explicit current-rule enforcement.
