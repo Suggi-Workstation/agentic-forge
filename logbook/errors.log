@@ -219,3 +219,8 @@ Recovery: Direct UTC timestamp commands plus fixed `expr` arithmetic supplied th
 Pipeline: 20261001T083505Z
 Failure: The required Brain freshness check returned `STALE -- live corpus differs from manifest (new=0, changed=1, deleted=0)`; a concurrently dispatched query nevertheless executed before the freshness result was known, so its output was invalid and unused.
 Recovery: The Brain log was inspected without retry, rebuild, or watcher invocation; its last recorded reindex completed at 2026-10-01T10:02:04Z but did not resolve the observed gate result. The research stage, exact evaluation input, STATUS row, and LEARNINGS remain unchanged for a fresh invocation.
+
+## [ENT-044] | 2026-10-01 10:38 UTC | Analyst | error | ref: forge/ideas/crocs-brand-durability-test-r01.md | see: 20261001T103830Z
+Pipeline: 20261001T103830Z
+Failure: One optional DOI extraction for a cognitive-bias source timed out during alternative-candidate investigation and returned no usable passage.
+Recovery: The source was not used. Fully read Brain topics and an inspected OSF/PNAS preregistration source supplied the alternative-candidate evidence without a retry, access change, repository write, or unsupported claim.

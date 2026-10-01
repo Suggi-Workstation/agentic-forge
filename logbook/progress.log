@@ -339,3 +339,12 @@ Findings: Embedded packs and separate outputs reproduce all 12 classifications, 
 Limit: Reader B's output says its context was restricted to the pack and contracts, while the research reports an extra generic skill read; prompts and self-reports cannot establish actual context compliance.
 Learning: Unchanged; the existing high-confidence preservation lesson already requires separate evidence for blind and separate-reader claims.
 Next: preserve hashed reader context and tool-access receipts, or rerun both passes with complete receipts, then return the corrected research to evaluation.
+
+## [ENT-038] | 2026-10-01 10:38 UTC | Analyst | research | ref: forge/ideas/crocs-brand-durability-test-r01.md | see: 20261001T103830Z
+Pipeline: 20261001T103830Z
+Stage: ideate. Result: PASS.
+Artifact: 20261001T103830Z.
+Origin: Direct Path B; target is the current Crocs Brand moat classification and the existing simple-moat application.
+Findings: The report classifies the moat Narrow / stable at Low confidence while stating that fashion durability is decisive and non-issuer demand evidence is thin; an official 2022-2023 teen-survey series plus a later contrary lead make a bounded source-aligned durability test possible.
+Limit: The consumer evidence covers one U.S. age cohort, later official detail is incomplete, and price, volume, mix, channel, and geography may not align into a comparable series.
+Next: research whether the full current moat contract supports the present mechanism, dimensional ratings, class, trend, and confidence, and whether a compact evidence bridge adds decision value.
