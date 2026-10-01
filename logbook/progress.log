@@ -257,3 +257,12 @@ Findings: The full current contract and the candidate classified all eight cases
 Limit: Complete reader outputs are unavailable, the sample is retrospective and small, and future author behavior and review cost remain unmeasured.
 Learning: Unchanged; existing package-preservation, full-contract-comparator, and unattended-tooling lessons cover the method and process failure.
 Next: closed; reopening requires prospective changed evidence that a concise rule produces a unique correct package or narrowing action and decision value beyond the full current contract.
+
+## [ENT-029] | 2026-10-01 03:36 UTC | Analyst | research | ref: forge/ideas/nintendo-cycle-path-dcf-applicability-r01.md | see: 20261001T033647Z
+Pipeline: 20261001T033647Z
+Stage: ideate. Result: PASS.
+Artifact: 20261001T033647Z.
+Origin: Direct Path B; target is the simple-DCF applicability gate and its current Nintendo application.
+Findings: The Nintendo report calls a smooth two-stage model a cash DCF while describing console-cycle cash ranging from negative JPY49.1 billion to positive JPY409.3 billion; the current framework already requires a representative positive path or another method.
+Limit: Only two company reports exist, cycle phase timing is unknown, the five-year average may not span a comparable full cycle, and the large price premium may leave the verdict insensitive to model form.
+Next: research a reproducible baseline, cold current-gate classifications, and predeclared matched cycle-path timing tests without editing Investing Hub.

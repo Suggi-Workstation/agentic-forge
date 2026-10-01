@@ -174,3 +174,8 @@ Recovery: Fixed `printf` and `wc` commands supplied the counts, Reader B retaine
 Pipeline: 20261001T013556Z
 Failure: One unattended `execute_code` attempt to parse a local spill file was blocked before execution; no repository action occurred.
 Recovery: Paginated `read_file` calls plus fixed `fold` and `wc` commands supplied the complete evidence and counts without changing approval, runtime, or repository state before the stage transaction.
+
+## [ENT-035] | 2026-10-01 03:36 UTC | Analyst | error | ref: forge/ideas/nintendo-cycle-path-dcf-applicability-r01.md | see: 20261001T033647Z
+Pipeline: 20261001T033647Z
+Failure: Live-browser retrieval of the McKinsey cyclical-valuation article returned an HTTP/2 protocol error, and the approved archive-recovery command timed out after 120 seconds.
+Recovery: The inaccessible page was not used as direct evidence; verified Damodaran HTML and fully read Brain valuation topics supplied the required method evidence without repository, access, runtime, or external-state changes.
