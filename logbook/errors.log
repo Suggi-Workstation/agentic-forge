@@ -264,3 +264,8 @@ Recovery: Every affected source now keeps its path and ` -- ` on one line, the t
 Pipeline: 20261001T083505Z
 Failure: The corrected scratch validator used an obsolete artifact-ID occurrence oracle and returned a false count failure after the artifact and six current error references were present.
 Recovery: The oracle was updated to the exact post-event corpus count while retaining repository-wide ID validation, and no artifact, board, handoff, or evidence content changed.
+
+## [ENT-053] | 2026-10-01 11:28 UTC | Researcher | error | ref: forge/research/company-report-cold-conformance-review-r02.md | see: 20261001T111239Z
+Pipeline: 20261001T083505Z
+Failure: A post-publication command to remove four exact task-owned scratch files was blocked by unattended mass-deletion controls before any file was removed.
+Recovery: A bounded search confirmed all 17 task-owned scratch files remain in the configured cache for automatic pruning after 24 hours; the published Forge repository and exact stage commit remain unchanged.
