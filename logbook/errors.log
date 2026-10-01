@@ -288,3 +288,13 @@ Pipeline: 20261001T103830Z
 Failure: The required Forge freshness check returned `STALE -- index at efc85f79, HEAD at d7bf3560`, so the query hard gate failed before prior-work retrieval.
 Indexer: The watcher log showed a reindex start at 2026-10-01T12:44:01Z for one new and one changed file with 1,000 chunks to embed, but no completion when inspected.
 Recovery: No query, retry, rebuild, watcher invocation, research artifact, STATUS, progress, or LEARNINGS change occurred. The exact idea remains at `research` for a fresh invocation.
+
+## [ENT-057] | 2026-10-01 13:49 UTC | Analyst | error | ref: forge/evaluations/company-report-cold-conformance-review-evaluation-r02.md | see: 20261001T134033Z
+Pipeline: 20261001T083505Z
+Failure: A combined post-write validation command was policy-blocked before execution because it used a loop and command substitution for ASCII counts.
+Recovery: Separate fixed `git status`, `git diff --check`, `git diff --stat`, `file`, and `stat` commands completed; written files are ASCII, the artifact mode matches its sibling, and no unrelated path is modified.
+
+## [ENT-058] | 2026-10-01 13:49 UTC | Analyst | error | ref: forge/evaluations/company-report-cold-conformance-review-evaluation-r02.md | see: 20261001T134033Z
+Pipeline: 20261001T083505Z
+Failure: Parent board validation opened the selected research body before the parent's cold baseline, so that context could not author the verdict.
+Recovery: A separate Analyst evaluator context inspected only target metadata, durably recorded its cold baseline before line 28, read the complete target, independently checked the evidence, and supplied the exact reviewed artifact bytes; the parent applied only the verified transaction.
