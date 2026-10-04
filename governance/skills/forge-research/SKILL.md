@@ -17,9 +17,10 @@ and `governance/template-research.md` before writing.
    HALT under the protocol's stage-independence rule.
    On revision, also read the evaluation/review findings and affected prior
    research or proposal. Confirm a single pipeline and the specific questions.
-2. Use `governance/skills/forge-loop-feynman/SKILL.md`: provisional explanation,
-   gaps, evidence gathering, fresh synthesis. Answer each material evaluation
-   or review finding with evidence, a revision, or a reasoned disagreement;
+2. Use `governance/skills/forge-loop-feynman/SKILL.md`: provisional explanation
+   and gaps in its scratch file, evidence gathering, fresh synthesis. Answer
+   each material evaluation or review finding with evidence, a revision, or a
+   reasoned disagreement;
    never silently drop an objection. Label unresolved issues as blocking.
 3. Query relevant Brain knowledge and use `web_search` / `web_extract`
    for independent primary sources. Read sources, not search snippets;

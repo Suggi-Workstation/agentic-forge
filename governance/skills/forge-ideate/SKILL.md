@@ -34,8 +34,9 @@ transaction in `forge/protocol.md` and `governance/template-idea.md`.
    idea per reflection. Reflections are leads, not independent validation.
 4. Consult `governance/skills/forge-loop-feynman/SKILL.md`. Discovery and
    method-memory reading come before the candidate's blank-page explanation.
-   State a provisional hypothesis, alternative explanation, and unknowns;
-   then check sources. New findings may expand or change the question.
+   Write a provisional hypothesis, alternative explanation, and unknowns to
+   the loop's scratch file; then check sources. New findings may expand or
+   change the question.
 5. Compare the final candidate again against prior work. For new ideation,
    if it is covered, already resolved, or closed without justified reopening,
    return NO-OP without a new artifact. If a requested reframe has no viable
