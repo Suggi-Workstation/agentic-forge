@@ -414,3 +414,12 @@ Origin: Direct Path A at Suggi's request (inter-agent prompt; checklist GWT-1/GW
 Findings: Queue ENT-099 shows Suggi as the relay between agents; only two of 41 active queue entries carry @mentions.
 Limit: One documented incident; frequency of needing a peer's private context and channel costs are unmeasured.
 Next: research the case inventory and option comparison with authority and loop safeguards; no channel is chosen.
+
+## [ENT-046] | 2026-10-26 22:59 UTC | Morpheus | research | ref: forge/ideas/report-claim-calibration-r01.md | see: 20261026T225109Z
+Pipeline: 20261026T225109Z
+Stage: ideate. Result: PASS.
+Artifact: 20261026T225109Z.
+Origin: Direct Path A at Suggi's request (checklist HOT-2); target is how agents spend verification on their own reports.
+Findings: Report overclaims recur in errors ENT-037 to ENT-041 and ENT-043; the record rule was cited in every case yet did not prevent them.
+Limit: Small sample drawn from known failures; stated confidence is rarely present in reports.
+Next: research claim-level signals and their error rates; no gate or template change is proposed.
