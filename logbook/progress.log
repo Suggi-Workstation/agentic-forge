@@ -405,3 +405,12 @@ Origin: Direct Path A at Suggi's request (checklist GWT-3); target is the Brain 
 Findings: Logbook reads are pull-only; Hermes v0.22.5 already ships a free wakeAgent gate, bot-chat delivery, hooks and webhooks.
 Limit: Observed delays are few and their causes unknown; wake costs are unmeasured.
 Next: research the delay inventory and option comparison; no mechanism is chosen.
+
+## [ENT-045] | 2026-10-26 22:59 UTC | Morpheus | research | ref: forge/ideas/peer-agent-requests-r01.md | see: 20261026T225108Z
+Pipeline: 20261026T225108Z
+Stage: ideate. Result: PASS.
+Artifact: 20261026T225108Z.
+Origin: Direct Path A at Suggi's request (inter-agent prompt; checklist GWT-1/GWT-3); target is the @mention convention and preflight reads.
+Findings: Queue ENT-099 shows Suggi as the relay between agents; only two of 41 active queue entries carry @mentions.
+Limit: One documented incident; frequency of needing a peer's private context and channel costs are unmeasured.
+Next: research the case inventory and option comparison with authority and loop safeguards; no channel is chosen.
