@@ -423,3 +423,12 @@ Origin: Direct Path A at Suggi's request (checklist HOT-2); target is how agents
 Findings: Report overclaims recur in errors ENT-037 to ENT-041 and ENT-043; the record rule was cited in every case yet did not prevent them.
 Limit: Small sample drawn from known failures; stated confidence is rarely present in reports.
 Next: research claim-level signals and their error rates; no gate or template change is proposed.
+
+## [ENT-047] | 2026-10-26 22:59 UTC | Morpheus | research | ref: forge/ideas/context-attention-schema-r01.md | see: 20261026T225110Z
+Pipeline: 20261026T225110Z
+Stage: ideate. Result: PASS.
+Artifact: 20261026T225110Z.
+Origin: Direct Path A at Suggi's request (checklist AST-1/AST-2); target is long-session and compaction handling.
+Findings: Lessons fail where the work does not load them (errors ENT-038) and reports from compressed context recur.
+Limit: Failure causes are mixed; the attention-schema evidence comes from a toy reinforcement-learning task.
+Next: research failure causes and option classes that act without the agent remembering; no mechanism is chosen.
