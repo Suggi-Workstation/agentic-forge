@@ -432,3 +432,12 @@ Origin: Direct Path A at Suggi's request (checklist AST-1/AST-2); target is long
 Findings: Lessons fail where the work does not load them (errors ENT-038) and reports from compressed context recur.
 Limit: Failure causes are mixed; the attention-schema evidence comes from a toy reinforcement-learning task.
 Next: research failure causes and option classes that act without the agent remembering; no mechanism is chosen.
+
+## [ENT-048] | 2026-10-26 22:59 UTC | Morpheus | research | ref: forge/ideas/surprise-triggered-memory-correction-r01.md | see: 20261026T225111Z
+Pipeline: 20261026T225111Z
+Stage: ideate. Result: PASS.
+Artifact: 20261026T225111Z.
+Origin: Direct Path A at Suggi's request (checklist PP-1/PP-2/RPT-2); target is the memory-observation loop.
+Findings: Five descriptions did not match the system in eleven days (errors ENT-043); no automatic step corrects memory on contradiction.
+Limit: Cases mostly from one agent and period; unnoticed mismatches leave no record.
+Next: research stale sources, earlier detection and correction options; no loop is chosen.
