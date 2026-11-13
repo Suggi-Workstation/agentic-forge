@@ -3,104 +3,104 @@ status: provisional-agent-curated
 description: Proposal-ending Forge workflow, template and pipeline-artifact retrieval benchmark.
 queries:
 - qid: f001
-  question: What is the eternal mission of the Agentic Forge?
+  question: When choosing among several candidate research questions, which qualities should make the Forge prefer one over the others?
   gold_files:
   - ANCHOR.md
   domain: control
 - qid: f002
-  question: How do idea research evaluation and proposal handoffs work between stages?
+  question: Which open Forge pipeline gets picked next when several are eligible, and how are ties between them broken?
   gold_files:
   - forge/protocol.md
   domain: protocol
 - qid: f003
-  question: What does the research loop do in one short Forge session?
+  question: To which skills does the research-side loop delegate each of its stages, and which file must it always leave untouched?
   gold_files:
   - governance/skills/forge-loop-research/SKILL.md
   domain: skills
 - qid: f004
-  question: How does evaluation form an independent baseline?
+  question: Should a Forge reviewer accept a claim because an earlier verdict or agent reflection already supports it, or verify it again?
   gold_files:
   - governance/skills/forge-evaluate/SKILL.md
   domain: skills
 - qid: f005
-  question: What must an implementable final Forge proposal contain?
+  question: How much implementation detail does a Forge proposal need for a rule change compared with a new skill or architecture change?
   gold_files:
   - governance/template-proposal.md
   domain: templates
 - qid: f006
-  question: Which stages may write LEARNINGS and when is a lesson admitted?
+  question: What evidence is needed to rate a Forge method lesson at medium or high confidence, and do repeated reports of one incident count?
   gold_files:
   - LEARNINGS.md
   domain: control
 - qid: f007
-  question: What future stagger is planned for research and evaluation loops?
+  question: At what times would the two Forge loops run once scheduling is enabled, and does that timing guarantee they never overlap?
   gold_files:
   - README.md
   domain: documentation
 - qid: f008
-  question: How is research evaluated before a final proposal?
+  question: What differs between the checks a reviewer applies to a research report and those applied to a final proposal?
   gold_files:
   - governance/skills/forge-evaluate/SKILL.md
   domain: skills
 - qid: f009
-  question: How does ideation select one narrow idea for the Forge?
+  question: What happens when a candidate Forge question is already covered by earlier work, or the duplicate checks themselves cannot be run?
   gold_files:
   - governance/skills/forge-ideate/SKILL.md
   domain: skills
 - qid: f010
-  question: How does a proposal answer evaluation and specify concrete changes?
+  question: How should someone drafting a Forge proposal respond to evaluation findings it accepts, disputes, or cannot resolve?
   gold_files:
   - governance/skills/forge-propose/SKILL.md
   domain: skills
 - qid: f011
-  question: How does research gather and record evidence for a proposal?
+  question: If a Forge research session runs out of time or its evidence refutes the hypothesis, how should each outcome be handled?
   gold_files:
   - governance/skills/forge-research/SKILL.md
   domain: skills
 - qid: f012
-  question: How does final review check the actual proposal before human approval?
+  question: After reviewing a finished proposal, where should a revise verdict send the work, and does a ready verdict count as approval?
   gold_files:
   - governance/template-final-review.md
   domain: templates
 - qid: f013
-  question: How can reflections produce research ideas without mistaking repeated stories for independent evidence?
+  question: How should agent reflections be sampled and recorded when hunting for a new research lead, and what can they prove?
   gold_files:
   - ANCHOR.md
   - governance/skills/forge-ideate/SKILL.md
   domain: discovery
 - qid: f014
-  question: How are graveyard entries and accepted or pending proposals checked before starting duplicate research?
+  question: Before writing a new Forge idea, how should overlapping earlier work be searched, and what must the idea document about it?
   gold_files:
   - governance/skills/forge-ideate/SKILL.md
   - governance/template-idea.md
   domain: discovery
 - qid: f015
-  question: Which identifier connects all revisions of an idea research evaluation and proposal?
+  question: How are revision numbers chosen for Forge artifact files across stages, and which earlier artifacts must a new revision link?
   gold_files:
   - forge/protocol.md
   domain: provenance
 - qid: f016
-  question: What happens when revision cycles exceed the budget or a rejected idea needs reopening?
+  question: How many corrective rounds can a pipeline go through before it must be deferred, and does a reframe reset the count?
   gold_files:
   - forge/protocol.md
   domain: protocol
 - qid: f017
-  question: Can a reflection reveal new gaps after the initial Feynman explanation?
+  question: Where and when must an agent write its first plain-language explanation of a research claim, and what happens to it afterwards?
   gold_files:
   - governance/skills/forge-loop-feynman/SKILL.md
   domain: skills
 - qid: f018
-  question: What evidence contradictions alternatives and feedback responses belong in a research report?
+  question: For each important claim in a research report, what should be noted about its source, and how are facts kept apart from inferences?
   gold_files:
   - governance/template-research.md
   domain: templates
 - qid: f019
-  question: How should an evaluation record its target baseline findings verdict and learning decision?
+  question: Does a research evaluation need a numeric score, and what does an advance verdict actually authorize?
   gold_files:
   - governance/template-evaluation.md
   domain: templates
 - qid: f020
-  question: When may completed evaluation or final review write method learnings and when must ideation research and proposals leave them unchanged?
+  question: Once an evaluator finishes its verdict, how does it decide on a method lesson, and where is a lesson edit that fails reported?
   gold_files:
   - LEARNINGS.md
   - governance/skills/forge-loop-evaluate/SKILL.md
