@@ -1,6 +1,6 @@
-version: '3.0'
+version: '4.0'
 status: provisional-agent-curated
-description: Proposal-ending Forge workflow and template retrieval benchmark.
+description: Proposal-ending Forge workflow, template and pipeline-artifact retrieval benchmark.
 queries:
 - qid: f001
   question: What is the eternal mission of the Agentic Forge?
@@ -105,3 +105,153 @@ queries:
   - LEARNINGS.md
   - governance/skills/forge-loop-evaluate/SKILL.md
   domain: control
+- qid: f021
+  question: What four defects remained after the history receipt switched to cat-file batch-check, and why did they exhaust the correction budget?
+  gold_files:
+  - forge/final-reviews/forge-history-duplicate-receipt-review-r02.md
+  domain: pipeline
+- qid: f022
+  question: Which change is up for human approval to let query skills wait once and recheck a lagging index, and how would it be reversed?
+  gold_files:
+  - forge/discoveries/bounded-index-freshness-recheck-r02.md
+  domain: pipeline
+- qid: f023
+  question: Why was a research-template rule demanding recoverable evidence packages rejected after testing eight past and synthetic reports?
+  gold_files:
+  - forge/graveyard/forge-research-evidence-package-gate-evaluation-r01.md
+  domain: pipeline
+- qid: f024
+  question: Did independent checks confirm that searching deleted Forge artifacts in Git history changes novelty decisions, and what must a proposal include?
+  gold_files:
+  - forge/evaluations/forge-history-duplicate-receipt-evaluation-r01.md
+  domain: pipeline
+- qid: f025
+  question: What plan and stop conditions were set before testing whether the Crocs and Nintendo stress headroom figures could be reproduced?
+  gold_files:
+  - forge/ideas/company-liquidity-stress-bridge-r01.md
+  domain: pipeline
+- qid: f026
+  question: How would a scratch Python driver use git cat-file batch-check and a monotonic deadline to bound history receipt reads?
+  gold_files:
+  - forge/proposals/forge-history-duplicate-receipt-r02.md
+  domain: pipeline
+- qid: f027
+  question: When reconstructing Crocs' USD69 million and Nintendo's JPY673 billion stress headroom from filings, which hidden assumptions turn up?
+  gold_files:
+  - forge/research/company-liquidity-stress-bridge-r01.md
+  domain: pipeline
+- qid: f028
+  question: Why was the single stale-index recheck design judged ready for discovery, and what cleanup ordering caveat applies to implementation?
+  gold_files:
+  - forge/final-reviews/bounded-index-freshness-recheck-review-r02.md
+  domain: pipeline
+- qid: f029
+  question: Why was the compact liquidity bridge for company reports closed, and what changed evidence would justify reopening it?
+  gold_files:
+  - forge/graveyard/company-liquidity-stress-bridge-evaluation-r01.md
+  domain: pipeline
+- qid: f030
+  question: Did the corrected 22-case freshness classifier reproduce under independent reruns, and what obligations were set for the next proposal?
+  gold_files:
+  - forge/evaluations/bounded-index-freshness-recheck-evaluation-r02.md
+  domain: pipeline
+- qid: f031
+  question: Which signals, such as writing from memory after compaction or hand-derived counts, might predict that an agent's report claim is wrong?
+  gold_files:
+  - forge/ideas/report-claim-calibration-r01.md
+  domain: pipeline
+- qid: f032
+  question: How should the query skill compute its single wait and compare HEAD and git status snapshots before a second freshness check?
+  gold_files:
+  - forge/proposals/bounded-index-freshness-recheck-r02.md
+  domain: pipeline
+- qid: f033
+  question: In the three historical stale-index events, which ones recovered on a second freshness check and why was the Brain case not counted?
+  gold_files:
+  - forge/research/bounded-index-freshness-recheck-r01.md
+  domain: pipeline
+- qid: f034
+  question: What ordering problems with git show probes and the 60-second ceiling sent the original history receipt proposal back for revision?
+  gold_files:
+  - forge/final-reviews/forge-history-duplicate-receipt-review-r01.md
+  domain: pipeline
+- qid: f035
+  question: Should Nintendo's console-cycle cash swings be modeled with a signed timing path in a DCF, and why was that idea dropped?
+  gold_files:
+  - forge/graveyard/nintendo-cycle-path-dcf-applicability-evaluation-r01.md
+  domain: pipeline
+- qid: f036
+  question: Why was research on mapping each proposal claim to a verification check sent back despite catching all six known blockers?
+  gold_files:
+  - forge/evaluations/forge-proposal-claim-verification-map-evaluation-r01.md
+  domain: pipeline
+- qid: f037
+  question: Can Buffett's one-dollar retained earnings test count as passed when the same company report says price exceeds intrinsic value?
+  gold_files:
+  - forge/ideas/valuation-consistent-retained-earnings-test-r01.md
+  domain: pipeline
+- qid: f038
+  question: How did the original plan propose using git log and git show to recover deleted Forge pipelines before judging an idea novel?
+  gold_files:
+  - forge/proposals/forge-history-duplicate-receipt-r01.md
+  domain: pipeline
+- qid: f039
+  question: How did a full claim map compare with the semantically applied proposal checklist in detections, row counts, and record size across two readers?
+  gold_files:
+  - forge/research/forge-proposal-claim-verification-map-r02.md
+  domain: pipeline
+- qid: f040
+  question: What Git configuration gap left the reachable-history receipt proposal deferred after its correction budget ran out?
+  gold_files:
+  - forge/graveyard/forge-history-duplicate-receipt-review-r03.md
+  domain: pipeline
+- qid: f041
+  question: Why did the blind two-reader company-report review experiment get sent back to research, and what receipts must be added?
+  gold_files:
+  - forge/evaluations/company-report-cold-conformance-review-evaluation-r01.md
+  domain: pipeline
+- qid: f042
+  question: Which three recurring report defects motivated testing a separate pre-release reviewer for Investing Hub company reports, and what research plan followed?
+  gold_files:
+  - forge/ideas/company-report-cold-conformance-review-r01.md
+  domain: pipeline
+- qid: f043
+  question: In the corrected history receipt design, how do RLIMIT_FSIZE and a single deadline dispatcher enforce byte and time limits?
+  gold_files:
+  - forge/proposals/forge-history-duplicate-receipt-r03.md
+  domain: pipeline
+- qid: f044
+  question: When does the replayed freshness classifier allow one wait and second check, and how are near-match STALE messages treated?
+  gold_files:
+  - forge/research/bounded-index-freshness-recheck-r02.md
+  domain: pipeline
+- qid: f045
+  question: Why was mandating claim-to-verification maps for Forge proposals rejected, and what evidence would justify reopening it?
+  gold_files:
+  - forge/graveyard/forge-proposal-claim-verification-map-evaluation-r02.md
+  domain: pipeline
+- qid: f046
+  question: Was the HEAD-lag freshness recheck research accepted at first evaluation, or what problems with its classifier replay forced a revision?
+  gold_files:
+  - forge/evaluations/bounded-index-freshness-recheck-evaluation-r01.md
+  domain: pipeline
+- qid: f047
+  question: How many Forge pipelines survive only in Git history after the fresh-start reset, and why might ideation mistake them for new work?
+  gold_files:
+  - forge/ideas/forge-history-duplicate-receipt-r01.md
+  domain: pipeline
+- qid: f048
+  question: What would a one-report prospective trial of author self-review versus a cold reviewer record, and which outcome classes could it return?
+  gold_files:
+  - forge/proposals/company-report-cold-conformance-review-r02.md
+  domain: pipeline
+- qid: f049
+  question: For a discovery written for Suggi, which sections are required and what checklist must pass before writing?
+  gold_files:
+  - governance/template-discovery.md
+  domain: templates
+- qid: f050
+  question: Under what conditions must an agent halt rather than condense a passed proposal for Suggi, and what handoff follows?
+  gold_files:
+  - governance/skills/forge-discover/SKILL.md
+  domain: skills
