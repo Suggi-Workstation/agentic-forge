@@ -1,4 +1,4 @@
-version: '4.1'
+version: '4.2'
 status: provisional-agent-curated
 description: Proposal-ending Forge workflow, template and pipeline-artifact retrieval benchmark.
 queries:
@@ -61,6 +61,7 @@ queries:
   question: After reviewing a finished proposal, where should a revise verdict send the work, and does a ready verdict count as approval?
   gold_files:
   - governance/template-final-review.md
+  - forge/protocol.md
   domain: templates
 - qid: f013
   question: How should agent reflections be sampled and recorded when hunting for a new research lead, and what can they prove?
