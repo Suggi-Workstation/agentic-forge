@@ -1,4 +1,4 @@
-version: '4.0'
+version: '4.1'
 status: provisional-agent-curated
 description: Proposal-ending Forge workflow, template and pipeline-artifact retrieval benchmark.
 queries:
@@ -255,3 +255,8 @@ queries:
   gold_files:
   - governance/skills/forge-discover/SKILL.md
   domain: skills
+- qid: f051
+  question: How do I test whether a change to the forge search ranking really improved results, using the MRR difference and its confidence interval?
+  gold_files:
+  - forge-index/README.md
+  domain: forge-index
